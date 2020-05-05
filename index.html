@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>English Practice</title>
+</head>
+<body>
+    <h1 id='h1-tab-sentences' class='active'>Sentences</h1>
+    <h1 id='h1-tab-dictionary' class=''>Dictionary</h1>
+    <section class='assignment-section'>
+        <div class='sentence-space'>
+            <p class='given-sentence'>Question</p>
+            <h5 class='word'>word</h5>
+            <div class='answer-all'>
+                <div class='answer-first'></div>
+                <input class='answer-input' type="text" placeholder="type your answer here" disabled>
+                <div class='answer-second'></div>
+            </div>
+        </div>    
+        <div class='buttons-space'>
+            <button class='dont-know' onclick="show_correct_answer()" disabled>I don't know</button>
+            <button class='check' onclick="check_button_handler()" disabled>Check</button>
+            <button class='next' onclick="get_word()">Next</button>
+            <p class='check-answer-true'></p>
+            <div class='check-answer-wrong'>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class='correct-answer-space'>
+            <p class='correct-answer'></p>
+        </div>
+
+        <a id='link-dict' href="./dictionary.html">All words</a>
+    </section>
+
+    <script src='./scripts/questions.js'></script>
+    <script src='./scripts/script.js'></script>
+    
+</body>
+</html>

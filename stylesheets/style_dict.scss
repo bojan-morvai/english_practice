@@ -1,0 +1,30 @@
+html {
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+section{
+    box-shadow: 0 0 10px black;
+	width: 80%;
+	margin: auto;
+    height: 600px;
+    overflow: auto;
+    p{
+        margin: 1rem 0 0 0;
+        width: 50%;
+    }
+    .dict-words{
+        display: flex;
+        // flex-direction: column;
+        flex-flow: wrap;
+    }
+}
+
+h1{
+    margin: 1rem;
+}
+
+a{
+    display: inline-block;
+    margin: 1rem;
+}

@@ -1,0 +1,36 @@
+html {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+section {
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  width: 80%;
+  margin: auto;
+  height: 600px;
+  overflow: auto;
+}
+
+section p {
+  margin: 1rem 0 0 0;
+  width: 50%;
+}
+
+section .dict-words {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+h1 {
+  margin: 1rem;
+}
+
+a {
+  display: inline-block;
+  margin: 1rem;
+}
+/*# sourceMappingURL=style_dict.css.map */
