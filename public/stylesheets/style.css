@@ -184,7 +184,7 @@ h1 {
   background-color: #c900FF;
   font-size: 0.75rem;
   width: 5rem;
-  position: fixed;
+  position: absolute;
   left: 79%;
   top: 73%;
   cursor: pointer;
