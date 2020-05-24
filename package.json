@@ -1,0 +1,26 @@
+{
+  "name": "english_c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojan-morvai/english_practice.git"
+  },
+  "author": "Bojan Morvai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bojan-morvai/english_practice/issues"
+  },
+  "homepage": "https://github.com/bojan-morvai/english_practice#readme"
+}
