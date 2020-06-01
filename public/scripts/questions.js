@@ -452,7 +452,7 @@ const state_local = [
         word:'stage',
         before_answer:"I",
         after_answer:"more patience left.",
-        answers: ["Reached the stage when I had no"]
+        answers: ["reached the stage when I had no"]
     },
     {
         question:"It is likely that whe will get very angry when she finds out.",
