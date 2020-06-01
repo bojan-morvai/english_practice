@@ -365,16 +365,16 @@ const state_local = [
     },
     {
         question:"If you don't know what you're doing, you shouldn't dismantle the clock.",
-        word:"appart",
+        word:"apart",
         before_answer:"Don't",
         after_answer:"you know what you are doing.",
         answers: ["take the clock apart unless"]
     },
     {
-        question:"Will Tom be able to type as well now that he's broken his thumb.",
+        question:"Will Tom be able to type as well now that he's broken his thumb?",
         word:'affect',
         before_answer:"Will Tom's",
-        after_answer:"to type.",
+        after_answer:"to type?",
         answers: ["broken thumb affect his ability"]
     },
     {
@@ -383,5 +383,89 @@ const state_local = [
         before_answer:"Jane will always wish that",
         after_answer:"the opportunity to go to drama school.",
         answers: ["she hadn't turned down"]
+    },
+    {
+        question:"John has hinted that he doesn't wish to remain in the group any longer.",
+        word:'hint',
+        before_answer:"John has",
+        after_answer:"wishes to remain in the group.",
+        answers: ["given a hint that he no longer"]
+    },
+    {
+        question:"Five actors were competing for the leading role in the play.",
+        word:'contention',
+        before_answer:"There",
+        after_answer:"the leading role in the play.",
+        answers: ["were five actors in contention for"]
+    },
+    {
+        question:"She was concentrating so hard on her work that she didn't notice when I came in.",
+        word:'wrapped',
+        before_answer:"She was",
+        after_answer:"that she didn't notice when I came in.",
+        answers: ["so wrapped up in her work"]
+    },
+    {
+        question:"They still haven't found out what caused the accident.",
+        word:'cause',
+        before_answer:"They have yet",
+        after_answer:"the accident was.",
+        answers: ["to find out what the cause of"]
+    },
+    {
+        question:"I reluctantly signed the contract.",
+        word:'signature',
+        before_answer:"It was with",
+        after_answer:"on the contract.",
+        answers: ["reluctance that I put my signature"]
+    },
+    {
+        question:"Suzanne is far superior to me in terms of technical knowledge.",
+        word:'match',
+        before_answer:"When it comes",
+        after_answer:"for Suzanne.",
+        answers: ["to technical knowledge I'm no match"]
+    },
+    {
+        question:"Once I made sure there was no reason to be afraid, I went ahead.",
+        word:'fear',
+        before_answer:"Having satisfied",
+        after_answer:", I went ahead.",
+        answers: ["myself there was nothing to fear"]
+    },
+    {
+        question:"The manager praised one particular player.",
+        word:'singled',
+        before_answer:"One particular player",
+        after_answer:"praise by the manager.",
+        answers: ["was singled out for"]
+    },
+    {
+        question:"He denied the accusation unconvincingly, which made me think he was guilty.",
+        word:'led',
+        before_answer:"His",
+        after_answer:"believe that he was guilty.",
+        answers: ["unconvincing denial led me to"]
+    },
+    {
+        question:"There came a time when I completely ran out of patience.",
+        word:'stage',
+        before_answer:"I",
+        after_answer:"more patience left.",
+        answers: ["Reached the stage when I had no"]
+    },
+    {
+        question:"It is likely that whe will get very angry when she finds out.",
+        word:'liable',
+        before_answer:"She",
+        after_answer:"fit when she finds out.",
+        answers: ["is liable to have a"]
+    },
+    {
+        question:"Being inexperienced was a disadvantage to her when she applied for promotion.",
+        word:'counted',
+        before_answer:"Her",
+        after_answer:"when she applied for promotion.",
+        answers: ["inexperience counted against her"]
     },
 ];
