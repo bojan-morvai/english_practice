@@ -298,7 +298,7 @@ const state_local = [
         word:'prompted',
         before_answer:"I don't know",
         after_answer:"a decision.",
-        answers: ["what prompted him to make so extraordinary"]
+        answers: ["what prompted Fred to make so extraordinary"]
     },
     {
         question:"Inefficient treatment of customers creates a bad impression of the company.",
@@ -424,7 +424,7 @@ const state_local = [
         word:'match',
         before_answer:"When it comes",
         after_answer:"for Suzanne.",
-        answers: ["to technical knowledge I'm no match"]
+        answers: ["to technical knowledge I'm no match","to technical knowledge I am no match"]
     },
     {
         question:"Once I made sure there was no reason to be afraid, I went ahead.",

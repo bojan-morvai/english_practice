@@ -181,7 +181,7 @@ h1 {
 
 .restart-answers {
   border-radius: 12px;
-  background-color: #c900FF;
+  background-color: #c900ff;
   font-size: 0.75rem;
   width: 5rem;
   position: absolute;
@@ -192,6 +192,46 @@ h1 {
 
 .restart-answers:focus {
   outline: none;
+}
+
+.award {
+  display: none;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0 0 50px black;
+          box-shadow: 0 0 50px black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  z-index: 99;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.award img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.award h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 95;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 878px) {
@@ -217,6 +257,15 @@ h1 {
   .assignment-section .buttons-space {
     margin-bottom: 6rem;
   }
+  .award {
+    width: 430px;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .award {
+    width: 320px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -229,6 +278,9 @@ h1 {
   }
   .restart-answers {
     top: 79%;
+  }
+  .award {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

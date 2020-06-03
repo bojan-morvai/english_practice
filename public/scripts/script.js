@@ -14,6 +14,9 @@ const switch_dict = document.querySelector('#h1-tab-dictionary');
 const dict_section = document.querySelector('.dict-section');
 const assignment_section = document.querySelector('.assignment-section');
 const link_dict = document.querySelector('#link-dict');
+const award_div = document.querySelector('.award');
+const award_pic = document.querySelector('#award-pic');
+const award_text = document.querySelector('#award-text');
 
 // Headline click 'Dictionary' set game to 'Dictionary'
 switch_dict.addEventListener('click', () => {
@@ -36,6 +39,7 @@ let state = [];
 let state_index;
 let which_game = 'sentences';
 let end_game = false;
+let corr_answer_counter = 0;
 
 /** For counting correct answers on all questions. After two correct answers we don't want to get that question until restart;
 this function adds counter of correct answers properties on each sentence object */
@@ -183,7 +187,51 @@ const answering_correct = () => {
 		: (state[state_index].firstCorrectAnswer = true);
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
+	award();
 };
+
+// Awarding by invoking function that shows image and text on given fixed number of correct answers
+const award = () => {
+	corr_answer_counter++;
+	switch(corr_answer_counter){
+		case 50:
+			correct_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
+			break;
+		case 100:
+			correct_award('/images/squ.jpg', 'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!');
+			break;
+		case state.length*2:
+			correct_award('/images/fox.jpg', 'You did it! There is no more questions... What an impressive achievement! This cute fox is so happy for you!');
+			break;
+	}
+}
+
+// Backdrop shown when showing award picture
+const create_backdrop = () => {
+	const backdrop = document.createElement('div');
+	backdrop.classList.add('backdrop');
+	document.body.appendChild(backdrop)
+}
+
+// Removing backdrop from DOM
+const remove_backdrop = () => {
+	const backdrop = document.querySelector('.backdrop');
+	backdrop.parentNode.removeChild(backdrop);
+}
+
+// Showing award image and text 
+const correct_award = (url, text) => {
+	create_backdrop();
+	award_div.classList.add('show');
+	award_pic.setAttribute('src', url);
+	award_text.textContent = text;
+}
+
+// Remove award picture and text by clicking on it
+award_div.addEventListener('click', ()=> {
+	remove_backdrop();
+	award_div.classList.remove('show');
+})
 
 // When user answers wrong, show icon, fade out icon
 const answering_wrong = () => {
@@ -228,6 +276,7 @@ const restart_answers = () => {
 	button_check.disabled = true;
 	button_dont_know.disabled = true;
 	end_game = false;
+	corr_answer_counter = 0;
 };
 
 // Helper function for setting text areas. Default values are empty strings
