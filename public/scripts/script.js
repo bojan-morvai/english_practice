@@ -40,6 +40,14 @@ let state_index;
 let which_game = 'sentences';
 let end_game = false;
 let corr_answer_counter = 0;
+let rand_num;
+
+// Set random number based on parimeters for random reward
+const set_random_number = () => {
+	do{
+		rand_num = Math.floor(Math.random() * state.length*2) + 1
+	}while(rand_num<=2 || rand_num===49 || rand_num===50 || rand_num===99 || rand_num===100 || rand_num>=state.length*2-2)
+}
 
 /** For counting correct answers on all questions. After two correct answers we don't want to get that question until restart;
 this function adds counter of correct answers properties on each sentence object */
@@ -67,6 +75,7 @@ fetch('/get-sentences')
 			} else {
 				state = [ ...data ];
 			}
+			set_random_number()
 			setAnswerCounter();
 		});
 	})
@@ -74,6 +83,7 @@ fetch('/get-sentences')
 		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
 		console.log(err);
 		state = [ ...state_local ];
+		set_random_number()
 		setAnswerCounter();
 	});
 
@@ -194,14 +204,23 @@ const answering_correct = () => {
 const award = () => {
 	corr_answer_counter++;
 	switch(corr_answer_counter){
-		case 50:
-			correct_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
+		case 49:
+			set_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
 			break;
-		case 100:
-			correct_award('/images/squ.jpg', 'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!');
+		case 99:
+			set_award('/images/squ.jpg', 'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!');
+			break;
+		case rand_num-1:
+			set_award('/images/kitten.jpg','Meow, meow, meow! This cute kitten is looking for his mom.');
+			break;
+		case state.length*2-1:
+			set_award('/images/fox.jpg', 'You did it! There is no more questions... Such an impressive achievement! This cute fox is so happy for you!');
 			break;
 		case state.length*2:
-			correct_award('/images/fox.jpg', 'You did it! There is no more questions... What an impressive achievement! This cute fox is so happy for you!');
+		case 50:
+		case 100:
+		case rand_num:
+			show_award();
 			break;
 	}
 }
@@ -219,12 +238,16 @@ const remove_backdrop = () => {
 	backdrop.parentNode.removeChild(backdrop);
 }
 
-// Showing award image and text 
-const correct_award = (url, text) => {
-	create_backdrop();
-	award_div.classList.add('show');
+// Set award section img src and h2 text
+const set_award = (url, text) => {
 	award_pic.setAttribute('src', url);
 	award_text.textContent = text;
+}
+
+// Showing award image and text 
+const show_award = () => {
+	create_backdrop();
+	award_div.classList.add('show');
 }
 
 // Remove award picture and text by clicking on it
@@ -271,6 +294,7 @@ const show_correct_answer = () => {
 // Restart game, invokes function for restarting each sentence answered properties, set end_game variable to false, and buttons to appropriate settings
 const restart_answers = () => {
 	setAnswerCounter();
+	set_random_number();
 	set_text_areas('Questions restarted');
 	button_next.disabled = false;
 	button_check.disabled = true;
