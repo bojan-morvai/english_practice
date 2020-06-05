@@ -41,9 +41,10 @@ let which_game = 'sentences';
 let end_game = false;
 let corr_answer_counter = 0;
 let rand_num;
+let backdrop_active = true;
 
 // Set random number based on parimeters for random reward
-const set_random_number = () => {
+const set_reward_rand_number = () => {
 	do{
 		rand_num = Math.floor(Math.random() * state.length*2) + 1
 	}while(rand_num<=2 || rand_num===49 || rand_num===50 || rand_num===99 || rand_num===100 || rand_num>=state.length*2-2)
@@ -75,7 +76,8 @@ fetch('/get-sentences')
 			} else {
 				state = [ ...data ];
 			}
-			set_random_number()
+			remove_backdrop();
+			set_reward_rand_number()
 			setAnswerCounter();
 		});
 	})
@@ -83,7 +85,8 @@ fetch('/get-sentences')
 		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
 		console.log(err);
 		state = [ ...state_local ];
-		set_random_number()
+		remove_backdrop();
+		set_reward_rand_number()
 		setAnswerCounter();
 	});
 
@@ -118,6 +121,7 @@ const get_word = () => {
 			button_dont_know.disabled = true;
 			text_input.disabled = true;
 		} else {
+			check_typeof_question();
 			set_text_areas(
 				state[state_index].question,
 				state[state_index].word,
@@ -130,6 +134,11 @@ const get_word = () => {
 		set_text_areas('Translate', dictionary[state_index].english);
 	}
 };
+
+// More space on input line if there is no text before it
+const check_typeof_question = () => {
+	state[state_index].before_answer.length === 0 ? text_input.style.width = '32rem' : text_input.style.width = null;
+}
 
 /**  If game is 'Sentences', get random index of sentence object which is not been answered correctly two times. Set 'end_game' to true if
  all sentences has been answered correctly two times */
@@ -181,11 +190,11 @@ const check_answer_dict = () => {
 
 // Pressing 'Enter' for check answer, 'down arrow' for 'don't know', and 'left arrow' for 'next'
 document.addEventListener('keydown', (event) => {
-	if (event.key === 'Enter' && !button_check.disabled) {
+	if (event.key === 'Enter' && !button_check.disabled && !backdrop_active) {
 		check_button_handler();
-	} else if (event.keyCode === 39 && !button_next.disabled) {
+	} else if (event.keyCode === 39 && !button_next.disabled && !backdrop_active) {
 		get_word();
-	} else if (event.keyCode === 40 && !button_dont_know.disabled) {
+	} else if (event.keyCode === 40 && !button_dont_know.disabled && !backdrop_active) {
 		show_correct_answer();
 	}
 });
@@ -225,15 +234,23 @@ const award = () => {
 	}
 }
 
-// Backdrop shown when showing award picture
+// Backdrop shown when showing award picture and before loading questions
 const create_backdrop = () => {
+	backdrop_active = true;
 	const backdrop = document.createElement('div');
 	backdrop.classList.add('backdrop');
-	document.body.appendChild(backdrop)
+	document.body.appendChild(backdrop);
+	if(state.length===0){
+		const loading = document.createElement('h1');
+		loading.style.cssText = "position: fixed; left: 50%; top: 50%; margin: auto; color: azure; transform: translate(-50%, -50%); font-size: 3rem;" 
+		loading.textContent = 'Loading . . .'
+		backdrop.appendChild(loading)
+	}
 }
 
 // Removing backdrop from DOM
 const remove_backdrop = () => {
+	backdrop_active = false;
 	const backdrop = document.querySelector('.backdrop');
 	backdrop.parentNode.removeChild(backdrop);
 }
@@ -294,7 +311,7 @@ const show_correct_answer = () => {
 // Restart game, invokes function for restarting each sentence answered properties, set end_game variable to false, and buttons to appropriate settings
 const restart_answers = () => {
 	setAnswerCounter();
-	set_random_number();
+	set_reward_rand_number();
 	set_text_areas('Questions restarted');
 	button_next.disabled = false;
 	button_check.disabled = true;
@@ -310,3 +327,6 @@ const set_text_areas = (questionText = '', wordText = '', beforeText = '', after
 	before_answer.textContent = beforeText;
 	after_answer.textContent = afterText;
 };
+
+// Create backdrop before loading questions
+create_backdrop()

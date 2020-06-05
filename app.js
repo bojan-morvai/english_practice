@@ -28,16 +28,6 @@ app.get('/dictionary', (req, res) => {
 	res.render('dictionary.ejs');
 });
 
-// Sentences.create(
-// 	{
-//         question: "I'm doubtfull that this plan is very realistic.",
-//         word: 'reservations',
-//         before_answer:'I',
-//         after_answer:'realistic this plan is.',
-//         answers: ['have reservations about how','have some reservations about how','have some reservations as to how','have reservations as to how','have reservations concerning how','have some reservations concerning how']
-//     },
-// );
-
 app.get('/get-sentences', (req, res) => {
 	Sentences.find({}, function(err, allSentences) {
 		if (err) {

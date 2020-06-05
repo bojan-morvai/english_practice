@@ -468,4 +468,214 @@ const state_local = [
         after_answer:"when she applied for promotion.",
         answers: ["inexperience counted against her"]
     },
+    {
+        question:"This is a very serious accusation and you shouldn't treat it so lightly.",
+        word:'',
+        before_answer:"This is too",
+        after_answer:".",
+        answers: ["serious an accusation to be treated so lightly"]
+    },
+    {
+        question:"it wasn't hard to persuade the children to watch television.",
+        word:'',
+        before_answer:"The children needed",
+        after_answer:".",
+        answers: ["no persuation to watch television"]
+    },
+    {
+        question:"Wendy said she was against the proposal.",
+        word:'',
+        before_answer:"Wendy expressed",
+        after_answer:".",
+        answers: ["her disapproval of the proposal","her objection to the proposal"]
+    },
+    {
+        question:"That woman looks rather like my mother.",
+        word:'',
+        before_answer:"That woman bears",
+        after_answer:".",
+        answers: ["a strong resemblance to my mother"]
+    },
+    {
+        question:"You certainly couldn't accuse Steve of being mean.",
+        word:'',
+        before_answer:"Steve was nothing",
+        after_answer:".",
+        answers: ["but generous","short of being mean"]
+    },
+    {
+        question:"The rescue attempt had to be called off because the storm was so severe.",
+        word:'',
+        before_answer:"Such",
+        after_answer:".",
+        answers: ["was the severity of the storm that the rescue attempt had to be called off"]
+    },
+    {
+        question:"I'm not going any further till I've had a drink.",
+        word:'',
+        before_answer:"This",
+        after_answer:".",
+        answers: ["is as far as I'm going without a drink","is the farthest I'm going to go without a drink","is as far as I am going without a drink","is the farthest I am going to go without a drink"]
+    },
+    {
+        question:"It's entirely your own fault that you've put on so much weight over the holiday.",
+        word:'',
+        before_answer:"You have no one",
+        after_answer:".",
+        answers: ["else to blame but yourself for putting so much weight over the holiday"]
+    },
+    {
+        question:"The thief was seen by an observant motorist.",
+        word:'caught',
+        before_answer:"",
+        after_answer:".",
+        answers: ["An observant motorist caught an eye of the thief"]
+    },
+    {
+        question:"I made an attempt to force the door open but I couldn't do it.",
+        word:'go',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I had a go at forcing the door open but I could'n do it"]
+    },
+    {
+        question:"The Finance Committee will not meet again until mid-December.",
+        word:'held',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The Finance Committee meeting will not be held again until mid-December"]
+    },
+    {
+        question:"A new financial arrangement has been made between the management and the unions.",
+        word:'struck',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The management and the unions have struck a new financial arrangement"]
+    },
+    {
+        question:"Morris complains all the time about his new boss.",
+        word:'stops',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Morris never stops complaining about his new boss"]
+    },
+    {
+        question:"The company director decided that new offices would be too expensive.",
+        word:'conclustion',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The company director came to the conclusion that the new offices would be too expensive"]
+    },
+    {
+        question:"The government tried unsuccessfully to secure a large loan.",
+        word:'avail',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The government tried to no avail to secure a large loan","The government tried to secure a large loan but to no avail"]
+    },
+    {
+        question:"Please do not send any money with this order form.",
+        word:'asked',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Customers are asked not to send any money with this order form","Clients are asked not to send any money with this order form"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"I don't want",
+        after_answer:"be any trouble over paying this bill.",
+        answers: ["there to"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Because the play differs in style from his other works, it is thought by most experts",
+        after_answer:"by Shakespeare.",
+        answers: ["not to have been written"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"That photograph doesn't",
+        after_answer:"justice: she's much better-looking.",
+        answers: ["do her"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"John is unbelievably trusting. It's the third time he",
+        after_answer:"for the same trick.",
+        answers: ["has fallen"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Rebecca doesn't speak anything",
+        after_answer:"languages as her younger brother.",
+        answers: ["like as many"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Mrs Brooks told the doctor that she",
+        after_answer:"from headaches for several days.",
+        answers: ["had been suffering"]
+    },
+    {
+        question:"Selena really has no idea of the difficulty of finding a parking place.",
+        word:'how',
+        before_answer:"Little does",
+        after_answer:"find a parking place.",
+        answers: ["Selena know how difficult is to","Selena know how difficult it was to"]
+    },
+    {
+        question:"The first candidate impressed the interviewers immediately.",
+        word:'made',
+        before_answer:"The first candidate",
+        after_answer:"the interviewers.",
+        answers: ["made an immediate impression on"]
+    },
+    {
+        question:"I felt relaxed at Gita's house because her parents greeted me so warmly.",
+        word:'ease',
+        before_answer:"Gita's parents",
+        after_answer:"the warmth of their greeting.",
+        answers: ["put me at ease with"]
+    },
+    {
+        question:"The area was completely devoid of vegetation.",
+        word:'whatsoever',
+        before_answer:"There",
+        after_answer:"the area.",
+        answers: ["was no vegetation whatsoever in"]
+    },
+    {
+        question:"No matter what happens, we will never do business with that firm again.",
+        word:'ever',
+        before_answer:"Under",
+        after_answer:"with that firm again.",
+        answers: ["no circumstances will we ever do business"]
+    },
+    {
+        question:"John concluded that he should take the job.",
+        word:'came',
+        before_answer:"John",
+        after_answer:"he should take the job.",
+        answers: ["came to the conclusion that"]
+    },
+    {
+        question:"Oskar didn't feel like going out last night.",
+        word:'mood',
+        before_answer:"Oskar",
+        after_answer:"last night.",
+        answers: ["was not in the mood to go out","was not in the mood for going out"]
+    },
+    {
+        question:"The news that the Prime Minister had resigned came as a great shock to everyone.",
+        word:'aback',
+        before_answer:"Everyone",
+        after_answer:"Prime Minister's resignation.",
+        answers: ["was taken aback by the"]
+    },
 ];
