@@ -15,6 +15,8 @@ mongoose
 	});
 mongoose.set('useFindAndModify', false);
 
+
+// Populate this array with objects to insert into DB
 const thingsToInsert = []
 
 Sentences.insertMany([...thingsToInsert], (err) => {

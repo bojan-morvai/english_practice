@@ -476,11 +476,11 @@ const state_local = [
         answers: ["serious an accusation to be treated so lightly"]
     },
     {
-        question:"it wasn't hard to persuade the children to watch television.",
+        question:"It wasn't hard to persuade the children to watch television.",
         word:'',
         before_answer:"The children needed",
         after_answer:".",
-        answers: ["no persuation to watch television"]
+        answers: ["no persuasion to watch television"]
     },
     {
         question:"Wendy said she was against the proposal.",
@@ -536,7 +536,7 @@ const state_local = [
         word:'go',
         before_answer:"",
         after_answer:".",
-        answers: ["I had a go at forcing the door open but I could'n do it"]
+        answers: ["I had a go at forcing the door open but I couldn't do it"]
     },
     {
         question:"The Finance Committee will not meet again until mid-December.",
@@ -677,5 +677,166 @@ const state_local = [
         before_answer:"Everyone",
         after_answer:"Prime Minister's resignation.",
         answers: ["was taken aback by the"]
+    },
+    {
+        question:"So that we would be able to leave the room quickly, Matthew stood by the door.",
+        word:'positioned',
+        before_answer:"Matthew",
+        after_answer:"as to be able to leave the room quickly.",
+        answers: ["positioned himself by the door"]
+    },
+    {
+        question:"In my opinion, it was an absolute miracle that they survived the accident.",
+        word:'short',
+        before_answer:"The fact that they survived the accident was",
+        after_answer:", in my opinion.",
+        answers: ["nothing short of a miracle"]
+    },
+    {
+        question:"I tried as hard as I could to make sure that this problem would not arise.",
+        word:'power',
+        before_answer:"I",
+        after_answer:"this problem from arising.",
+        answers: ["did everything in my power to stop"]
+    },
+    {
+        question:"I didn't think it was reasonable of you to complain so much about the service.",
+        word:'justified',
+        before_answer:"I don't think you",
+        after_answer:"fuss about the service.",
+        answers: ["were justified in making such a"]
+    },
+    {
+        question:"Laura was faced with a lot of problems during her childhood.",
+        word:'contend',
+        before_answer:"Lora had a",
+        after_answer:"during her childhood.",
+        answers: ["lot of problems to contend with"]
+    },
+    {
+        question:"The audience suddenly started to applaud loudly.",
+        word:'sudden',
+        before_answer:"All",
+        after_answer:"from the audience.",
+        answers: ["of a sudden, there was loud applause"]
+    },
+    {
+        question:"Immediately after winning the race, Sandy began training for the next one.",
+        word:'had',
+        before_answer:"No",
+        after_answer:"she began training for the next one.",
+        answers: ["sooner had Sandy won the race than"]
+    },
+    {
+        question:"When a novel is made into a film, the author may have to tolerate changes to his or her original work.",
+        word:'put',
+        before_answer:"When a novel is made into a film, the author may have no choice",
+        after_answer:"being made to his or her original work.",
+        answers: ["but to put up with changes"]
+    },
+    {
+        question:"The newspaper article said that the runner wasn't old enough for international competitions.",
+        word:'too',
+        before_answer:"The newspaper article described",
+        after_answer:"internationally.",
+        answers: ["the runner as too young to compete"]
+    },
+    {
+        question:"Owing to the companie's financial problems, several of their retail outlets were closed.",
+        word:'resulted',
+        before_answer:"Financial problems",
+        after_answer:"several of the companies retail outlets.",
+        answers: ["resulted in closure of"]
+    },
+    {
+        question:"Rumour has it that the famous couple are about to announce their engagement.",
+        word:'verge',
+        before_answer:"The famous couple are said",
+        after_answer:"their engagement",
+        answers: ["to be on the verge of announcing"]
+    },
+    {
+        question:"You can borrow Dad's car, but don't blame me when it breaks down.",
+        word:'hold',
+        before_answer:"You can borrow Dad's car but",
+        after_answer:"breaking down.",
+        answers: ["don't hold me responsible for its"]
+    },
+    {
+        question:"It's unfortunate that I came to see him when he wasn't here.",
+        word:'going',
+        before_answer:"If I",
+        after_answer:"here, I wouldn't have come.",
+        answers: ["had known he wasn't going to be"]
+    },
+    {
+        question:"In order to discover how the disagreement had started, Mary talked to each child separately.",
+        word:'one',
+        before_answer:"Mary talked to the children",
+        after_answer:"attempt to discover how the disagreement had started.",
+        answers: ["one by one in her"]
+    },
+    {
+        question:"Kim hasn't had as much success with her project as she had hoped.",
+        word:'liked',
+        before_answer:"Kim",
+        after_answer:"more successful.",
+        answers: ["would had liked her project to be"]
+    },
+    {
+        question:"It's unfortunate that I came to see him when he wasn't here.",
+        word:'going',
+        before_answer:"If I",
+        after_answer:"here, I wouldn't have come.",
+        answers: ["had known he wasn't going to be"]
+    },
+    {
+        question:"David played the main role when the proposal was drafted.",
+        word:'instrumental',
+        before_answer:"David",
+        after_answer:"of the proposal.",
+        answers: ["was instrumental in the drafting"]
+    },
+    {
+        question:"If you hadn't changed our original agreement, everything would have been fine.",
+        word:'stuck',
+        before_answer:"Had",
+        after_answer:"agreed, everything would have been fine.",
+        answers: ["you stuck to what we originally"]
+    },
+    {
+        question:"I think you should have some consideration for those who don't have lives as privileged as yours.",
+        word:'spare',
+        before_answer:"I think you should",
+        after_answer:"lives aren't as privileged as yours.",
+        answers: ["spare a thought for those whose"]
+    },
+    {
+        question:"I don't want to give up while some hope of success remained.",
+        word:'defeat',
+        before_answer:"I was loath",
+        after_answer:"some hope of success.",
+        answers: ["to admit defeat while there was still"]
+    },
+    {
+        question:"Afted a long hard journey, I cheered up when I saw my home again.",
+        word:'sight',
+        before_answer:"After a long hard journey my spirits",
+        after_answer:"of my home again.",
+        answers: ["rose when I cought sight","were lifted when I cought sight"]
+    },
+    {
+        question:"Your attitude to life would be greatly improved by regular exercise.",
+        word:'wonders',
+        before_answer:"Regular exercise would",
+        after_answer:"at life.",
+        answers: ["do wonders for the way you look"]
+    },
+    {
+        question:"Robert was offended when he was left out of the team.",
+        word:'exception',
+        before_answer:"Robert",
+        after_answer:"left out of the team.",
+        answers: ["took exception to being"]
     },
 ];

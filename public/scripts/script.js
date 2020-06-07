@@ -75,19 +75,19 @@ fetch('/get-sentences')
 				state = [ ...state_local ];
 			} else {
 				state = [ ...data ];
-			}
-			remove_backdrop();
-			set_reward_rand_number()
+			}		
+			set_reward_rand_number();
 			setAnswerCounter();
+			remove_backdrop();
 		});
 	})
 	.catch((err) => {
 		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
 		console.log(err);
 		state = [ ...state_local ];
-		remove_backdrop();
-		set_reward_rand_number()
+		set_reward_rand_number();
 		setAnswerCounter();
+		remove_backdrop();
 	});
 
 // When user click on headline 'Sentences' or 'Dictionary' restart all fields
