@@ -45,10 +45,19 @@ let backdrop_active = true;
 
 // Set random number based on parimeters for random reward
 const set_reward_rand_number = () => {
-	do{
-		rand_num = Math.floor(Math.random() * state.length*2) + 1
-	}while(rand_num<=2 || rand_num===49 || rand_num===50 || rand_num===99 || rand_num===100 || rand_num>=state.length*2-2)
-}
+	do {
+		rand_num = Math.floor(Math.random() * state.length * 2) + 1;
+	} while (
+		rand_num < 54 ||
+		rand_num === 99 ||
+		rand_num === 100 ||
+		rand_num === 101 ||
+		rand_num === 199 ||
+		rand_num === 200 ||
+		rand_num === 201 ||
+		rand_num >= state.length * 2 - 2
+	);
+};
 
 /** For counting correct answers on all questions. After two correct answers we don't want to get that question until restart;
 this function adds counter of correct answers properties on each sentence object */
@@ -75,7 +84,7 @@ fetch('/get-sentences')
 				state = [ ...state_local ];
 			} else {
 				state = [ ...data ];
-			}		
+			}
 			set_reward_rand_number();
 			setAnswerCounter();
 			remove_backdrop();
@@ -137,8 +146,10 @@ const get_word = () => {
 
 // More space on input line if there is no text before it
 const check_typeof_question = () => {
-	state[state_index].before_answer.length === 0 ? text_input.style.width = '32rem' : text_input.style.width = null;
-}
+	state[state_index].before_answer.length === 0
+		? (text_input.style.width = '32rem')
+		: (text_input.style.width = null);
+};
 
 /**  If game is 'Sentences', get random index of sentence object which is not been answered correctly two times. Set 'end_game' to true if
  all sentences has been answered correctly two times */
@@ -212,27 +223,40 @@ const answering_correct = () => {
 // Awarding by invoking function that shows image and text on given fixed number of correct answers
 const award = () => {
 	corr_answer_counter++;
-	switch(corr_answer_counter){
+	switch (corr_answer_counter) {
 		case 49:
 			set_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
 			break;
 		case 99:
-			set_award('/images/squ.jpg', 'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!');
+			set_award(
+				'/images/squ.jpg',
+				'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!'
+			);
 			break;
-		case rand_num-1:
-			set_award('/images/kitten.jpg','Meow, meow, meow! This cute kitten is looking for his mom.');
+		case rand_num - 1:
+			set_award('/images/kitten.jpg', 'Meow, meow, meow! This cute kitten is looking for his mom.');
 			break;
-		case state.length*2-1:
-			set_award('/images/fox.jpg', 'You did it! There is no more questions... Such an impressive achievement! This cute fox is so happy for you!');
+		case 199:
+			set_award(
+				'/images/coon.jpg',
+				'Wow, you are showing some real tenacity here! Like this little tenacious raccoon! You are at 200! '
+			);
 			break;
-		case state.length*2:
+		case state.length * 2 - 1:
+			set_award(
+				'/images/fox.jpg',
+				'You did it! There is no more questions... Such an impressive achievement! This cute fox is so happy for you!'
+			);
+			break;
+		case state.length * 2:
 		case 50:
 		case 100:
+		case 200:
 		case rand_num:
 			show_award();
 			break;
 	}
-}
+};
 
 // Backdrop shown when showing award picture and before loading questions
 const create_backdrop = () => {
@@ -240,38 +264,39 @@ const create_backdrop = () => {
 	const backdrop = document.createElement('div');
 	backdrop.classList.add('backdrop');
 	document.body.appendChild(backdrop);
-	if(state.length===0){
+	if (state.length === 0) {
 		const loading = document.createElement('h1');
-		loading.style.cssText = "position: fixed; left: 50%; top: 50%; margin: auto; color: azure; transform: translate(-50%, -50%); font-size: 3rem;" 
-		loading.textContent = 'Loading . . .'
-		backdrop.appendChild(loading)
+		loading.style.cssText =
+			'position: fixed; left: 50%; top: 50%; margin: auto; color: azure; transform: translate(-50%, -50%); font-size: 3rem;';
+		loading.textContent = 'Loading . . .';
+		backdrop.appendChild(loading);
 	}
-}
+};
 
 // Removing backdrop from DOM
 const remove_backdrop = () => {
 	backdrop_active = false;
 	const backdrop = document.querySelector('.backdrop');
 	backdrop.parentNode.removeChild(backdrop);
-}
+};
 
 // Set award section img src and h2 text
 const set_award = (url, text) => {
 	award_pic.setAttribute('src', url);
 	award_text.textContent = text;
-}
+};
 
-// Showing award image and text 
+// Showing award image and text
 const show_award = () => {
 	create_backdrop();
 	award_div.classList.add('show');
-}
+};
 
 // Remove award picture and text by clicking on it
-award_div.addEventListener('click', ()=> {
+award_div.addEventListener('click', () => {
 	remove_backdrop();
 	award_div.classList.remove('show');
-})
+});
 
 // When user answers wrong, show icon, fade out icon
 const answering_wrong = () => {
@@ -329,4 +354,4 @@ const set_text_areas = (questionText = '', wordText = '', beforeText = '', after
 };
 
 // Create backdrop before loading questions
-create_backdrop()
+create_backdrop();

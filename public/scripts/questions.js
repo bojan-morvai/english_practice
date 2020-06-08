@@ -823,7 +823,7 @@ const state_local = [
         word:'sight',
         before_answer:"After a long hard journey my spirits",
         after_answer:"of my home again.",
-        answers: ["rose when I cought sight","were lifted when I cought sight"]
+        answers: ["rose when I caught sight","were lifted when I caught sight"]
     },
     {
         question:"Your attitude to life would be greatly improved by regular exercise.",
@@ -838,5 +838,103 @@ const state_local = [
         before_answer:"Robert",
         after_answer:"left out of the team.",
         answers: ["took exception to being"]
+    },
+    {
+        question:"If Tony hadn't interfered, there would have been no problems yesterday, I'm sure.",
+        word:'smoothly',
+        before_answer:"Without Tony's",
+        after_answer:"yesterday, I'm sure.",
+        answers: ["interference everything would have run smoothly"]
+    },
+    {
+        question:"He didn't want to get into a position where he might lose all his money.",
+        word:'possibility',
+        before_answer:"He didn't want to expose",
+        after_answer:"all his money.",
+        answers: ["himself to the possibility of losing"]
+    },
+    {
+        question:"The company received an enormous number of calls responding to the advert.",
+        word:'deluged',
+        before_answer:"The company",
+        after_answer:"response to the advert.",
+        answers: ["was deluged with calls in"]
+    },
+    {
+        question:"The manager said that he had paid attention to my complaints and would take the appropriate action.",
+        word:'note',
+        before_answer:"The manager said that he had",
+        after_answer:"accordingly.",
+        answers: ["taken note of my complaints and would take appropriate action"]
+    },
+    {
+        question:"His behaviour at the conference gave him the bad reputation he now has.",
+        word:'conducted',
+        before_answer:"The way",
+        after_answer:"in the bad reputation he now has.",
+        answers: ["he conducted himself at the conference has resulted"]
+    },
+    {
+        question:"Her work didn't meet the standards that were considered acceptable.",
+        word:'conform',
+        before_answer:"Her work",
+        after_answer:"acceptable standards.",
+        answers: ["didn't conform to what were considered"]
+    },
+    {
+        question:"The film was so controversial that it was banned in several parts of the world.",
+        word:'caused',
+        before_answer:"Such was",
+        after_answer:"the film that it was banned in several parts of the world.",
+        answers: ["the controversy coused by"]
+    },
+    {
+        question:"He had no idea what was going happen to him when he walked into that room.",
+        word:'store',
+        before_answer:"Little",
+        after_answer:"him when he walked into that room.",
+        answers: ["did he know what was in store for"]
+    },
+    {
+        question:"You shouldn't let trivial matters worry you so much.",
+        word:'prey',
+        before_answer:"You shouldn't let trivial matters",
+        after_answer:"extent.",
+        answers: ["prey on you to such an"]
+    },
+    {
+        question:"He became famous but it cost him his privacy.",
+        word:'expense',
+        before_answer:"His rise",
+        after_answer:"of his privacy.",
+        answers: ["to fame was at the expense","to fame came at the expense"]
+    },
+    {
+        question:"I helped Ray, with the result that his business became successful.",
+        word:'favour',
+        before_answer:"I",
+        after_answer:"which his business became successful.",
+        answers: ["did Ray a favour as a result of","did Ray a favour because of","did Ray a favout due to"]
+    },
+    {
+        question:"I had to wait for the manager for almost an hour before he would see me.",
+        word:'best',
+        before_answer:"The manager kept",
+        after_answer:"an hour before he would see me.",
+        answers: ["me waiting for the best part of"]
+    },
+    {
+        question:"A spokesman said that the story was pure speculation.",
+        word:'dismissed',
+        before_answer:"The story",
+        after_answer:"than speculation by a spokesman.",
+        answers: ["was dismissed as nothing other","was dismissed as no more"]
+    },
+    {
+        question:"Antony wasn't at all discouraged by this bad experience.",
+        word:'put',
+        before_answer:"This bad experience",
+        after_answer:"least.",
+        answers: ["didn't put Antony off in the"]
     },
 ];
