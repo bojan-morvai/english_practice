@@ -91,7 +91,7 @@ const check_button_handler = () => {
 };
 
 // Get all sentences from MongoDB or local js file
-fetch('/get-sentefnces')
+fetch('/get-sentences')
 	.then((response) => {
 		if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
 
