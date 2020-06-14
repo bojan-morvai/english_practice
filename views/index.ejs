@@ -7,7 +7,8 @@
     <title>English Practice</title>
 </head>
 <body>
-    <h1 id='h1-tab-sentences' class='active'>Sentences</h1>
+    <h1 id='h1-tab-transformations' class='active'>Transformations</h1>
+    <h1 id='h1-tab-story' class=''>Story</h1>
     <h1 id='h1-tab-dictionary' class=''>Dictionary</h1>
     <section class='assignment-section'>
         <div class='award'>
@@ -15,6 +16,7 @@
             <h2 id='award-text'></h2>
         </div>
         <div class='sentence-space'>
+            
             <p class='given-sentence'>Question</p>
             <h5 class='word'>word</h5>
             <div class='answer-all'>
@@ -22,6 +24,7 @@
                 <input class='answer-input' type="text" placeholder="type your answer here" disabled>
                 <div class='answer-second'></div>
             </div>
+            <div class='story-space'></div>
         </div>    
         <div class='buttons-space'>
             <button class='dont-know' onclick="show_correct_answer()" disabled>I don't know</button>
@@ -35,7 +38,7 @@
         </div>
 
         <div class='correct-answer-space'>
-            <p class='correct-answer'></p>
+            <div class='correct-answer'></div>
         </div>
 
         <a id='link-dict' href="/dictionary">All words</a>
@@ -44,6 +47,7 @@
 
     <script src="/scripts/dictionary.js"></script>
     <script src='/scripts/questions.js'></script>
+    <script src="/scripts/stories.js"></script>
     <script src='/scripts/script.js'></script>
     
 </body>

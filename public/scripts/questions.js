@@ -515,7 +515,7 @@ const state_local = [
         word:'',
         before_answer:"This",
         after_answer:".",
-        answers: ["is as far as I'm going without a drink","is the farthest I'm going to go without a drink","is as far as I am going without a drink","is the farthest I am going to go without a drink"]
+        answers: ["is as far as I am going to go until I have had a drink","is as far as I'm going to go until I have had a drink","is as far as I will go until I have had a drink"]
     },
     {
         question:"It's entirely your own fault that you've put on so much weight over the holiday.",
@@ -886,7 +886,7 @@ const state_local = [
         word:'caused',
         before_answer:"Such was",
         after_answer:"the film that it was banned in several parts of the world.",
-        answers: ["the controversy coused by"]
+        answers: ["the controversy caused by"]
     },
     {
         question:"He had no idea what was going happen to him when he walked into that room.",
@@ -937,4 +937,130 @@ const state_local = [
         after_answer:"least.",
         answers: ["didn't put Antony off in the"]
     },
+    {
+        question:"Do you mind if I watch you while you paint?",
+        word:'objection',
+        before_answer:"Do you",
+        after_answer:"you while you paint.",
+        answers: ["have any objection to my watching"]
+    },
+    {
+        question:"Mick will give you lots of excuses for being late but don't believe any of them.",
+        word:'many',
+        before_answer:"No",
+        after_answer:"Mick gives you for being late, don't believe any of them.",
+        answers: ["matter how many excuses"]
+    },
+    {
+        question:"Immediately after his arrival things went wrong.",
+        word:'',
+        before_answer:"No sooner",
+        after_answer:".",
+        answers: ["had he arrived than things went wrong"]
+    },
+    {
+        question:"The company lent us an apartment as part of the deal.",
+        word:'loan',
+        before_answer:"As part of the deal, we were",
+        after_answer:"by the company.",
+        answers: ["given the loan of an apartment"]
+    },
+    {
+        question:"Coming second didn't make her feel any better because she only wanted to win.",
+        word:'consolation',
+        before_answer:"Coming second",
+        after_answer:"was all that mattered to her.",
+        answers: ["was no consolation because winning","was of no consolation because winning","was of no consolation to her because winning","was no consolation to her because winning"]
+    },
+    {
+        question:"Eventually, Jim admitted that he was responsible for the error.",
+        word:'owned',
+        before_answer:"Eventually, it",
+        after_answer:"been responsible for the error.",
+        answers: ["was Jim who owned up to having","was Jim that owned up to having","was Jim who owned up that he had","was Jim that owned up that he had"]
+    },
+    {
+        question:"Without your assistance, I could never have done this job so well.",
+        word:'assisted',
+        before_answer:"Had",
+        after_answer:", I could never have done this job so well.",
+        answers: ["you not assisted me"]
+    },
+    {
+        question:"It's impossible to predict how long it will take to do this job.",
+        word:'telling',
+        before_answer:"There is",
+        after_answer:"will take.",
+        answers: ["no way of telling how long this job"]
+    },
+    {
+        question:"Not many people buy that particular product these days.",
+        word:'demand',
+        before_answer:"There",
+        after_answer:"that particular product these days.",
+        answers: ["is not much demand for","is little demand for"]
+    },
+    {
+        question:"Nobody expected Natalia to resign.",
+        word:'came',
+        before_answer:"Natalia's",
+        after_answer:"everyone.",
+        answers: ["resignation came as a surprise to"]
+    },
+    {
+        question:"Attendance at the additional evening lectures is not obligatory for students.",
+        word:'under',
+        before_answer:"Students",
+        after_answer:"the additional evening lectures.",
+        answers: ["are under no obligation to attend"]
+    },
+    {
+        question:"You must keep this door closed at all times when the red light is illuminated.",
+        word:'account',
+        before_answer:"On",
+        after_answer:"this door when the red light is illuminated.",
+        answers: ["no account must you open"]
+    },
+    {
+        question:"You can't find pottery like this in any other part of the country.",
+        word:'type',
+        before_answer:"This is the only part of the country",
+        after_answer:"found.",
+        answers: ["where this type of pottery can be"]
+    },
+    {
+        question:"Natalie's friends talked her out of going to the concert alone.",
+        word:'dissuaded',
+        before_answer:"It was Natalie's friends",
+        after_answer:"to the concert alone.",
+        answers: ["who dissuaded her from going"]
+    },
+    {
+        question:"As a result of the bad weather, there may be delays on some international flights.",
+        word:'subject',
+        before_answer:"Due to the bad weather",
+        after_answer:"possible delays.",
+        answers: ["international flights will be subject to","international flights are subject to"]
+    },
+    {
+        question:"Lorraine was the only student to hand in her assignment on time.",
+        word:'exception',
+        before_answer:"With",
+        after_answer:"of the students handed in their assignment on time.",
+        answers: ["the exception of Lorraine none"]
+    },
+    {
+        question:"It never crossed my mind that the studio door might have been locked.",
+        word:'occurred',
+        before_answer:"It",
+        after_answer:"might have locked the studio door.",
+        answers: ["never occurred to me that someone"]
+    },
+    {
+        question:"Students at the school are not allowed to go into the Rainbow Disco.",
+        word:'bounds',
+        before_answer:"The Rainbow Disco",
+        after_answer:"students at the school.",
+        answers: ["is out of bounds to"]
+    }
 ];

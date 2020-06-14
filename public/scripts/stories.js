@@ -1,0 +1,111 @@
+const stories = [
+	{
+		headline: 'Letter From a Genius',
+		texts: [
+			"In 1912, the world's top mathematicians began to receive letters which were (1)",
+			'of incredibly complex formulae. They came from Madras, in India, (2)',
+			'a 23-year old accounts clerk named Srinivasa Ramanujan had seemingly (3)',
+			'up with hundreds of new solutions to known mathematical problems (4)',
+			'any form of assistance or training.<hr>For the most (5)',
+			", the professional mathematicians' response was the usual one (6)",
+			'faced with eccentric letters: they consigned them straight (7)',
+			'the bin. But in 1913 some reached G.H. Hardy, a leading authority in number theory at Cambridge University. He to, initially dismissed the letters (8)',
+			'the work of an eccetric, but unable to (9)',
+			'them out of his head, he eventually subjected them to closer scrutiny. After a few hours, Hardy arrived (10)',
+			'the conclusion that what he had (11)',
+			'him was the work of a mathematical genius, a view confirmed by ccolleagues with (12)',
+			'he shared his discovery.<hr>Before very (13)',
+			', Ramanujan had received an invitation to Cambridge and, once there, he soon proved (14)',
+			'worth. A fruitful collaboration with Hardy (15)',
+			'in the opening up of waste areas of mathematical research, still being worked on to (16)',
+			'day.'
+		],
+		answers: [
+			[ 'full' ],
+			[ 'where' ],
+			[ 'come' ],
+			[ 'without' ],
+			[ 'part' ],
+			[ 'when' ],
+			[ 'to' ],
+			[ 'as' ],
+			[ 'get' ],
+			[ 'at' ],
+			[ 'before' ],
+			[ 'whom' ],
+			[ 'long' ],
+			[ 'his' ],
+			[ 'resulted' ],
+			[ 'this' ]
+		]
+	},
+	{
+		headline: 'Global English',
+		texts: [
+			'Global English exists (1)',
+			'a political and cultural reality. Many misguided theories attempt to explain why the English language should have succeeded internationally, whilst (2)',
+			'have not. Is it because there is (3)',
+			'inherently logical or beautiful about the structure of English? Does its simple grammar (4)',
+			'it easy to learn? Such ideas are misconcieved. Latin was once a major international language, despite having a complicated grammar structure, and English also presents learners (5)',
+			'all manner of real difficulities, (6)',
+			'least its spelling system. Ease (7)',
+			'learning, therefore, has little to (8)',
+			'with it. (9)',
+			'all, children learn to speak their mother tongue in approximately the same period of time, (10)',
+			'of their language.<hr>English has spread not so (11)',
+			'for linguistic reasons, but rather because it has often found (12)',
+			'in the right place, at the right time. (13)',
+			'the 1960s, two developments have contributed to strengthening this global status. Firstly, in a number of countries, English is now used in addition to national or regional languages. As (14)',
+			'as this, an electronic revolution has taken (15)',
+			'. It is estimated that (16)',
+			'the region of 80% of worldwide electronic communication is now in English.'
+		],
+		answers: [['as'],['others'],['something'],['make'],['with'],['not'],['of'],['do'],['after'],['regardless'],['much'],['itself'],['since'],['well'],['place'],['in']]
+	},
+	{
+		headline: 'Can Parrots Communicate?',
+		texts: [
+			'Everyone knows that parrots can imitate human speech, but can (1)',
+			'birds also understand meaning? Two decades ago, researcher Irene Pepperberg started working with Alex, an African grey parrot, and ever since then, she has building (2)',
+			'data on him. Pepperberg, (3)',
+			"recently published book <em>The Alex Sudies</em> makes fascinating reading, claims Alex doesn't copy speech but intentionaly uses words to get (4)",
+			'it is that he wants.<hr>In actual (5)',
+			'some of his cognitive skills are identical to those of a five-year-old child. (6)',
+			"a child's, Alex's learning has been a steady progression. Early on, he (7)",
+			'vocalise whether two things were the same of different. Now, he carries (8)',
+			'more complex tasks. Presented (9)',
+			"different-coloured balls and blocks and asked the number of red blocks, he'll answer correctly. He requests things as well. (10)",
+			'he ask to sit on your shoulder and yoy put him (11)',
+			"else, he'll complain: 'Wanna go <em>shoulder.</em>'<hr>A (12)",
+			'experts remain sceptical, seeing very (13)',
+			"in Alex's performance beyond learning by association, by (14)",
+			'of intensive training. Yet Alex appears to (15)',
+			'mastered simple two-way communication. As parrots live for 60 years or more, Alex may surprise (16)',
+			'all further.'
+		],
+		answers: [['these'],['up'],['whose'],['whatever','what'],['practice'],['like'],['could','would'],['out'],['with'],['should'],['somewhere'],['few'],['little'],['means'],['have'],['as']]
+	},
+	{
+		headline: 'Garden Wildlife',
+		texts: [
+			'The age of a garden (1)',
+			'a great effect on the abundance of its wildlife. Since most animals depend ultimately on plants for their food, animal life cannot easily establish (2)',
+			'in the absence of plant life. A plot of land behind a newly-built house, even (3)',
+			'covered with a layer of good soil, will support very (4)',
+			'resident species other (5)',
+			'microscopic organisms. (6)',
+			'from the odd worm or spider, not (7)',
+			'creatures will be able to (8)',
+			'a living in the garden (9)',
+			'this stage.<hr>Colonisation takes (10)',
+			'gradually. Humans may introduce plants, and weed seeds will arrive on the breeze or be dropped by passing birds. Insects and other animals visit the garden and, given suitable conditions, they take (11)',
+			'residence there. (12)',
+			'all this activity, however, it takes years for a garden to become fully populated, and it cannot really be regarded as mature until it is (13)',
+			'of supporting fully-grown shrubs and trees. On (14)',
+			'basis, a large number of British gardens are immature, (15)',
+			'as much as they do not support (16)',
+			'a variety of wildlife as an older garden.'
+		],
+		answers: [['has'],['itself'],['when','though','if'],['few'],['than'],['apart'],['many'],['make'],['at'],['place'],['up'],['despite'],['capable'],['this'],['in'],['such']]
+	}
+];

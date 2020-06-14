@@ -9,60 +9,71 @@ const button_dont_know = document.querySelector('.dont-know');
 const text_input = document.querySelector('.answer-input');
 const icon_true = document.querySelector('.check-answer-true');
 const icon_wrong = document.querySelector('.check-answer-wrong');
-const switch_sentences = document.querySelector('#h1-tab-sentences');
+const switch_transformations = document.querySelector('#h1-tab-transformations');
 const switch_dict = document.querySelector('#h1-tab-dictionary');
+const switch_story = document.querySelector('#h1-tab-story');
 const dict_section = document.querySelector('.dict-section');
 const assignment_section = document.querySelector('.assignment-section');
 const link_dict = document.querySelector('#link-dict');
 const award_div = document.querySelector('.award');
 const award_pic = document.querySelector('#award-pic');
 const award_text = document.querySelector('#award-text');
+const sentence_space = document.querySelector('.sentence-space');
+const story_space = document.querySelector('.story-space');
 
 // Headline click 'Dictionary' set game to 'Dictionary'
 switch_dict.addEventListener('click', () => {
 	switch_dict.classList.add('active');
-	switch_sentences.classList.remove('active');
+	switch_transformations.classList.remove('active');
+	switch_story.classList.remove('active');
 	which_game = 'dictionary';
+	restart_answers();
 	restart();
 });
 
-// Headline click 'Sentences', set game to 'Sentences'
-switch_sentences.addEventListener('click', () => {
+// Headline click "Story", set game to 'story'
+switch_story.addEventListener('click', () => {
+	switch_story.classList.add('active');
+	switch_transformations.classList.remove('active');
 	switch_dict.classList.remove('active');
-	switch_sentences.classList.add('active');
-	which_game = 'sentences';
+	which_game = 'story';
+	restart_answers();
+	restart();
+});
+
+// Headline click 'Transformations', set game to 'transformations'
+switch_transformations.addEventListener('click', () => {
+	switch_dict.classList.remove('active');
+	switch_story.classList.remove('active');
+	switch_transformations.classList.add('active');
+	which_game = 'transformations';
+	restart_answers();
 	restart();
 });
 
 // Important global variables
 let state = [];
 let state_index;
-let which_game = 'sentences';
+let which_game = 'transformations';
 let end_game = false;
 let corr_answer_counter = 0;
-let rand_num;
+let rand_bigN_reward;
 let backdrop_active = true;
 
-// Set random number based on parimeters for random reward
-const set_reward_rand_number = () => {
+//Set random number based on parimeters for random reward
+const set_reward_rand_number = (min) => {
+	let num;
+	if (state.length < 55) return 3;
 	do {
-		rand_num = Math.floor(Math.random() * state.length * 2) + 1;
-	} while (
-		rand_num < 54 ||
-		rand_num === 99 ||
-		rand_num === 100 ||
-		rand_num === 101 ||
-		rand_num === 199 ||
-		rand_num === 200 ||
-		rand_num === 201 ||
-		rand_num >= state.length * 2 - 2
-	);
+		num = Math.floor(Math.random() * state.length * 2) + min;
+	} while (num < 102 || num === 199 || num === 200 || num === 201 || num >= state.length * 2 - 2);
+	return num;
 };
 
 /** For counting correct answers on all questions. After two correct answers we don't want to get that question until restart;
-this function adds counter of correct answers properties on each sentence object */
-const setAnswerCounter = () => {
-	for (let question of state) {
+this function adds counter of correct answers properties on each input data object */
+const setAnswerCounter = (data) => {
+	for (let question of data) {
 		question.firstCorrectAnswer = false;
 		question.secondCorrectAnswer = false;
 	}
@@ -70,11 +81,17 @@ const setAnswerCounter = () => {
 
 // When user click on button 'check', need to know which game is played
 const check_button_handler = () => {
-	which_game === 'sentences' ? check_answer_sentences() : check_answer_dict();
+	if (which_game === 'transformations') {
+		check_answer_transformations();
+	} else if (which_game === 'dictionary') {
+		check_answer_dict();
+	} else if (which_game === 'story') {
+		check_answer_story();
+	}
 };
 
 // Get all sentences from MongoDB or local js file
-fetch('/get-sentences')
+fetch('/get-sentefnces')
 	.then((response) => {
 		if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
 
@@ -85,8 +102,8 @@ fetch('/get-sentences')
 			} else {
 				state = [ ...data ];
 			}
-			set_reward_rand_number();
-			setAnswerCounter();
+			rand_bigN_reward = set_reward_rand_number(54);
+			setAnswerCounter(state);
 			remove_backdrop();
 		});
 	})
@@ -94,12 +111,12 @@ fetch('/get-sentences')
 		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
 		console.log(err);
 		state = [ ...state_local ];
-		set_reward_rand_number();
-		setAnswerCounter();
+		rand_bigN_reward = set_reward_rand_number(54);
+		setAnswerCounter(state);
 		remove_backdrop();
 	});
 
-// When user click on headline 'Sentences' or 'Dictionary' restart all fields
+// When user click on headline 'Transformations','Dictionary', or 'Story' restart all fields
 const restart = () => {
 	button_check.disabled = true;
 	button_next.disabled = false;
@@ -109,10 +126,32 @@ const restart = () => {
 	text_input.disabled = true;
 	set_text_areas('Question', 'word');
 	remove_icons();
-	which_game !== 'sentences' ? (link_dict.style.display = 'block') : (link_dict.style.display = 'none');
+	which_game === 'dictionary' ? (link_dict.style.display = 'block') : (link_dict.style.display = 'none');
+	set_game(which_game);
 };
 
-// When user click on button 'next', getting question or word
+// Set visibility of DOM elements for games 'story' or any other kind
+const set_game = (game) => {
+	remove_story();
+	if (game === 'story') {
+		story_space.display = 'block';
+		story_space.textContent = "press 'next' to get a story";
+		question.style.display = 'none';
+		word.textContent = 'Headline';
+		text_input.style.display = 'none';
+		before_answer.style.display = 'none';
+		after_answer.style.display = 'none';
+		story_space.classList.add('story-space');
+	} else {
+		story_space.display = 'none';
+		question.style.display = 'block';
+		text_input.style.display = 'block';
+		before_answer.style.display = 'block';
+		after_answer.style.display = 'block';
+	}
+};
+
+// When user click on button 'next', set buttons, icons and getting appropriate question
 const get_word = () => {
 	button_check.disabled = false;
 	button_next.disabled = true;
@@ -120,28 +159,89 @@ const get_word = () => {
 	text_input.disabled = false;
 	remove_icons();
 	correct_answer.classList.remove('show');
+	switch (which_game) {
+		case 'transformations':
+			get_new_transformation();
+			break;
+		case 'dictionary':
+			get_new_dictionary();
+			break;
+		case 'story':
+			get_new_story();
+			break;
+	}
+};
+
+// Get new transformation question, end game if none left
+const get_new_transformation = () => {
 	text_input.value = '';
 	text_input.focus();
-	if (which_game === 'sentences') {
-		get_random_index();
-		if (end_game) {
-			set_text_areas('There is no more questions!');
-			button_check.disabled = true;
-			button_dont_know.disabled = true;
-			text_input.disabled = true;
-		} else {
-			check_typeof_question();
-			set_text_areas(
-				state[state_index].question,
-				state[state_index].word,
-				state[state_index].before_answer,
-				state[state_index].after_answer
-			);
-		}
+	get_random_index(state);
+	if (end_game) {
+		set_text_areas('There is no more questions!');
+		button_check.disabled = true;
+		button_dont_know.disabled = true;
+		text_input.disabled = true;
 	} else {
-		state_index = get_random_number(dictionary);
-		set_text_areas('Translate', dictionary[state_index].english);
+		check_typeof_question();
+		set_text_areas(
+			state[state_index].question,
+			state[state_index].word,
+			state[state_index].before_answer,
+			state[state_index].after_answer
+		);
 	}
+};
+
+// Get new story question, end game if none left
+const get_new_story = () => {
+	remove_story();
+	get_random_index(stories);
+	if (end_game) {
+		set_text_areas('', 'There is no more stories!');
+		button_check.disabled = true;
+		button_dont_know.disabled = true;
+		text_input.disabled = true;
+	} else {
+		set_story();
+	}
+};
+
+// Get new dictionary question
+const get_new_dictionary = () => {
+	text_input.value = '';
+	text_input.focus();
+	state_index = get_random_number(dictionary);
+	set_text_areas('Translate', dictionary[state_index].english);
+};
+
+// When get_word() is fired, if game is 'story',  create appropriate DOM elements
+const set_story = () => {
+	story_space.textContent = '';
+	assignment_section.classList.add('more-height');
+	const story = stories[state_index].texts;
+	word.textContent = stories[state_index].headline;
+	const el_array = story.map((text, i) => {
+		const divEl = document.createElement('div');
+		divEl.classList.add('story-div');
+		const input = document.createElement('input');
+		input.classList.add('answer-input', 'short-input', 'story-input');
+		input.setAttribute('which', i);
+		divEl.innerHTML = text;
+		if (i < story.length - 1) {
+			divEl.appendChild(input);
+		}
+		return divEl;
+	});
+	for (let el of el_array) {
+		story_space.appendChild(el);
+	}
+};
+
+// Remove created DOM elemets for game 'story'
+const remove_story = () => {
+	story_space.innerHTML = '';
+	assignment_section.classList.remove('more-height');
 };
 
 // More space on input line if there is no text before it
@@ -151,21 +251,21 @@ const check_typeof_question = () => {
 		: (text_input.style.width = null);
 };
 
-/**  If game is 'Sentences', get random index of sentence object which is not been answered correctly two times. Set 'end_game' to true if
- all sentences has been answered correctly two times */
-const get_random_index = () => {
-	if (checking_if_all_guessed()) {
+/**  Get random index of argument object which is not been answered correctly two times. Set 'end_game' to true if
+ all questions of argument has been answered correctly two times */
+const get_random_index = (data) => {
+	if (checking_if_all_guessed(data)) {
 		end_game = true;
 		return null;
 	}
 	do {
-		state_index = get_random_number(state);
-	} while (state[state_index].secondCorrectAnswer);
+		state_index = get_random_number(data);
+	} while (data[state_index].secondCorrectAnswer);
 };
 
-// Check if all sentence objects are answered correctly two times
-const checking_if_all_guessed = () => {
-	return state.every((question) => {
+// Check if all data objects are answered correctly two times
+const checking_if_all_guessed = (data) => {
+	return data.every((question) => {
 		return question.secondCorrectAnswer;
 	});
 };
@@ -175,11 +275,11 @@ const get_random_number = (data) => {
 	return Math.floor(Math.random() * data.length);
 };
 
-// Button 'check' function for checking if user inputed correct answer for 'Sentences' game
-const check_answer_sentences = () => {
+// Button 'check' function for checking if user inputted correct answer for 'Transformations' game
+const check_answer_transformations = () => {
 	const answer = text_input.value;
 	if (state[state_index].answers.includes(answer.trim()) || answer === 'bojan') {
-		answering_correct();
+		answering_correct(state);
 		show_correct_answer();
 	} else {
 		answering_wrong();
@@ -187,15 +287,36 @@ const check_answer_sentences = () => {
 	}
 };
 
-// Button 'check' function for checking if user inputed correct answer for 'Dictionary' game
+// Button 'check' function for checking if user inputted correct answer for 'Dictionary' game
 const check_answer_dict = () => {
 	const answer = text_input.value;
 	if (dictionary[state_index].serbian.includes(answer.trim())) {
-		answering_correct();
+		answering_correct(state);
 		show_correct_answer();
 	} else {
 		answering_wrong();
 		console.log(dictionary[state_index].serbian);
+	}
+};
+
+// Button 'check' function for checking if user inputted correct answer for 'Story' game
+const check_answer_story = () => {
+	const inputs = document.querySelectorAll('.story-input');
+	let check = true;
+	for (let i = 0; i < inputs.length; i++) {
+		if (stories[state_index].answers[i].includes(inputs[i].value.toLowerCase().trim())) {
+			inputs[i].classList.remove('wrong-story-answer');
+		} else {
+			inputs[i].classList.add('wrong-story-answer');
+			check = false;
+		}
+	}
+	if (check || inputs[2].value === 'bojan') {
+		show_correct_answer();
+		answering_correct(stories);
+	} else {
+		answering_wrong();
+		console.log(stories[state_index].answers);
 	}
 };
 
@@ -204,17 +325,21 @@ document.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter' && !button_check.disabled && !backdrop_active) {
 		check_button_handler();
 	} else if (event.keyCode === 39 && !button_next.disabled && !backdrop_active) {
+		event.preventDefault();
 		get_word();
 	} else if (event.keyCode === 40 && !button_dont_know.disabled && !backdrop_active) {
+		event.preventDefault();
 		show_correct_answer();
 	}
 });
 
 // When user answers correctly, show icon, and set attribute of current sentence object for checking how many times is correct answer provided
-const answering_correct = () => {
-	state[state_index].firstCorrectAnswer
-		? (state[state_index].secondCorrectAnswer = true)
-		: (state[state_index].firstCorrectAnswer = true);
+// For game "story", we want to guess only once. Therefore, when game is "story", we also set secondCorrectAnswer to true
+const answering_correct = (state_obj) => {
+	state_obj[state_index].firstCorrectAnswer
+		? (state_obj[state_index].secondCorrectAnswer = true)
+		: (state_obj[state_index].firstCorrectAnswer = true);
+	if (which_game === 'story') state_obj[state_index].secondCorrectAnswer = true;
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
 	award();
@@ -233,7 +358,7 @@ const award = () => {
 				'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!'
 			);
 			break;
-		case rand_num - 1:
+		case rand_bigN_reward - 1:
 			set_award('/images/kitten.jpg', 'Meow, meow, meow! This cute kitten is looking for his mom.');
 			break;
 		case 199:
@@ -252,7 +377,7 @@ const award = () => {
 		case 50:
 		case 100:
 		case 200:
-		case rand_num:
+		case rand_bigN_reward:
 			show_award();
 			break;
 	}
@@ -314,29 +439,47 @@ const remove_icons = () => {
 	icon_wrong.classList.remove('show');
 };
 
-// Show correct answer, also trigger when "don't know" button is clicked
+// Show correct answer, also trigger when "don't know" button is clicked, disables all input tags
 const show_correct_answer = () => {
 	button_check.disabled = true;
 	button_next.disabled = false;
 	button_dont_know.disabled = true;
-	text_input.disabled = true;
+	const inputs = document.getElementsByTagName('input');
+	for (let i = 0; i < inputs.length; i++) {
+		inputs[i].disabled = true;
+	}
 	correct_answer.textContent = '';
-	if (which_game === 'sentences') {
+	if (which_game === 'transformations') {
 		let corr_answer = state[state_index].answers;
 		for (let i in corr_answer) {
 			correct_answer.textContent += `${state[state_index].before_answer} ${corr_answer[i]} ${state[state_index]
 				.after_answer} \r\n`;
 		}
-	} else {
+	} else if (which_game === 'dictionary') {
 		correct_answer.textContent = `${dictionary[state_index].serbian}`;
+	} else if (which_game === 'story') {
+		showing_answer_story();
 	}
 	correct_answer.classList.add('show');
 };
 
+const showing_answer_story = () => {
+	for (let i = 0; i < stories[state_index].answers.length; i++) {
+		correct_answer.innerHTML += `<div style="display:inline;">${i + 1}) ${stories[state_index].answers[
+			i
+		]}</div>     `;
+		if ((i + 1) % 3 === 0) correct_answer.innerHTML += '<br>';
+	}
+};
+
 // Restart game, invokes function for restarting each sentence answered properties, set end_game variable to false, and buttons to appropriate settings
 const restart_answers = () => {
-	setAnswerCounter();
-	set_reward_rand_number();
+	if (which_game === 'transformations') {
+		setAnswerCounter(state);
+	} else if (which_game === 'story') {
+		setAnswerCounter(stories);
+	}
+	set_reward_rand_number(54);
 	set_text_areas('Questions restarted');
 	button_next.disabled = false;
 	button_check.disabled = true;
@@ -346,12 +489,15 @@ const restart_answers = () => {
 };
 
 // Helper function for setting text areas. Default values are empty strings
-const set_text_areas = (questionText = '', wordText = '', beforeText = '', afterText = '') => {
+const set_text_areas = (questionText = '', wordText = '', beforeText = '', afterText = '', correctAnswer = '') => {
 	question.textContent = questionText;
 	word.textContent = wordText;
 	before_answer.textContent = beforeText;
 	after_answer.textContent = afterText;
+	correct_answer.textContent = correctAnswer;
 };
 
 // Create backdrop before loading questions
 create_backdrop();
+// Set answer counters on stories
+setAnswerCounter(stories);
