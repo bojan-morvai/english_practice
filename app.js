@@ -31,7 +31,7 @@ app.get('/dictionary', (req, res) => {
 app.get('/get-sentences', (req, res) => {
 	Sentences.find({}, function(err, allSentences) {
 		if (err) {
-			alert('Error connecting to db...', err);
+			console.log('Error connecting to db...', err);
 		}
 		res.send(allSentences);
 	});

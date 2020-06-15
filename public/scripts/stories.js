@@ -13,7 +13,7 @@ const stories = [
 			'the work of an eccetric, but unable to (9)',
 			'them out of his head, he eventually subjected them to closer scrutiny. After a few hours, Hardy arrived (10)',
 			'the conclusion that what he had (11)',
-			'him was the work of a mathematical genius, a view confirmed by ccolleagues with (12)',
+			'him was the work of a mathematical genius, a view confirmed by colleagues with (12)',
 			'he shared his discovery.<hr>Before very (13)',
 			', Ramanujan had received an invitation to Cambridge and, once there, he soon proved (14)',
 			'worth. A fruitful collaboration with Hardy (15)',
@@ -75,7 +75,7 @@ const stories = [
 			'vocalise whether two things were the same of different. Now, he carries (8)',
 			'more complex tasks. Presented (9)',
 			"different-coloured balls and blocks and asked the number of red blocks, he'll answer correctly. He requests things as well. (10)",
-			'he ask to sit on your shoulder and yoy put him (11)',
+			'he ask to sit on your shoulder and you put him (11)',
 			"else, he'll complain: 'Wanna go <em>shoulder.</em>'<hr>A (12)",
 			'experts remain sceptical, seeing very (13)',
 			"in Alex's performance beyond learning by association, by (14)",
@@ -83,7 +83,7 @@ const stories = [
 			'mastered simple two-way communication. As parrots live for 60 years or more, Alex may surprise (16)',
 			'all further.'
 		],
-		answers: [['these'],['up'],['whose'],['whatever','what'],['practice'],['like'],['could','would'],['out'],['with'],['should'],['somewhere'],['few'],['little'],['means'],['have'],['as']]
+		answers: [['these'],['up'],['whose'],['whatever','what'],['practice'],['like'],['could','would'],['out'],['with'],['should'],['somewhere'],['few'],['little'],['means'],['have'],['us']]
 	},
 	{
 		headline: 'Garden Wildlife',
@@ -107,5 +107,32 @@ const stories = [
 			'a variety of wildlife as an older garden.'
 		],
 		answers: [['has'],['itself'],['when','though','if'],['few'],['than'],['apart'],['many'],['make'],['at'],['place'],['up'],['despite'],['capable'],['this'],['in'],['such']]
+	},
+	{
+		headline: 'Children',
+		texts: [
+			'For over two hundred years, scholars have shown an interest in the way children learn to speak and understand their first language. Several small-scale studies were (1)',
+			'out, especially towards the end of the nineteenth century, (2)',
+			'data recorded in parental diaries. But detailed, systematic investigation did not begin (3)',
+			'the middle decades of the twenieth century, when the tape recorder (4)',
+			'into routine use. This made it possible to keep a permanent record of samples of child speech, so that analysts (5)',
+			'listen repeatedly to obscure (6)',
+			', and (7)',
+			'produce a detailed and accurate description.<hr>The problems that have to be (8)',
+			'when investigating child speech are quite different from (9)',
+			'encountered when working with adults. It is not possible to carry out (10)',
+			"kinds of experiments, because aspects of children's cognitive development, (11)",
+			'as their ability to (12)',
+			'attention or to remember instructions, may not be (13)',
+			'advanced. (14)',
+			'is it easy to get children to (15)',
+			'systematic judgements about language - a (16)',
+			'that is virtually impossible below the age of three. Moreover, (17)',
+			"who has tried to make a tape recording of a representative sample of a child's speech (18)",
+			"how frustrating this can be. Some children, it seems, are innately programmed to (19)",
+			"off as soon as they notice a tape recorder (20)",
+			"switched on."
+		],
+		answers: [['carried'],['using'],['until','till'],['came'],['could'],['sounds'],['so','thus'],['solved','tackled'],['those'],['these','such'],['such'],['pay'],['sufficiently'],['nor'],['make'],['task'],['anyone'],['knows'],['switch'],['being']]
 	}
 ];

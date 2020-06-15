@@ -1062,5 +1062,271 @@ const state_local = [
         before_answer:"The Rainbow Disco",
         after_answer:"students at the school.",
         answers: ["is out of bounds to"]
+    },
+    {
+        question:"'You should have waited for us' the team leader said to John.",
+        word:'',
+        before_answer:"The team leader criticised",
+        after_answer:".",
+        answers: ["John for not waiting for them"]
+    },
+    {
+        question:"It's possible that he didn't get my letter.",
+        word:'',
+        before_answer:"He might",
+        after_answer:".",
+        answers: ["not have got my letter"]
+    },
+    {
+        question:"The last time it snowed here was six years ago.",
+        word:'',
+        before_answer:"It",
+        after_answer:".",
+        answers: ["has been six years since it last snowed here"]
+    },
+    {
+        question:"I only realised what I had I missed when they told me about it later.",
+        word:'',
+        before_answer:"Only when",
+        after_answer:".",
+        answers: ["they told me about it later did I realise what I had missed"]
+    },
+    {
+        question:"There weren't nearly as many people there as I had expected.",
+        word:'',
+        before_answer:"There were far",
+        after_answer:".",
+        answers: ["fewer people there than I had expected"]
+    },
+    {
+        question:"When the Minister was asked about the strike, he declined to comment.",
+        word:'',
+        before_answer:"On",
+        after_answer:".",
+        answers: ["being asked about the strike, the Minister declined to comment"]
+    },
+    {
+        question:"There was no need for you to have gone to all that trouble.",
+        word:'',
+        before_answer:"You",
+        after_answer:".",
+        answers: ["shouldn't have gone to all that trouble"]
+    },
+    {
+        question:"Please don't say things like that.",
+        word:'',
+        before_answer:"I wish",
+        after_answer:".",
+        answers: ["you didn't say things like that"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Her father",
+        after_answer:"90 years old this week if he had lived.",
+        answers: ["would have been"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"I can't stand the way he's",
+        after_answer:"us what to do.",
+        answers: ["telling",'ordering']
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"You",
+        after_answer:"to the concert with us last night. You would have enjoyed it.",
+        answers: ["should have come"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"",
+        after_answer:"so much to go sailing again for ages.'Well, why didn't you say so? We'll go tomorow'.",
+        answers: ["I have been wanting","I've been wanting"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"You are",
+        after_answer:"on organising such a successful sales conference.",
+        answers: ["to be congratulated"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"He's thought",
+        after_answer:"in 1900, but he's never told anyone exactly how old he is.",
+        answers: ["to have been born"]
+    },
+    {
+        question:"I'd like you to wait until they bring out a new model.",
+        word:'rather',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I would rather you waited until they bring out a new model"]
+    },
+    {
+        question:"We couldn't find the cat anywhere.",
+        word:'nowhere',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The cat was nowhere to be found"]
+    },
+    {
+        question:"What finally ended the dispute was the fact that the union agreed to go to arbitration.",
+        word:'agreement',
+        before_answer:"",
+        after_answer:".",
+        answers: ["What finally ended the dispute was the agreement of the union to go to arbitration"]
+    },
+    {
+        question:"He won't let anyone else touch his records.",
+        word:'objects',
+        before_answer:"",
+        after_answer:".",
+        answers: ["He objects to his records being touched"]
+    },
+    {
+        question:"The fact that nobody said anything at the time suprised me.",
+        word:'what',
+        before_answer:"",
+        after_answer:".",
+        answers: ["What surprised me was the fact that nobody said anything"]
+    },
+    {
+        question:"The referee first blew the whistle 30 minutes into the game.",
+        word:'playing',
+        before_answer:"",
+        after_answer:".",
+        answers: ["After 30 minutes of playing the game, the referee blew the whistle"]
+    },
+    {
+        question:"I admited it was my fault for burning the toast.",
+        word:'blame',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I admited I was to blame for burning the toast"]
+    },
+    {
+        question:"It's becoming extremely expensive to maintain the museum.",
+        word:'upkeep',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The upkeep of the museum is becoming extremely expensive"]
+    },
+    {
+        question:"I won't agree until Tom's apologised.",
+        word:'',
+        before_answer:"Only when",
+        after_answer:".",
+        answers: ["Tom apologises will I agree","Tom has apologised will I agree"]
+    },
+    {
+        question:"Please don't use the shower after midnight.",
+        word:'',
+        before_answer:"Would you mind",
+        after_answer:".",
+        answers: ["not using the shower after midnight"]
+    },
+    {
+        question:"I agree he's a good worker but I still don't think he should get the job.",
+        word:'',
+        before_answer:"Despite",
+        after_answer:".",
+        answers: ["the fact that he is a good worker I don't think he should get the job","the fact that he's a good worker I don't think he should get the job"]
+    },
+    {
+        question:"The residents get very angry when bicycles are left in the hallway.",
+        word:'',
+        before_answer:"The residents all wish bicycles",
+        after_answer:".",
+        answers: ["were not left in the hallway"]
+    },
+    {
+        question:"'John shouldn't have behaved so badly' said Janet.",
+        word:'',
+        before_answer:"Janet objected",
+        after_answer:".",
+        answers: ["to John's bad behaviour","to John behaving badly"]
+    },
+    {
+        question:"Anna failed to understand how serious her illness was until she spoke to the doctor.",
+        word:'',
+        before_answer:"Not until",
+        after_answer:".",
+        answers: ["Anna spoke to the doctor did she understand how serious her illness was"]
+    },
+    {
+        question:"They set off to climb the mountain in spite of the fog.",
+        word:'',
+        before_answer:"Although",
+        after_answer:".",
+        answers: ["it was foggy they set off to climb the mountain","there was fog they set off to climb the mountain"]
+    },
+    {
+        question:"I do like carrots, but I don't want to eat them every day.",
+        word:'',
+        before_answer:"Much as",
+        after_answer:".",
+        answers: ["i like carrots I don't want to eat them every day"]
+    },
+    {
+        question:"We expect he will arrive by nine'o'clock.",
+        word:'',
+        before_answer:"He is",
+        after_answer:".",
+        answers: ["expected to arrive by nine'o'clock"]
+    },
+    {
+        question:"'Would you like some toast?'",
+        word:'',
+        before_answer:"'No, thank you. I've",
+        after_answer:"already'.",
+        answers: ["had some"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"A research project has been set up to find out",
+        after_answer:"that couses this strange phenomenon.",
+        answers: ["what it is"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Inspector Morse questioned ten people,",
+        after_answer:"could give him any useful information.",
+        answers: ["none of who","none of whom"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"It's been raining for hours. I wish",
+        after_answer:"stop.",
+        answers: ["it would"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Be careful how you start the motor. There's no",
+        after_answer:"happen.",
+        answers: ["way of telling what could","way of telling what can"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"The police investigation",
+        after_answer:"eight arrests.",
+        answers: ["resulted in","led to"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"It is quite an easy test, so most students will have",
+        after_answer:"completing it in twenty minutes.",
+        answers: ["no difficulty in"]
     }
 ];

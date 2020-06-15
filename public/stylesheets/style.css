@@ -168,6 +168,43 @@ h1 {
   overflow: auto;
 }
 
+.assignment-section .award {
+  display: none;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0 0 50px black;
+          box-shadow: 0 0 50px black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  z-index: 99;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.assignment-section .award img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.assignment-section .award h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+.assignment-section .countdown {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 48%;
+}
+
 .show {
   display: block !important;
 }
@@ -196,36 +233,6 @@ h1 {
 
 .restart-answers:focus {
   outline: none;
-}
-
-.award {
-  display: none;
-  background-color: #f2f2f2;
-  -webkit-box-shadow: 0 0 50px black;
-          box-shadow: 0 0 50px black;
-  border-radius: 10px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 620px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: auto;
-  z-index: 99;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.award img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.award h2 {
-  font-size: 1.4rem;
-  margin: 0.5rem;
 }
 
 .backdrop {
@@ -282,7 +289,7 @@ hr {
   .assignment-section .buttons-space {
     margin-bottom: 6rem;
   }
-  .award {
+  .assignment-section .award {
     width: 430px;
   }
   .more-height {
@@ -290,9 +297,12 @@ hr {
   }
 }
 
-@media screen and (max-width: 444px) {
-  .award {
+@media screen and (max-width: 483px) {
+  .assignment-section .award {
     width: 320px;
+  }
+  .assignment-section .countdown {
+    top: 93%;
   }
   .more-height {
     height: 1400px !important;
@@ -307,13 +317,18 @@ hr {
     width: 100%;
     height: 550px;
   }
-  .award {
+  .assignment-section .award {
     width: 300px;
+  }
+  .assignment-section .countdown {
+    top: 83%;
   }
   .more-height {
     height: 1200px !important;
   }
-  #h1-tab-transformations, #h1-tab-story, #h1-tab-dictionary {
+  #h1-tab-transformations,
+  #h1-tab-story,
+  #h1-tab-dictionary {
     font-size: 1.6rem;
   }
 }

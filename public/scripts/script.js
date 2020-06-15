@@ -20,12 +20,14 @@ const award_pic = document.querySelector('#award-pic');
 const award_text = document.querySelector('#award-text');
 const sentence_space = document.querySelector('.sentence-space');
 const story_space = document.querySelector('.story-space');
+const countdown = document.querySelector('.countdown');
 
 // Headline click 'Dictionary' set game to 'Dictionary'
 switch_dict.addEventListener('click', () => {
 	switch_dict.classList.add('active');
 	switch_transformations.classList.remove('active');
 	switch_story.classList.remove('active');
+	countdown.classList.remove('show');
 	which_game = 'dictionary';
 	restart_answers();
 	restart();
@@ -36,6 +38,7 @@ switch_story.addEventListener('click', () => {
 	switch_story.classList.add('active');
 	switch_transformations.classList.remove('active');
 	switch_dict.classList.remove('active');
+	countdown.classList.remove('show');
 	which_game = 'story';
 	restart_answers();
 	restart();
@@ -46,6 +49,7 @@ switch_transformations.addEventListener('click', () => {
 	switch_dict.classList.remove('active');
 	switch_story.classList.remove('active');
 	switch_transformations.classList.add('active');
+	countdown.classList.add('show');
 	which_game = 'transformations';
 	restart_answers();
 	restart();
@@ -57,17 +61,15 @@ let state_index;
 let which_game = 'transformations';
 let end_game = false;
 let corr_answer_counter = 0;
-let rand_bigN_reward;
+let rand_100_award;
+let rand_200_award;
+let rand_300_award;
 let backdrop_active = true;
 
-//Set random number based on parimeters for random reward
-const set_reward_rand_number = (min) => {
-	let num;
-	if (state.length < 55) return 3;
-	do {
-		num = Math.floor(Math.random() * state.length * 2) + min;
-	} while (num < 102 || num === 199 || num === 200 || num === 201 || num >= state.length * 2 - 2);
-	return num;
+// Return random number based on min and max numbers for random rewards
+const set_reward_rand_number = (min, max) => {
+	if (state.length < 55) return null;
+	return Math.floor(Math.random() * (max - min) + min);
 };
 
 /** For counting correct answers on all questions. After two correct answers we don't want to get that question until restart;
@@ -90,31 +92,45 @@ const check_button_handler = () => {
 	}
 };
 
-// Get all sentences from MongoDB or local js file
+//Get all sentences from MongoDB or local js file
 fetch('/get-sentences')
 	.then((response) => {
 		if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
 
-		response.json().then((data) => {
-			if (data.length === 0) {
-				console.log('DB is empty, getting local data...');
-				state = [ ...state_local ];
-			} else {
+		response
+			.json()
+			.then((data) => {
+				if (data.length === 0) {
+					throw new Error('DB is empty, getting local data...');
+				}
 				state = [ ...data ];
-			}
-			rand_bigN_reward = set_reward_rand_number(54);
-			setAnswerCounter(state);
-			remove_backdrop();
-		});
+				after_initial_load(state);
+			})
+			.catch((err) => {
+				console.log(err);
+				state = [ ...state_local ];
+				after_initial_load(state);
+			});
 	})
 	.catch((err) => {
 		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
 		console.log(err);
 		state = [ ...state_local ];
-		rand_bigN_reward = set_reward_rand_number(54);
-		setAnswerCounter(state);
-		remove_backdrop();
+		after_initial_load(state);
 	});
+
+// After getting data from DB or locally, remove backdrop, set counters and randomise awards
+const after_initial_load = (data) => {
+	setAnswerCounter(data);
+	if (which_game === 'transformations') {
+		countdown_trans();
+		countdown.classList.add('show');
+	}
+	rand_100_award = set_reward_rand_number(110, 191);
+	rand_200_award = set_reward_rand_number(210, 291);
+	rand_300_award = set_reward_rand_number(310, data.length * 2 - 15);
+	remove_backdrop();
+};
 
 // When user click on headline 'Transformations','Dictionary', or 'Story' restart all fields
 const restart = () => {
@@ -336,18 +352,24 @@ document.addEventListener('keydown', (event) => {
 // When user answers correctly, show icon, and set attribute of current sentence object for checking how many times is correct answer provided
 // For game "story", we want to guess only once. Therefore, when game is "story", we also set secondCorrectAnswer to true
 const answering_correct = (state_obj) => {
+	corr_answer_counter++;
 	state_obj[state_index].firstCorrectAnswer
 		? (state_obj[state_index].secondCorrectAnswer = true)
 		: (state_obj[state_index].firstCorrectAnswer = true);
 	if (which_game === 'story') state_obj[state_index].secondCorrectAnswer = true;
+	if (which_game === 'transformations') countdown_trans();
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
 	award();
 };
 
+// Countdown for correct answers in game 'transformations'
+const countdown_trans = () => {
+	countdown.textContent = state.length * 2 - corr_answer_counter;
+};
+
 // Awarding by invoking function that shows image and text on given fixed number of correct answers
 const award = () => {
-	corr_answer_counter++;
 	switch (corr_answer_counter) {
 		case 49:
 			set_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
@@ -358,7 +380,7 @@ const award = () => {
 				'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!'
 			);
 			break;
-		case rand_bigN_reward - 1:
+		case rand_100_award - 1:
 			set_award('/images/kitten.jpg', 'Meow, meow, meow! This cute kitten is looking for his mom.');
 			break;
 		case 199:
@@ -366,6 +388,21 @@ const award = () => {
 				'/images/coon.jpg',
 				'Wow, you are showing some real tenacity here! Like this little tenacious raccoon! You are at 200! '
 			);
+			break;
+		case rand_200_award - 1:
+			set_award(
+				'/images/puppy-kitten.jpg',
+				'Cherish your vast knowledge like puppy and kitten cherish their unlikely friendship!'
+			);
+			break;
+		case 299:
+			set_award(
+				'/images/koala.jpg',
+				"You are holding to this like a baby koala onto her mother's back! Keep up the good work!"
+			);
+			break;
+		case rand_300_award - 1:
+			set_award('/images/goat.jpg', 'You are showing some real skill! Like a goat climbing a steep slope!');
 			break;
 		case state.length * 2 - 1:
 			set_award(
@@ -377,7 +414,10 @@ const award = () => {
 		case 50:
 		case 100:
 		case 200:
-		case rand_bigN_reward:
+		case 300:
+		case rand_100_award:
+		case rand_200_award:
+		case rand_300_award:
 			show_award();
 			break;
 	}
@@ -463,6 +503,7 @@ const show_correct_answer = () => {
 	correct_answer.classList.add('show');
 };
 
+// Show correct answers for 'story' game, 3 on each line
 const showing_answer_story = () => {
 	for (let i = 0; i < stories[state_index].answers.length; i++) {
 		correct_answer.innerHTML += `<div style="display:inline;">${i + 1}) ${stories[state_index].answers[
