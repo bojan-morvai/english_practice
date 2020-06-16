@@ -1,4 +1,4 @@
-const stories = [
+const stories_local = [
 	{
 		headline: 'Letter From a Genius',
 		texts: [
@@ -132,6 +132,33 @@ const stories = [
 			"how frustrating this can be. Some children, it seems, are innately programmed to (19)",
 			"off as soon as they notice a tape recorder (20)",
 			"switched on."
+		],
+		answers: [['carried'],['using'],['until','till'],['came'],['could'],['sounds'],['so','thus'],['solved','tackled'],['those'],['these','such'],['such'],['pay'],['sufficiently'],['nor'],['make'],['task'],['anyone'],['knows'],['switch'],['being']]
+	},
+	{
+		headline: 'Use of English',
+		texts: [
+			'Clothes have (1)',
+			'basic functions. They protect us from (2)',
+			'of temperature. rain and wind and provide a degree of modesty (3)',
+			'covering our bodies. (4)',
+			"is also inportant however, is the way clothing transmits messages about the wearer's personality, attributes, social status, behaviour and group allegiances. Some people are more sensitive to dress signals than others, but there are very few who (5)",
+			'to take clothes into (6)',
+			'at all when forming first (7)',
+			'. <hr>To (8)',
+			'in with (9)',
+			'social role and to be (10)',
+			"as a valid actor of your part, you usually have to look the part as well as act the part. (11)",
+			'eccentric managers and executives are (12)',
+			'to dress in jeans and baggy pullovers, but they are very much in the (13)',
+			'. Clothes in the professional world are a kind of uniform and unwritten rules prescribe (14)',
+			'standards and styles for everyone in the hierarchy. The (15)',
+			'to be accepted is neither to underdress nor overdress. If (16)',
+			'the rules can be combined with a (17)',
+			"individuality and personal flair, then the (18)",
+			"will be greater. Silk scarves, ties and other items that have no real (19)",
+			"can communicate (20)",
+			"from political allegiance to temperament."
 		],
 		answers: [['carried'],['using'],['until','till'],['came'],['could'],['sounds'],['so','thus'],['solved','tackled'],['those'],['these','such'],['such'],['pay'],['sufficiently'],['nor'],['make'],['task'],['anyone'],['knows'],['switch'],['being']]
 	}

@@ -1204,11 +1204,11 @@ const state_local = [
         answers: ["After 30 minutes of playing the game, the referee blew the whistle"]
     },
     {
-        question:"I admited it was my fault for burning the toast.",
+        question:"I admitted it was my fault for burning the toast.",
         word:'blame',
         before_answer:"",
         after_answer:".",
-        answers: ["I admited I was to blame for burning the toast"]
+        answers: ["I admitted I was to blame for burning the toast"]
     },
     {
         question:"It's becoming extremely expensive to maintain the museum.",
@@ -1271,14 +1271,14 @@ const state_local = [
         word:'',
         before_answer:"Much as",
         after_answer:".",
-        answers: ["i like carrots I don't want to eat them every day"]
+        answers: ["I like carrots I don't want to eat them every day"]
     },
     {
-        question:"We expect he will arrive by nine'o'clock.",
+        question:"We expect he will arrive by nine o'clock.",
         word:'',
         before_answer:"He is",
         after_answer:".",
-        answers: ["expected to arrive by nine'o'clock"]
+        answers: ["expected to arrive by nine o'clock"]
     },
     {
         question:"'Would you like some toast?'",

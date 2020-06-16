@@ -57,6 +57,7 @@ switch_transformations.addEventListener('click', () => {
 
 // Important global variables
 let state = [];
+let stories = [];
 let state_index;
 let which_game = 'transformations';
 let end_game = false;
@@ -92,44 +93,17 @@ const check_button_handler = () => {
 	}
 };
 
-//Get all sentences from MongoDB or local js file
-fetch('/get-sentences')
-	.then((response) => {
-		if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
-
-		response
-			.json()
-			.then((data) => {
-				if (data.length === 0) {
-					throw new Error('DB is empty, getting local data...');
-				}
-				state = [ ...data ];
-				after_initial_load(state);
-			})
-			.catch((err) => {
-				console.log(err);
-				state = [ ...state_local ];
-				after_initial_load(state);
-			});
-	})
-	.catch((err) => {
-		console.log('SOMETHING WENT WRONG WITH FETCH! Getting local data...');
-		console.log(err);
-		state = [ ...state_local ];
-		after_initial_load(state);
-	});
-
 // After getting data from DB or locally, remove backdrop, set counters and randomise awards
 const after_initial_load = (data) => {
 	setAnswerCounter(data);
 	if (which_game === 'transformations') {
 		countdown_trans();
 		countdown.classList.add('show');
+		rand_100_award = set_reward_rand_number(110, 191);
+		rand_200_award = set_reward_rand_number(210, 291);
+		rand_300_award = set_reward_rand_number(310, data.length * 2 - 15);
 	}
-	rand_100_award = set_reward_rand_number(110, 191);
-	rand_200_award = set_reward_rand_number(210, 291);
-	rand_300_award = set_reward_rand_number(310, data.length * 2 - 15);
-	remove_backdrop();
+	if (backdrop_active) remove_backdrop();
 };
 
 // When user click on headline 'Transformations','Dictionary', or 'Story' restart all fields
@@ -540,5 +514,3 @@ const set_text_areas = (questionText = '', wordText = '', beforeText = '', after
 
 // Create backdrop before loading questions
 create_backdrop();
-// Set answer counters on stories
-setAnswerCounter(stories);

@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Sentences = require('./models/sentence');
+const Stories = require('./models/story');
 
 const app = express();
 
@@ -34,6 +35,15 @@ app.get('/get-sentences', (req, res) => {
 			console.log('Error connecting to db...', err);
 		}
 		res.send(allSentences);
+	});
+});
+
+app.get('/get-stories', (req,res) => {
+	Stories.find({}, function(err, allStories) {
+		if(err){
+			console.log('Error connecting to db...', err);
+		}
+		res.send(allStories)
 	});
 });
 
