@@ -324,13 +324,11 @@ document.addEventListener('keydown', (event) => {
 });
 
 // When user answers correctly, show icon, and set attribute of current sentence object for checking how many times is correct answer provided
-// For game "story", we want to guess only once. Therefore, when game is "story", we also set secondCorrectAnswer to true
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
 	state_obj[state_index].firstCorrectAnswer
 		? (state_obj[state_index].secondCorrectAnswer = true)
 		: (state_obj[state_index].firstCorrectAnswer = true);
-	if (which_game === 'story') state_obj[state_index].secondCorrectAnswer = true;
 	if (which_game === 'transformations') countdown_trans();
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
