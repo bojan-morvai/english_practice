@@ -136,7 +136,7 @@ const stories_local = [
 		answers: [['carried'],['using'],['until','till'],['came'],['could'],['sounds'],['so','thus'],['solved','tackled'],['those'],['these','such'],['such'],['pay'],['sufficiently'],['nor'],['make'],['task'],['anyone'],['knows'],['switch'],['being']]
 	},
 	{
-		headline: 'Use of English',
+		headline: 'Clothes',
 		texts: [
 			'Clothes have (1)',
 			'basic functions. They protect us from (2)',
@@ -160,6 +160,120 @@ const stories_local = [
 			"can communicate (20)",
 			"from political allegiance to temperament."
 		],
-		answers: [['carried'],['using'],['until','till'],['came'],['could'],['sounds'],['so','thus'],['solved','tackled'],['those'],['these','such'],['such'],['pay'],['sufficiently'],['nor'],['make'],['task'],['anyone'],['knows'],['switch'],['being']]
+		answers: [['two','their'],['extremes'],['by'],['what'],['fail'],['consideration','account'],['impression'],['fit'],['the','your'],['seen'],['few'],['ready'],['minority'],['certain'],['way'],['following','obeing'],['little','slight'],['effect','impact'],['function','purpose'],['anything']]
+	},
+	{
+		headline: 'Conversations',
+		texts: [
+			'Conversations are such common, everyday events that we easily take them for granted and assume that they require no special skills. (1)',
+			'at some time or (2)',
+			', most of (3)',
+			'have had problems talking with other people. You may (4)',
+			"yourself unable to get a (5)",
+			'in edgeways, and feel foolish and inadequate. Sometimes you have to interrupt rudely, and are (6)',
+			'feeling that, to other people, you must (7)',
+			'unpleasantly aggresive. Or (8)',
+			'been desperate to speak, you do not know how to stop and risk (9)',
+			'considering boring.<hr>Everyone sometimes finds it difficult to strike (10)',
+			"conversations. The importance of being able to start conversation is (11)",
+			'. To have relationships, you have to meet people and get to know them. To get to know them, you have to talk to them. At some point, (12)',
+			"has to be an opening line, but how do you know what to say? Conversations often begin when one person remarks, 'Beautiful weather, isn't it?' or asks (13)",
+			'other cliched question. Conversation openers are (14)',
+			'original - the anxiety of (15)',
+			'the first approach is not conducive to creative thought - but (16)',
+			'does not metter. (17)',
+			"does matter is that these openers are recognized (18)",
+			"what they'are - attempts (19)",
+			"starting a conversation. The words are unimportant, the (20)",
+			"that they have been spoken is."
+		],
+		answers: [['but','yet'],['other'],['us'],['find'],['word'],['left'],['seem','appear'],['having'],['being'],['up'],['clear','evident'],['there'],['some'],['rarely'],['making'],['this','that'],['what'],['for'],['at'],['fact']]
+	},
+	{
+		headline: 'Aggression',
+		texts: [
+			'Aggression has long been a natural feature of human behaviour, perhaps ever since the emergence of the eariest hominids. However, (1)',
+			'is no (2)',
+			'for organised group conflict before about 12,000 years ago. The development of (3)',
+			'conflict was closely linked to changes (4)',
+			"economy and society, (5)",
+			'probably (6)',
+			'more serious after the adoption of agriculture. Larger populations (7)',
+			'greater pressure on land and resources, and thus increased tension (8)',
+			'neighbours. Settled farmers also had food stores, herd animals and standing crops (9)',
+			'steal. The stresses associated with the emergence of more hierarchical societies (10)',
+			"over by chiefs and kings may (11)",
+			'have played an important (12)',
+			"in the growth of inter-group conflict.<hr>As human communities became organised into larger units (13)",
+			'warfare they waged became (14)',
+			'more lethal. States had greater resources (15)',
+			'for aggression, defence and the development of new weapons. The written records of ancient societies tell (16)',
+			'full-time specialists employed by the state to produce armour and weaponry, and expensively-equipped elite forces (17)',
+			"into being. Sometimes the (18)",
+			"social and economic order was moulded around the (19)",
+			"of warfare. The feudal system of medieval Europe, for example, had as (20)",
+			"of its principal objectives, the maintenance of a force of armoured knights."
+		],
+		answers: [['there'],['evidence'],['such'],['in','all'],['which'],['became'],['put','exerted'],['between'],['to'],['ruled'],
+		['well'],['role'],['the'],['even'],['available'],['of'],['came'],['entire'],['needs'],['one']]
+	},
+	{
+		headline: 'Curiosity',
+		texts: [
+			'Curiosity about the origins and development of human society is a distinctive feature of our species that can be traced back thousands of years. Even (1)',
+			'ancient times, people kept collections of antiquities from even (2)',
+			'periods. For (3)',
+			'of the human past, archaeology is the only (4)',
+			"of information, as written records are a comparatively recent invention.<hr>Our knowledge of the period stretching back from the present day to the emergence of the first tool-making hominids some 2.5 million years ago (5)",
+			'based predominately on the remains of settlements, burials and artefacts. It is the (6)',
+			'of these traces that is the domain of archaeology. From it we (7)',
+			'of the gradual but (8)',
+			'mastery of the environment, beginning (9)',
+			'the tools, the building of shelters and the knowledge of fire - early (10)',
+			"along a o path of successive innovations such as pottery and metallurgy (11)",
+			'has led to the advanced technologies of the present day. We learn also of the change (12)',
+			"hunting and gathering food to keeping animals and planting crops and (13)",
+			'the increasing social complexity which accompanied these developments, eventually (14)',
+			'to the formation of states and empires. The archaeological record of (15)',
+			'recent events is enriched (16)',
+			'the survival of lavishly furnished tombs, temples and palaces which are (17)',
+			"the greatest human cultural and artistic achievements. (18)",
+			"archaeology in not only (19)",
+			"study of the grandiose and spectacular, but also provides evidence of the everyday circumstances of (20)",
+			"people."
+		],
+		answers: [['in'],['earlier'],['much'],['source'],['was'],['study'],['learn'],['increasing'],
+		['from'],['steps'],['which','that'],['from'],['of'],['leading'],['most','more'],['with'],['among'],
+		['but','yet'],['the'],['ordinary']]
+	},
+	{
+		headline: 'Art',
+		texts: [
+			'We do not know how art began any more than we know how language started. If we take art to mean (1)',
+			'activities as building temples and houses, making pictures and sculptures, (2)',
+			'weaving patterns there are (3)',
+			'people in all the world without art. If, on the other (4)',
+			", we mean by art some kind of beautiful luxury, we must realise that (5)",
+			'use of the word is a very recent development and that many of the (6)',
+			'artists of the past never (7)',
+			'of it. We can best understand this difference if we think of architecture. We all (8)',
+			'that there are beautiful buildings and that some of them are true (9)',
+			'of art. But there is (10)',
+			"any building (11)",
+			'the world which was not erected (12)',
+			"a particular purpose. Those (13)",
+			'use these buildings as (14)',
+			'of worship or entertainment, or as dwellings, judge them (15)',
+			'and foremost by the standards of utility. But (16)',
+			'from this, they may like or (17)',
+			"the design or the proportions of the structure. In the (18)",
+			"the attitude to paintings and statues was often similar. We are not (19)",
+			"to understand the art of the past if we are quite ignorant of the (20)",
+			"it had to serve."
+		],
+		answers: [['such'],['or'],['no'],['hand'],['this'],
+		['famous'],['heard'],['know'],['works'],['hardly'],
+		['in'],['for'],['who'],['places'],['first'],['apart'],
+		['dislike'],['past'],['able'],['purpose','function']]
 	}
 ];

@@ -1328,5 +1328,985 @@ const state_local = [
         before_answer:"It is quite an easy test, so most students will have",
         after_answer:"completing it in twenty minutes.",
         answers: ["no difficulty in"]
+    },
+    {
+        question:"The managing director suggested not appointing any new staff.",
+        word:'freeze',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The managing director suggested a freeze on the appointment of any new staff"]
+    },
+    {
+        question:"They hate each other intensely.",
+        word:'sworn',
+        before_answer:"",
+        after_answer:".",
+        answers: ["They are sworn enemies"]
+    },
+    {
+        question:"There's no need to be so upset about the result.",
+        word:'shed',
+        before_answer:"",
+        after_answer:".",
+        answers: ["There's no need to shed any tears over the result","There is no need to shed any tears over the result"]
+    },
+    {
+        question:"I'd be grateful if you could have a look at these figures.",
+        word:'cast',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I'd be greatful if you could cast an eye over these figures","I'd be greatful if you could cast an eye on these figures"]
+    },
+    {
+        question:"I was pleasantly surprised at the result of the meeting.",
+        word:'came',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The result of the meeting came as a pleasant surprise to me"]
+    },
+    {
+        question:"Although he has been very determined, he has never managed to defeat his rival.",
+        word:'determination',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Despite his great determination he has never managed to defeat his rival"]
+    },
+    {
+        question:"The arrival time of the plane has been changed to 3.30.",
+        word:'re-scheduled',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The plane has been re-scheduled to arrive at 3.30"]
+    },
+    {
+        question:"Without his personal assistant John wouldn't know what to do next.",
+        word:'relies',
+        before_answer:"",
+        after_answer:".",
+        answers: ["John relies on his personal assistant to know what to do next"]
+    },
+    {
+        question:"Jack plays football more skilfully than Paul.",
+        word:'',
+        before_answer:"Jack is",
+        after_answer:".",
+        answers: ["a more skilfull football player than Paul"]
+    },
+    {
+        question:"'Hand over the bag or I'll shoot you!' Said the robber to the security guard.",
+        word:'',
+        before_answer:"The robber threatened",
+        after_answer:".",
+        answers: ["to shoot the security guard if he didn't hand over the bag"]
+    },
+    {
+        question:"Although professor Sweet knew a lot about grammar, he couldn't answer the question.",
+        word:'',
+        before_answer:"Despite",
+        after_answer:".",
+        answers: ["knowing a lot about grammar, professor Sweet couldn't answer the question"]
+    },
+    {
+        question:"Mrs Fielding is too old to make such a journey.",
+        word:'',
+        before_answer:"Mrs Fielding is so",
+        after_answer:".",
+        answers: ["old that she can't make such a journey"]
+    },
+    {
+        question:"I am always short of time.",
+        word:'',
+        before_answer:"I never",
+        after_answer:".",
+        answers: ["have enough time"]
+    },
+    {
+        question:"I had only just watered the garden when it began to rain.",
+        word:'',
+        before_answer:"Hardly",
+        after_answer:".",
+        answers: ["had I watered the garden, then it began to rain"]
+    },
+    {
+        question:"I haven't visited any countries in South America except Venezuela.",
+        word:'',
+        before_answer:"Venezuela is",
+        after_answer:".",
+        answers: ["the only county in South America that I have visited"]
+    },
+    {
+        question:"We cannot exchange tickets in any circumstances.",
+        word:'',
+        before_answer:"Under",
+        after_answer:".",
+        answers: ["no circumstances can we exchange the tickets"]
+    },
+    {
+        question:"Whenever he passed the prison, Bernard remembered the years he has spent there.",
+        word:'',
+        before_answer:"Bernard couldn’t",
+        after_answer:".",
+        answers: ["pass the prison without remembering the years he has spent there"]
+    },
+    {
+        question:"If you buy 15 tickets for the same performance, you can have a 25 percent discount.",
+        word:'',
+        before_answer:"Provided 15",
+        after_answer:".",
+        answers: ["tickets are bought for the same performance you can have a 25 purcent discount"]
+    },
+    {
+        question:"Our profits this year are higher then the have ever been.",
+        word:'',
+        before_answer:"Under",
+        after_answer:".",
+        answers: ["have our profits been as high as they are this year"]
+    },
+    {
+        question:"It is my opinion that he is the greatest artist of the twentieth century.",
+        word:'',
+        before_answer:"I consider him",
+        after_answer:".",
+        answers: ["to be the greatest artist of the twentieth century"]
+    },
+    {
+        question:"'I did not remove the money from the safe', said Peter.",
+        word:'',
+        before_answer:"Peter denied",
+        after_answer:".",
+        answers: ["removing the money from the safe"]
+    },
+    {
+        question:"Macbeth is the play that I enjoy the most.",
+        word:'',
+        before_answer:"There",
+        after_answer:".",
+        answers: ["is no play that I enjoy more than Macbeth"]
+    },
+    {
+        question:"Nobody remained on the ship after the captain had left it.",
+        word:'',
+        before_answer:"The captain",
+        after_answer:".",
+        answers: ["was the last person to leave this ship"]
+    },
+    {
+        question:"The factory seemed to have been damaged by fire.",
+        word:'',
+        before_answer:"It looked",
+        after_answer:".",
+        answers: ["as if the factory has been damaged by the fire"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"The judge refused to do what the gangsters asked,",
+        after_answer:"much money they offered him.",
+        answers: ["no matter how"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Robert had filled the freezer with food,",
+        after_answer:"we were very grateful.",
+        answers: ["for which"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Mr Archer complained that the hotel",
+        after_answer:"the picture in the brochure.",
+        answers: ["did not match"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"All the robbers",
+        after_answer:"to ten years in prison.",
+        answers: ["were sentenced",'were convicted of a crime']
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Look at these footprints! He",
+        after_answer:"come this way!",
+        answers: ["must have"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Swimming is a good way of",
+        after_answer:"yourself fit and healthy.",
+        answers: ["keeping"]
+    },
+    {
+        question:"The inspector showed us four potential health hazards.",
+        word:'drew',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The inspector drew our attention to four potential health hazards"]
+    },
+    {
+        question:"Margaret desperately wanted Nigel to return.",
+        word:'longed',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Margaret longed for Nigel's return","Margaret longed for Nigel to return"]
+    },
+    {
+        question:"Jack failed to keep his promise to help us.",
+        word:'let',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Jack let us down by not keeping his promise to help us"]
+    },
+    {
+        question:"Michael is a very poor tennis player.",
+        word:'good',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Michael is no good at tennis at all"]
+    },
+    {
+        question:"If we tried to force him to repay the debt, we would be wasting our time.",
+        word:'point',
+        before_answer:"",
+        after_answer:".",
+        answers: ["There is no point in trying to force him to repay the debt, we would be wasting our time"]
+    },
+    {
+        question:"The house is dirty because no one bothers to keep it clean.",
+        word:'trouble',
+        before_answer:"",
+        after_answer:".",
+        answers: ["No one takes the trouble to keep the house clean"]
+    },
+    {
+        question:"Sheila was dismissed after only three days.",
+        word:'sack',
+        before_answer:"Under",
+        after_answer:".",
+        answers: ["Sheila got the sack after only three days"]
+    },
+    {
+        question:"The committee decided that the crash was not the pilot's fault.",
+        word:'blame',
+        before_answer:"Under",
+        after_answer:".",
+        answers: ["The committee decided that the pilot was not to blame for the crash"]
+    },
+    {
+        question:"The controller never looked away from the screen.",
+        word:'',
+        before_answer:"At no time",
+        after_answer:".",
+        answers: ["did the controller look away from the screen"]
+    },
+    {
+        question:"Miranda said she was sorry that she had not read my report yet.",
+        word:'',
+        before_answer:"Miranda apologised",
+        after_answer:".",
+        answers: ["for not reading my report yet","for not having yet read my report"]
+    },
+    {
+        question:"Only the Chairman’s firmness and diplomacy prevented a serious argument between the committee members.",
+        word:'',
+        before_answer:"If",
+        after_answer:".",
+        answers: ["it hadn’t been for the Chairman’s firmness and diplomacy, there would have been a serious argument between the committee members.","the Chairman hadn’t been firm and diplomatic, there would have been a serious argument between the committee members."]
+    },
+    {
+        question:"You can stay in the flat for free if you pay the bills.",
+        word:'',
+        before_answer:"So long as",
+        after_answer:".",
+        answers: ["you pay the bills you can stay in the flat for free"]
+    },
+    {
+        question:"I didn’t mean to be impolite.",
+        word:'',
+        before_answer:"It",
+        after_answer:".",
+        answers: ["was not my intention to be impolite"]
+    },
+    {
+        question:"Despite Jack’s strange clothes, everybody ignored him.",
+        word:'',
+        before_answer:"Nobody took",
+        after_answer:".",
+        answers: ["any notice of Jack despite his strange clothes","notice of Jack despite his strange clothes"]
+    },
+    {
+        question:"It was more of a business arrangement than a marriage.",
+        word:'',
+        before_answer:"It was not",
+        after_answer:".",
+        answers: ["so much a marriage as a business arrangement"]
+    },
+    {
+        question:"You must not communicate in any way with anyone involved in this case.",
+        word:'',
+        before_answer:"You must have",
+        after_answer:".",
+        answers: ["no connection at all with anyone involved in this case","no contact at all with anyone involved in this case"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"He packed his suitcase the night before",
+        after_answer:"to be able to leave early the next morning.",
+        answers: ["in order to","so as"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Dorothy took a packed lunch",
+        after_answer:"she couldn’t get any food on the train.",
+        answers: ["in case"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Please make cheques",
+        after_answer:"Thomas Nelson Ldt.",
+        answers: ["out to","payable to"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"The novel has",
+        after_answer:"for television by Thomas Smith.",
+        answers: ["been adapted"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"When he regained consciousness, he",
+        after_answer:"himself in hospital..",
+        answers: ["found"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Captain Kidd found the treasure",
+        after_answer:"many man before him searched in vain.",
+        answers: ["for which"]
+    },
+    {
+        question:"It is by no means certain that he was responsible for the crime.",
+        word:'questionable',
+        before_answer:"",
+        after_answer:".",
+        answers: ["It is questionable whether he was responsible for the crime"]
+    },
+    {
+        question:"Everyone except John will remain on the coach.",
+        word:'apart',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Apart from John, everyone will remain on the coach"]
+    },
+    {
+        question:"Joan was not sure if it was a good idea to employ such young staff.",
+        word:'misgivings',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Joan had misgivings about employment of such young staff"]
+    },
+    {
+        question:"$500 is too much to pay for that painting.",
+        word:'worth',
+        before_answer:"",
+        after_answer:".",
+        answers: ["That painting was not worth paying $500 for"]
+    },
+    {
+        question:"Andrew insisted that the shop gave him his money back.",
+        word:'refund',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Andrew insisted on a refund from the shop"]
+    },
+    {
+        question:"Be careful not to waste water",
+        word:'economical',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Be economical with water"]
+    },
+    {
+        question:"The performances take place every two hours.",
+        word:'intervals',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The performances take place in two hourly intervals"]
+    },
+    {
+        question:"Poverty is only part of the problem.",
+        word:'whole',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Poverty is not the whole problem"]
+    },
+    {
+        question:"James Hogg Ltd. is the only shop that supplies this product.",
+        word:'exclusive',
+        before_answer:"",
+        after_answer:".",
+        answers: ["James Hogg Ltd. is the exclusive supplier of this products"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"'This is your emergency signal beacon,' said the instructor,",
+        after_answer:"you should not travel in these remote regions'.",
+        answers: ["without which"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Do you have",
+        after_answer:"anyone involved in this case?",
+        answers: ["any connection with"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"",
+        after_answer:"I had known that 5 years ago!",
+        answers: ["I wish"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"This machine is not",
+        after_answer:"the purpose for which it was designed.",
+        answers: ["being used for"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"If so much money has been spent, why is there",
+        after_answer:"for it?",
+        answers: ["so little to show","nothing to show"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Although he has lived in Canada for ten years, Marino still",
+        after_answer:"to the cold winters.",
+        answers: ["hasn't got used"]
+    },
+    {
+        question:"At 3 p.m. the visiting football team had still not arrived.",
+        word:'sign',
+        before_answer:"",
+        after_answer:".",
+        answers: ["At 3 p.m. there was still no sign of the football team"]
+    },
+    {
+        question:"A summary cannot bring out the high quality of this book.",
+        word:'justice',
+        before_answer:"",
+        after_answer:".",
+        answers: ["A summary doesn’t do justice to the high quality of the book"]
+    },
+    {
+        question:"He had no idea at all that the police were watching him.",
+        word:'unaware',
+        before_answer:"",
+        after_answer:".",
+        answers: ["He was completely unaware that the police were watching him"]
+    },
+    {
+        question:"Joanne has a rather unsatisfactory relationship with her sisters.",
+        word:'get',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Joanne doesn't get on really well with her sisters"]
+    },
+    {
+        question:"Whatever colour you choose, we can supply it.",
+        word:'matter',
+        before_answer:"",
+        after_answer:".",
+        answers: ["No matter what colour you choose, we can supply it"]
+    },
+    {
+        question:"Although he is young, there are several ministers even younger than him.",
+        word:'means',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Although he is young, he is by no means he is not the youngest minister"]
+    },
+    {
+        question:"As a champion swimmer, she will never be better that she is now.",
+        word:'prime',
+        before_answer:"",
+        after_answer:".",
+        answers: ["As a champion swimmer, she is in her prime."]
+    },
+    {
+        question:"You must eat less sugar.",
+        word:'intake',
+        before_answer:"",
+        after_answer:".",
+        answers: ["You must reduce your intake of sugar"]
+    },
+    {
+        question:"His father made him study Latin at the age of three.",
+        word:'',
+        before_answer:"At the age of three, he",
+        after_answer:".",
+        answers: ["was made to study Latin by his father"]
+    },
+    {
+        question:"I would prefer you to pay in cash.",
+        word:'',
+        before_answer:"I’d rather",
+        after_answer:".",
+        answers: ["you paid in cash"]
+    },
+    {
+        question:"Try as I might, I could not understand the code.",
+        word:'',
+        before_answer:"No matter",
+        after_answer:".",
+        answers: ["how hard I tried I couldn't understand the code"]
+    },
+    {
+        question:"Professor Helsing knows everything about this manuscript.",
+        word:'',
+        before_answer:"There is",
+        after_answer:".",
+        answers: ["nothing professor Helsing doesn't know about this manuscript"]
+    },
+    {
+        question:"If you trade in your existing answerphone, we will reduce the price of a new one by $100.",
+        word:'',
+        before_answer:"Trade",
+        after_answer:".",
+        answers: ["in your existing answerphone and we will reduce the price of a new one by $100"]
+    },
+    {
+        question:"Norman was sorry he has lost his temper.",
+        word:'',
+        before_answer:"Norman regretted",
+        after_answer:".",
+        answers: ["losing his temper"]
+    },
+    {
+        question:"Although I respect the law, I cannot accept the court's decision.",
+        word:'',
+        before_answer:"Much",
+        after_answer:".",
+        answers: ["as I respect the law I cannot accept the court's decision"]
+    },
+    {
+        question:"Is he the only person who knows the secret?",
+        word:'',
+        before_answer:"Does",
+        after_answer:"?",
+        answers: ["anyone else know the secret"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"The man",
+        after_answer:"be the ringleader has so far evaded capture.",
+        answers: ["believed to"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Sonia has only her own greed",
+        after_answer:"for what happened.",
+        answers: ["to blame"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"It is an interesting concept but can it",
+        after_answer:"practice?",
+        answers: ["be put into"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"If you hadn't seen the policeman, what",
+        after_answer:"done?",
+        answers: ["would you have"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"George threatened his neighbour with an axe,",
+        after_answer:"he received a six-month prison sentence.",
+        answers: ["for which"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"They hoped that the conference",
+        after_answer:"better understanding between nations.",
+        answers: ["would lead to"]
+    },
+    {
+        question:"All the other students got their exam results before Maria did.",
+        word:'last',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Maria was the last student to get her exam results"]
+    },
+    {
+        question:"When the automatic ticket machines are in operation, there will be no more queues.",
+        word:'put',
+        before_answer:"",
+        after_answer:".",
+        answers: ["When the automatic ticket machines are put into operation there will be no more queues","When the automatic ticket machines are put into use there will be no more queues"]
+    },
+    {
+        question:"I tried hard as I could to persuade John not to go.",
+        word:'utmost',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I tried my utmost to persuade John not to go","I did my utmost to persuade John not to go"]
+    },
+    {
+        question:"What would happen if we refused to pay?",
+        word:'supposing',
+        before_answer:"",
+        after_answer:"?",
+        answers: ["Supposing we refuse to pay, what would happen"]
+    },
+    {
+        question:"Jane is very likely to be promoted.",
+        word:'stands',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Jane stands a very good chance of being promoted"]
+    },
+    {
+        question:"After the lecture, Professor Sweet was exhausted. ",
+        word:'left',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The lecture left Professor Sweet exhausted"]
+    },
+    {
+        question:"Mr Keating must report to the police daily until his trial begins.",
+        word:'required',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Mr Keating is required to report to the police daily until his trial begins"]
+    },
+    {
+        question:"Bernard never stops complaining.",
+        word:'nothing',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Bernard does nothing but complain"]
+    },
+    {
+        question:"These are problems which can only be solved politically.",
+        word:'',
+        before_answer:"These are problems to which",
+        after_answer:".",
+        answers: ["there is only a political solution"]
+    },
+    {
+        question:"People say that the animals are mistreated in that circus, but I didn’t see it.",
+        word:'',
+        before_answer:"I didn't see",
+        after_answer:".",
+        answers: ["any animals being mistreated in that circus"]
+    },
+    {
+        question:"If you practice regularly you will become more skilful.",
+        word:'',
+        before_answer:"Without",
+        after_answer:".",
+        answers: ["regular practice you will not become skilful enough"]
+    },
+    {
+        question:"Peter's advice to me was to sell the shares immediately.",
+        word:'',
+        before_answer:"Peter suggested",
+        after_answer:".",
+        answers: ["that I should sell my shares immediately"]
+    },
+    {
+        question:"I am sure the exchange rate will not change.",
+        word:'',
+        before_answer:"In my opinion there",
+        after_answer:".",
+        answers: ["will be no change in the exchange rate"]
+    },
+    {
+        question:"We can attend the seminar provided we get the manager’s approval.",
+        word:'',
+        before_answer:"The manager's approval",
+        after_answer:".",
+        answers: ["is needed if we are to attend the seminar","is necessary if we are to attend the seminar"]
+    },
+    {
+        question:"It sounds very much like a song I heard twenty years ago.",
+        word:'',
+        before_answer:"It reminds",
+        after_answer:".",
+        answers: ["me a lot of a song I heard twenty years ago","me a great deal of a song I heard twenty years ago"]
+    },
+    {
+        question:"Sarah thought the traffic warden was a policeman.",
+        word:'',
+        before_answer:"Sarah mistook",
+        after_answer:".",
+        answers: ["the traffic warden for a policeman"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"I",
+        after_answer:"my visit to the dentist but it turned out to be even worse that I had expected.",
+        answers: ["was dreading"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"We",
+        after_answer:"Tom since eight o’clock and he still hasn't arrived.",
+        answers: ["have been waiting"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"You look upset. What on earth",
+        after_answer:"",
+        answers: ["has happened?"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"It",
+        after_answer:"Sally that you saw; she's in London.",
+        answers: ["can't have been","couldn't have been"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"I'm tired - I",
+        after_answer:"getting up so early.",
+        answers: ["am not used to","'m not used to"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Sally",
+        after_answer:"to come and spend Christmas with us, but she had to change her plans as a result of the bad weather. ",
+        answers: ["was going"]
+    },
+    {
+        question:"I couldn't draw because I didn't have the necessary equipment. ",
+        word:'lack',
+        before_answer:"",
+        after_answer:".",
+        answers: ["I couldn't draw for lack of the necessary equipment"]
+    },
+    {
+        question:"No special payments have been received by my client.",
+        word:'receipt',
+        before_answer:"",
+        after_answer:".",
+        answers: ["My client has not been in receipt of any special payments"]
+    },
+    {
+        question:"He didn’t concentrate on the lecture.",
+        word:'attention',
+        before_answer:"",
+        after_answer:".",
+        answers: ["He didn't pay attention to the lecture","He paid no attention to the lecture"]
+    },
+    {
+        question:"The car cannot go faster than 60 m.p.h.",
+        word:'speed',
+        before_answer:"",
+        after_answer:"",
+        answers: ["The car has a maximum speed of 60.m.p.h."]
+    },
+    {
+        question:"It was unfair that the ice-skater got such low marks. ",
+        word:'deserve',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The ice-skater didn't deserve to get such low marks"]
+    },
+    {
+        question:"There isn't much that Peter doesn't know about modern art.",
+        word:'gaps',
+        before_answer:"",
+        after_answer:".",
+        answers: ["There are few gaps in Peter's knowledge of modern art"]
+    },
+    {
+        question:"That painting is nothing like the one I saw at the auction.",
+        word:'similarity',
+        before_answer:"",
+        after_answer:".",
+        answers: ["There is no similarity at all between this painting and the one I saw at the auction"]
+    },
+    {
+        question:"William remained silent throughout the meeting.",
+        word:'contribution',
+        before_answer:"",
+        after_answer:".",
+        answers: ["William made no contribution to the meeting"]
+    },
+    {
+        question:"He threatened the officers with violence.",
+        word:'',
+        before_answer:"He made",
+        after_answer:".",
+        answers: ["threat of violence to the officers"]
+    },
+    {
+        question:"All the children will receive a prize, whatever their score in the competition.",
+        word:'',
+        before_answer:"No matter",
+        after_answer:".",
+        answers: ["their score in the competition all the children will receive a prize"]
+    },
+    {
+        question:"Except for the inspector, everyone was in uniform.",
+        word:'',
+        before_answer:"The inspector was the",
+        after_answer:".",
+        answers: ["only person not in the uniform"]
+    },
+    {
+        question:"Because of his conviction for fraud, the trainer lost his licence.",
+        word:'',
+        before_answer:"His conviction for fraud",
+        after_answer:".",
+        answers: ["cost the trainer his licence"]
+    },
+    {
+        question:"There has never been a time when the English language was not in the state of change.",
+        word:'',
+        before_answer:"At no time",
+        after_answer:".",
+        answers: ["has the English language not been in the state of change"]
+    },
+    {
+        question:"Bill found a new job very quickly.",
+        word:'',
+        before_answer:"It didn't",
+        after_answer:".",
+        answers: ["take Bill long to find a new job"]
+    },
+    {
+        question:"You’ll have to spend at least $500 to get that sort of camera.",
+        word:'',
+        before_answer:"You won't",
+        after_answer:".",
+        answers: ["get that sort of camera for less than $500"]
+    },
+    {
+        question:"Only the managing director and the chief chemist know the details.",
+        word:'',
+        before_answer:"Knowledge",
+        after_answer:".",
+        answers: ["of the details is restricted to the managing director and the chief chemist"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"What a shame the trip",
+        after_answer:". I was really looking forward to it.",
+        answers: ["has been cancelled"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"If only you would help, we",
+        after_answer:"the work in an hour.",
+        answers: ["would finish"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"I can't offer you any coffee; we seem not to",
+        after_answer:".",
+        answers: ["have any left"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"He was wearing dark glass to",
+        after_answer:"recognised.",
+        answers: ["avoid being"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"Police",
+        after_answer:"to take extra care because of the fog.",
+        answers: ["is advising motorists"]
+    },
+    {
+        question:"",
+        word:'',
+        before_answer:"You can come with me as",
+        after_answer:"don't make any noise.",
+        answers: ["long as you"]
+    },
+    {
+        question:"He is certainly not a reliable witness.",
+        word:'means',
+        before_answer:"",
+        after_answer:".",
+        answers: ["By no means is he a reliable witness","He is by no means a reliable witness"]
+    },
+    {
+        question:"The leader went so fast that no one could keep up with him.",
+        word:'pace',
+        before_answer:"",
+        after_answer:".",
+        answers: ["The leader set such a fast pace that no one could keep up with him"]
+    },
+    {
+        question:"Weren't you once the secretary of the Gardering Club?",
+        word:'use',
+        before_answer:"",
+        after_answer:"",
+        answers: ["Didn't you use to be the secretary of the Gardering Club?"]
+    },
+    {
+        question:"We have no use for this equipment.",
+        word:'nothing',
+        before_answer:"",
+        after_answer:".",
+        answers: ["There is nothing we can use this equipment for"]
+    },
+    {
+        question:"They could not warn people by electronic mail because that might spread the computer virus.",
+        word:'fear',
+        before_answer:"",
+        after_answer:".",
+        answers: ["They could not warn people by electronic mail, for fear of spreading the computer virus"]
+    },
+    {
+        question:"Martin's habit of taking risks doesn't fit in with his image as a family man.",
+        word:'compatible',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Martin's habit of taking risks is not compatible with his image as a family man"]
+    },
+    {
+        question:"His whole life was one of deceit and treachery.",
+        word:'throughout',
+        before_answer:"",
+        after_answer:".",
+        answers: ["Throughout his life he was deceitful and treacherous"]
     }
 ];

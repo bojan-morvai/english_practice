@@ -16,26 +16,24 @@ mongoose
 	});
 mongoose.set('useFindAndModify', false);
 
-
 // Populate this array with sentences objects to insert into DB
-const sentencesToInsert = []
+const sentencesToInsert = [];
 
 // Populate this array with story objects to insert into DB
-const storiesToInsert = []
+const storiesToInsert = [];
 
-Sentences.insertMany([...sentencesToInsert], () => {
-	if(sentencesToInsert.length !== 0){
+Sentences.insertMany([ ...sentencesToInsert ], () => {
+	if (sentencesToInsert.length !== 0) {
 		console.log('Successfully inserted sentences to db');
-	}else{
-		console.log('No sentences to insert!')
+	} else {
+		console.log('No sentences to insert!');
 	}
-	
 });
 
-Stories.insertMany([...storiesToInsert], () => {
-	if(storiesToInsert.length !== 0){
+Stories.insertMany([ ...storiesToInsert ], () => {
+	if (storiesToInsert.length !== 0) {
 		console.log('Successfully inserted stories to db');
-	}else{
-		console.log('No stories to insert!')
+	} else {
+		console.log('No stories to insert!');
 	}
 });

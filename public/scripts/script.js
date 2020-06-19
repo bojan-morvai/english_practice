@@ -65,6 +65,8 @@ let corr_answer_counter = 0;
 let rand_100_award;
 let rand_200_award;
 let rand_300_award;
+let rand_400_award;
+let rand_500_award;
 let backdrop_active = true;
 
 // Return random number based on min and max numbers for random rewards
@@ -101,7 +103,9 @@ const after_initial_load = (data) => {
 		countdown.classList.add('show');
 		rand_100_award = set_reward_rand_number(110, 191);
 		rand_200_award = set_reward_rand_number(210, 291);
-		rand_300_award = set_reward_rand_number(310, data.length * 2 - 15);
+		rand_300_award = set_reward_rand_number(310, 391);
+		rand_400_award = set_reward_rand_number(410, 491);
+		rand_500_award = set_reward_rand_number(510, 591);
 	}
 	if (backdrop_active) remove_backdrop();
 };
@@ -323,7 +327,7 @@ document.addEventListener('keydown', (event) => {
 	}
 });
 
-// When user answers correctly, show icon, and set attribute of current sentence object for checking how many times is correct answer provided
+// When user answers correctly, show icon, and set attribute of current object for checking how many times is correct answer provided
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
 	state_obj[state_index].firstCorrectAnswer
@@ -338,61 +342,6 @@ const answering_correct = (state_obj) => {
 // Countdown for correct answers in game 'transformations'
 const countdown_trans = () => {
 	countdown.textContent = state.length * 2 - corr_answer_counter;
-};
-
-// Awarding by invoking function that shows image and text on given fixed number of correct answers
-const award = () => {
-	switch (corr_answer_counter) {
-		case 49:
-			set_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');
-			break;
-		case 99:
-			set_award(
-				'/images/squ.jpg',
-				'Wow, 100 correct answers! Such a smart cookie! Baby squirrel is cheering for you!'
-			);
-			break;
-		case rand_100_award - 1:
-			set_award('/images/kitten.jpg', 'Meow, meow, meow! This cute kitten is looking for his mom.');
-			break;
-		case 199:
-			set_award(
-				'/images/coon.jpg',
-				'Wow, you are showing some real tenacity here! Like this little tenacious raccoon! You are at 200! '
-			);
-			break;
-		case rand_200_award - 1:
-			set_award(
-				'/images/puppy-kitten.jpg',
-				'Cherish your vast knowledge like puppy and kitten cherish their unlikely friendship!'
-			);
-			break;
-		case 299:
-			set_award(
-				'/images/koala.jpg',
-				"You are holding to this like a baby koala onto her mother's back! Keep up the good work!"
-			);
-			break;
-		case rand_300_award - 1:
-			set_award('/images/goat.jpg', 'You are showing some real skill! Like a goat climbing a steep slope!');
-			break;
-		case state.length * 2 - 1:
-			set_award(
-				'/images/fox.jpg',
-				'You did it! There is no more questions... Such an impressive achievement! This cute fox is so happy for you!'
-			);
-			break;
-		case state.length * 2:
-		case 50:
-		case 100:
-		case 200:
-		case 300:
-		case rand_100_award:
-		case rand_200_award:
-		case rand_300_award:
-			show_award();
-			break;
-	}
 };
 
 // Backdrop shown when showing award picture and before loading questions
@@ -415,18 +364,6 @@ const remove_backdrop = () => {
 	backdrop_active = false;
 	const backdrop = document.querySelector('.backdrop');
 	backdrop.parentNode.removeChild(backdrop);
-};
-
-// Set award section img src and h2 text
-const set_award = (url, text) => {
-	award_pic.setAttribute('src', url);
-	award_text.textContent = text;
-};
-
-// Showing award image and text
-const show_award = () => {
-	create_backdrop();
-	award_div.classList.add('show');
 };
 
 // Remove award picture and text by clicking on it
