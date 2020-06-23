@@ -142,7 +142,7 @@ const stories_local = [
 			'basic functions. They protect us from (2)',
 			'of temperature. rain and wind and provide a degree of modesty (3)',
 			'covering our bodies. (4)',
-			"is also inportant however, is the way clothing transmits messages about the wearer's personality, attributes, social status, behaviour and group allegiances. Some people are more sensitive to dress signals than others, but there are very few who (5)",
+			"is also important however, is the way clothing transmits messages about the wearer's personality, attributes, social status, behaviour and group allegiances. Some people are more sensitive to dress signals than others, but there are very few who (5)",
 			'to take clothes into (6)',
 			'at all when forming first (7)',
 			'. <hr>To (8)',

@@ -1453,7 +1453,7 @@ const state_local = [
         word:'',
         before_answer:"Provided 15",
         after_answer:".",
-        answers: ["tickets are bought for the same performance you can have a 25 purcent discount"]
+        answers: ["tickets are bought for the same performance you can have a 25 percent discount"]
     },
     {
         question:"Our profits this year are higher then the have ever been.",

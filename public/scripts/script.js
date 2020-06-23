@@ -95,10 +95,11 @@ const check_button_handler = () => {
 	}
 };
 
-// After getting data from DB or locally, remove backdrop, set counters and randomise awards
+// After getting data from DB or locally, set answer counters
+// When data is 'transformations', set award counters and remove backdrop
 const after_initial_load = (data) => {
 	setAnswerCounter(data);
-	if (which_game === 'transformations') {
+	if (data[0].question && data[0].after_answer) {
 		countdown_trans();
 		countdown.classList.add('show');
 		rand_100_award = set_reward_rand_number(110, 191);
@@ -106,8 +107,8 @@ const after_initial_load = (data) => {
 		rand_300_award = set_reward_rand_number(310, 391);
 		rand_400_award = set_reward_rand_number(410, 491);
 		rand_500_award = set_reward_rand_number(510, 591);
+		if (backdrop_active) remove_backdrop();
 	}
-	if (backdrop_active) remove_backdrop();
 };
 
 // When user click on headline 'Transformations','Dictionary', or 'Story' restart all fields
@@ -271,8 +272,11 @@ const get_random_number = (data) => {
 
 // Button 'check' function for checking if user inputted correct answer for 'Transformations' game
 const check_answer_transformations = () => {
-	const answer = text_input.value;
-	if (state[state_index].answers.includes(answer.trim()) || answer === 'bojan') {
+	const answer = text_input.value.replace(/,/g, '');
+	const correct_answers = state[state_index].answers.map((corr) => {
+		return corr.replace(/,/g, '');
+	}); // We want to exclude ',' from answers
+	if (correct_answers.includes(answer.trim()) || answer === 'bojan') {
 		answering_correct(state);
 		show_correct_answer();
 	} else {
