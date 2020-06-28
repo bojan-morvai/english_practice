@@ -651,7 +651,7 @@ const transformations_second = [
         answers: ["All tenants must comply to the regulations about guests"]
     },
     {
-        question:"All tenants must comply to the regulations about guests.",
+        question:"He became famous when his first book was published.",
         word:'publication',
         before_answer:"",
         after_answer:".",

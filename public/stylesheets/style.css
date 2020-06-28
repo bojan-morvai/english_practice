@@ -209,6 +209,10 @@ h1 .small-text {
   left: 48%;
 }
 
+.countdown-story-mode {
+  top: 136% !important;
+}
+
 .show {
   display: block !important;
 }

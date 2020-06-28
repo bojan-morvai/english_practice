@@ -41,7 +41,7 @@ switch_story.addEventListener('click', () => {
 	switch_story.classList.add('active');
 	switch_transformations.classList.remove('active');
 	switch_dict.classList.remove('active');
-	countdown.classList.remove('show');
+	countdown.classList.add('show');
 	switch_transformations_2.classList.remove('active');
 	which_game = 'story';
 	second_trans = false;
@@ -121,7 +121,7 @@ const check_button_handler = () => {
 const after_initial_load = (data) => {
 	setAnswerCounter(data);
 	if (data[0].question && data[0].after_answer) {
-		countdown_trans();
+		countdown_answers();
 		countdown.classList.add('show');
 		rand_100_award = set_reward_rand_number(110, 191);
 		rand_200_award = set_reward_rand_number(210, 291);
@@ -242,6 +242,7 @@ const get_new_dictionary = () => {
 const set_story = () => {
 	story_space.textContent = '';
 	assignment_section.classList.add('more-height');
+	countdown.classList.add('countdown-story-mode');
 	const story = stories[state_index].texts;
 	word.textContent = stories[state_index].headline;
 	const el_array = story.map((text, i) => {
@@ -265,13 +266,12 @@ const set_story = () => {
 const remove_story = () => {
 	story_space.innerHTML = '';
 	assignment_section.classList.remove('more-height');
+	countdown.classList.remove('countdown-story-mode');
 };
 
 // More space on input line if there is no text before it
 const check_typeof_question = (data) => {
-	data[state_index].before_answer.length === 0
-		? (text_input.style.width = '32rem')
-		: (text_input.style.width = null);
+	data[state_index].before_answer.length === 0 ? (text_input.style.width = '32rem') : (text_input.style.width = null);
 };
 
 /**  Get random index of argument object which is not been answered correctly two times. Set 'end_game' to true if
@@ -378,15 +378,16 @@ const answering_correct = (state_obj) => {
 	state_obj[state_index].firstCorrectAnswer
 		? (state_obj[state_index].secondCorrectAnswer = true)
 		: (state_obj[state_index].firstCorrectAnswer = true);
-	if (which_game === 'transformations') countdown_trans();
+	if (which_game !== 'dictionary') countdown_answers();
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
 	award();
 };
 
-// Countdown for correct answers in games 'transformations' and 'transformations 2' 
-const countdown_trans = () => {
-	const data = type_of_transformations();
+// Countdown for correct answers in games 'transformations' and 'transformations 2'
+const countdown_answers = () => {
+	let data;
+	which_game === 'story' ? (data = stories) : (data = type_of_transformations());
 	countdown.textContent = data.length * 2 - corr_answer_counter;
 };
 
@@ -474,13 +475,13 @@ const restart_answers = () => {
 	corr_answer_counter = 0;
 	if (which_game === 'transformations') {
 		const data = type_of_transformations();
-		countdown_trans();
 		setAnswerCounter(data);
 	} else if (which_game === 'story') {
 		setAnswerCounter(stories);
 		story_space.innerHTML = 'Questions restarted...';
 		state_index = 0;
 	}
+	countdown_answers();
 	set_text_areas('Questions restarted...');
 	button_next.disabled = false;
 	button_check.disabled = true;
