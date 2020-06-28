@@ -27,6 +27,10 @@ h1 {
   cursor: pointer;
 }
 
+h1 .small-text {
+  display: none;
+}
+
 .active {
   color: #206632;
 }
@@ -279,6 +283,12 @@ hr {
   }
   body {
     margin: 0;
+  }
+  h1 .big-text {
+    display: none;
+  }
+  h1 .small-text {
+    display: inline;
   }
   .restart-answers {
     left: 37%;

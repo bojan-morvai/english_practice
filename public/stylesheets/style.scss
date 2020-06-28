@@ -16,6 +16,9 @@ h1 {
 	display: inline-block;
 	margin: 1rem;
 	cursor: pointer;
+	.small-text{
+		display: none;
+	}
 }
 
 .active {
@@ -234,6 +237,7 @@ hr {
 	.assignment-section {
 		width: 95%;
 	}
+
 }
 
 @media screen and (max-width: 620px) {
@@ -242,6 +246,14 @@ hr {
 	}
 	body {
 		margin: 0;
+	}
+	h1{
+		.big-text{
+			display: none;
+		}
+		.small-text{
+			display: inline;
+		}
 	}
 	.restart-answers {
 		left: 37%;
