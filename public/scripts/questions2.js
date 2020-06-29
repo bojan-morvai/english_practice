@@ -1,4 +1,4 @@
-const transformations_second = [
+const transformations_second_local = [
     {
         question:"I hope the committee will consider this new information when they meet next week.",
         word:'account',
@@ -39,7 +39,7 @@ const transformations_second = [
         word:'what',
         before_answer:"Leo doesn't understand",
         after_answer:"his plan is.",
-        answers: ["his sister's opposition to"]
+        answers: ["what the reason for his sister's opposition to"]
     },
     {
         question:"Sam moved house only because he disliked commuting.",
@@ -84,7 +84,7 @@ const transformations_second = [
         answers: ["has been put off until"]
     },
     {
-        question:"I don’t think you'll find that many road atlases have such detailed maps.",
+        question:"I don't think you'll find that many road atlases have such detailed maps.",
         word:'few',
         before_answer:"I",
         after_answer:"have such detailed maps.",
@@ -137,10 +137,10 @@ const transformations_second = [
         word:'decision',
         before_answer:"No",
         after_answer:"to relinquish his position as director.",
-        answers: ["explination has been given for his decision"]
+        answers: ["explanation has been given for his decision"]
     },
     {
-        question:"Sam doesn’t think he'll be able to come with us at the weekend.",
+        question:"Sam doesn't think he'll be able to come with us at the weekend.",
         word:'prospect',
         before_answer:"Sam sees",
         after_answer:"to come with us at the weekend.",
@@ -340,7 +340,7 @@ const transformations_second = [
         word:'account',
         before_answer:"",
         after_answer:".",
-        answers: ["When estimating the cost of a holiday, it's important to take into account every extra things that add to the cost"]
+        answers: ["When estimating the cost of a holiday, it's important to take into account all the extra things that add to the cost"]
     },
     {
         question:"John made his teacher very angry.",
@@ -396,7 +396,7 @@ const transformations_second = [
         word:'',
         before_answer:"The moment",
         after_answer:".",
-        answers: ["Mary finishes the novel she plans to go abroad"]
+        answers: ["Mary finishes her novel she plans to go abroad"]
     },
     {
         question:"This cough medicine doesn't affect your ability to drive.",
@@ -550,7 +550,7 @@ const transformations_second = [
         word:'',
         before_answer:"The Chairman insisted on",
         after_answer:".",
-        answers: ["an explination of why the Finance Director acted as he did"]
+        answers: ["an explanation of why the Finance Director acted as he did"]
     },
     {
         question:"I had better leave now.",
@@ -564,14 +564,14 @@ const transformations_second = [
         word:'',
         before_answer:"The clerk denied",
         after_answer:".",
-        answers: ["The clerk denied"]
+        answers: ["falsifying the figures"]
     },
     {
         question:"It is the only way we can solve this problem?",
         word:'',
         before_answer:"Isn't there",
         after_answer:"?",
-        answers: ["any other way of solving the problem"]
+        answers: ["any other way of solving this problem"]
     },
     {
         question:"",
@@ -662,7 +662,7 @@ const transformations_second = [
         word:'criticism',
         before_answer:"",
         after_answer:".",
-        answers: ["If you want to express your criticism than the local authorities are the ones to blame","If you want to voice your criticism than the local authorities are the ones to blame"]
+        answers: ["If you want to express your criticism then the local authorities are the ones to blame","If you want to voice your criticism then the local authorities are the ones to blame"]
     },
     {
         question:"The authorities had decided they would get tough with dissidents.",
@@ -670,5 +670,5 @@ const transformations_second = [
         before_answer:"",
         after_answer:".",
         answers: ["The authorities had decided on a crackdown on the dissidents"]
-    },  
+    },
 ]

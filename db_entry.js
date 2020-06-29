@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Sentences = require('./models/sentence');
 const Stories = require('./models/story');
+const Sentences2 = require('./models/sentence2');
 
 mongoose
 	.connect('mongodb+srv://Bojan:klisaklisa@cluster0-rfxxc.mongodb.net/english?retryWrites=true&w=majority', {
@@ -22,6 +23,9 @@ const sentencesToInsert = [];
 // Populate this array with story objects to insert into DB
 const storiesToInsert = [];
 
+// Populate this array with sentences2 objects to insert into DB
+const sentences2ToInsert = [];
+
 Sentences.insertMany([ ...sentencesToInsert ], () => {
 	if (sentencesToInsert.length !== 0) {
 		console.log('Successfully inserted sentences to db');
@@ -35,5 +39,13 @@ Stories.insertMany([ ...storiesToInsert ], () => {
 		console.log('Successfully inserted stories to db');
 	} else {
 		console.log('No stories to insert!');
+	}
+});
+
+Sentences2.insertMany([ ...sentences2ToInsert ], () => {
+	if (sentences2ToInsert.length !== 0) {
+		console.log('Successfully inserted sentences2 to db');
+	} else {
+		console.log('No sentences2 to insert!');
 	}
 });

@@ -78,6 +78,7 @@ switch_transformations_2.addEventListener('click', () => {
 // Important global variables
 let state = [];
 let stories = [];
+let transformations_second = [];
 let state_index = 0;
 let which_game = 'transformations';
 let end_game = false;
@@ -89,6 +90,9 @@ let rand_400_award;
 let rand_500_award;
 let backdrop_active = true;
 let second_trans = false;
+let trans1_ok,
+	trans2_ok,
+	story_ok = false;
 
 // Return random number based on min and max numbers for random rewards
 const set_reward_rand_number = (min, max) => {
@@ -116,11 +120,11 @@ const check_button_handler = () => {
 	}
 };
 
-// After getting data from DB or locally, set answer counters
-// When data is 'transformations', set award counters and remove backdrop
-const after_initial_load = (data) => {
+// After getting all the data from DB or locally, set counters, rewards and remove backdrop
+const after_initial_load = (data, which) => {
+	set_after_load(which);
 	setAnswerCounter(data);
-	if (data[0].question && data[0].after_answer) {
+	if (trans1_ok && story_ok && trans2_ok) {
 		countdown_answers();
 		countdown.classList.add('show');
 		rand_100_award = set_reward_rand_number(110, 191);
@@ -129,6 +133,21 @@ const after_initial_load = (data) => {
 		rand_400_award = set_reward_rand_number(410, 491);
 		rand_500_award = set_reward_rand_number(510, 591);
 		if (backdrop_active) remove_backdrop();
+	}
+};
+
+// When data is loaded, set appropriate variables to true
+const set_after_load = (which) => {
+	switch (which) {
+		case 'trans1':
+			trans1_ok = true;
+			break;
+		case 'trans2':
+			trans2_ok = true;
+			break;
+		case 'stories':
+			story_ok = true;
+			break;
 	}
 };
 
