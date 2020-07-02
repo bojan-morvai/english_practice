@@ -394,20 +394,27 @@ document.addEventListener('keydown', (event) => {
 // When user answers correctly, show icon, and set attribute of current object for checking how many times is correct answer provided
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
-	state_obj[state_index].firstCorrectAnswer
-		? (state_obj[state_index].secondCorrectAnswer = true)
-		: (state_obj[state_index].firstCorrectAnswer = true);
+	if (which_game === 'transformations' && !second_trans) {
+		state_obj[state_index].firstCorrectAnswer = true;
+		state_obj[state_index].secondCorrectAnswer = true;
+	} else {
+		state_obj[state_index].firstCorrectAnswer
+			? (state_obj[state_index].secondCorrectAnswer = true)
+			: (state_obj[state_index].firstCorrectAnswer = true);
+	}
 	if (which_game !== 'dictionary') countdown_answers();
 	icon_true.classList.add('show');
 	icon_wrong.classList.remove('show');
-	award();
+	award(state_obj);
 };
 
 // Countdown for correct answers in games 'transformations' and 'transformations 2'
 const countdown_answers = () => {
+	let k = 2;
+	if(which_game === 'transformations' && !second_trans) k=1;
 	let data;
 	which_game === 'story' ? (data = stories) : (data = type_of_transformations());
-	countdown.textContent = data.length * 2 - corr_answer_counter;
+	countdown.textContent = data.length * k - corr_answer_counter;
 };
 
 // Backdrop shown when showing award picture and before loading questions
