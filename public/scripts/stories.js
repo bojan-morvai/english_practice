@@ -666,6 +666,48 @@ const stories_local = [
 		['among'],['out'],['called'],['what']]
 	},
 	{
+		headline: 'Niagara Falls',
+		texts: [
+			'Niagara Falls is Canada`s foremost tourist attraction in (1)',
+			'of the number of visitors it attracts. (2)',
+			'from the waterfall itself, however, there is precious (3)',
+			'to detain you in the area. Unless, (4)',
+			"is, you`re fan of wax museums, flashing neon lights and souvenir shops. But the <em>Maid of the Mist</em> boat ride is something not to be missed. (5)",
+			'operation since 1846, the boat takes millions of tourists a year around the base of the Falls. It`s wet ride and more (6)',
+			'that not, the raincoats they supply you (7)',
+			'prove futile against the stinging spray, but it`s well (8)',
+			'the drenching. The view of hundreds of liters of water per second crashing onto the rocks right in front of you is (9)',
+			'short of breathtaking.<hr> (10)',
+			"those who want a closer look, the journey behind the Falls also repays the price of admission, as the school groups you`ll inevitably (11)",
+			'across there will be only (12)',
+			"willing to testify. You walk through man-made tunnels to an observation tower situated (13)",
+			'the very brink of the Falls. The experience (14)',
+			'only be described as surreal; you feel as though you`re actually walking inside the waterfall. (15)',
+			'with the boat ride, you`re guaranteed a soaking, but there again, this is a waterfall, so (16)',
+			'do you expect?'
+		],
+		answers: [['terms'],['apart'],['little'],['that'],['in'],
+		['often'],['with'],['worth'],['nothing'],['for'],
+		['come'],['too'],['on'],['can'],['as'],['what']]
+	},
+	{
+		headline: 'Laughing is Good for You - Seriously',
+		texts: [
+			'It is a sad fact (1)',
+			'adults laugh far less than children, sometimes (2)',
+			'as much as a couple of hundred times a day. Just take a (3)',
+			'at people`s faces on the way to work or in the office: you`ll be lucky to see a smile, let (4)',
+			"hear a laugh. This is a shame - especially in (5)",
+			'of the fact that scientists have proved that laughing is good for you. `When you laugh,` says psychologist David Cohen, `it produces the feel-good hormones, endorphins. It counters the effects of stress (6)',
+			'enhances the immune system.`<hr>There are many (7)',
+			'why we might laugh less in adult life: perhaps we are too work-obsessed, or too embarrassed to (8)',
+			'our emotions show. Some psychologists simply believe that children have more naive responses, and as adults we naturally grow (9)',
+			'of spontaneous reactions.'
+		],
+		answers: [['that'],['by'],['look'],['alone'],['view'],
+		['and'],['reasons'],['let'],['out']]
+	},
+	{
 		headline: 'NASLOV',
 		texts: [
 			'G (1)',
