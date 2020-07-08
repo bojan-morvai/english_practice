@@ -19,6 +19,12 @@ const getSentences2Data = (data) => {
     after_initial_load(transformations_second,'trans2');
 }
 
+const getSentences3Data = (data) => {
+    if(data.length===0) throw new Error('Database in empty');
+    transformations_third = [...data];
+    after_initial_load(transformations_third,'trans3');
+}
+
 const getStoriesData = (data) => {
     if(data.length===0) throw new Error('Database is empty!');
     stories = [ ...data ];
@@ -53,4 +59,14 @@ fetchFromDb('/get-sentences2')
         console.log('Getting local data...');
         transformations_second = [...transformations_second_local];
         after_initial_load(transformations_second,'trans2');
+    })
+
+fetchFromDb('/get-sentences3')
+    .then(checkStatusAndParse)
+    .then(getSentences3Data)
+    .catch((err) => {
+        console.log(`Something wrong with sentences3 fetch, ${err}`);
+        console.log('Getting local data...');
+        transformations_third = [...transformations_third_local];
+        after_initial_load(transformations_third,'trans3');
     })

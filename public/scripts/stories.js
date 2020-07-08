@@ -624,6 +624,48 @@ const stories_local = [
 		['on'],['face'],['into','onto'],['though','if']]
 	},
 	{
+		headline: 'Food for a Future',
+		texts: [
+			'Jon Wynne-Tyson was an original thinker (1)',
+			"best-known book 'Food for a Future' was published in 1975. In this classic work, a case was (2)",
+			'forward for (3)',
+			"can only be described as a more responsible and humane attitude towards the world's food resources. It had gradually (4)",
+			"clear to Wynne-Tyson that the economics and ecology of meat production did not (5)",
+			'sense. What justification was (6)',
+			", he argued, for using seven tonnes of cereal to produce one tonne of meat?<hr>Even today, the book's succinct style makes it compulsively readable. (7)",
+			'his approach is basically an emotional one, Whynne-Tyson goes to great lengths to back (8)',
+			'every statement with considerable supporting evidence and statistical data. Thus, even (9)',
+			'of us who are widely read (10)',
+			"the subject of vegetarianism will gain fresh insights from his book. It is generally agreed that his most skilful achievement is the slow revelation of his main thesis (11)",
+			'the arguments unfold. The book concludes that a move away from an animal-based diet to (12)',
+			"which is based on plant sources is inevitable in the long term, in (13)",
+			'of the fact that there is no sound nutritional, medical or social justification for meat-eating. (14)',
+			'of whether you agree with (15)',
+			'a conclusion or not, the book certainly makes (16)',
+			'fascinating read.',
+		],
+		answers: [['whose'],['put'],['what'],['become'],['make'],
+		['there'],['although','while'],['up'],['those'],['on'],
+		['as'],['one'],['view'],['regardless'],['such'],['a']]
+	},
+	{
+		headline: 'Charles Schulz',
+		texts: [
+			'The cartoonist Sharles Schulz created the daily lives of Charlie Brown, Snoopy, Lucy and the (1)',
+			'inhabitants of the <em>Peanuts</em> strip. Schulz, (2)',
+			"to his friends as 'Sparky', drew the daily strip for almost 50 years. Its dictinctly American culture (3)",
+			'nothing to hamper its universal success. It was said to have 355 million readers in 75 countries, and it (4)',
+			"Schulz very rich. Schulz displayed unflaggingly sharp observation and a fairly gentle, if sometimes downbeat humour.<hr>He was given (5)",
+			'anxiety and low spirits, and there was an underlying sadness in his stories, a bitter-sweet quality that clearly fascinated many of his fans. In the 1950s, the strip had a vogue following (6)',
+			'intellectuals, but Schulz was happy to point (7)',
+			'that he himself had flunked algebra, Latin, English and physics a school. When someone (8)',
+			'him an existentialist, he had to ask (9)',
+			'the word meant.'
+		],
+		answers: [['other'],['known'],['did'],['made'],['to'],
+		['among'],['out'],['called'],['what']]
+	},
+	{
 		headline: 'NASLOV',
 		texts: [
 			'G (1)',

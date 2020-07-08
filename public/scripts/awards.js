@@ -13,7 +13,7 @@ const show_award = () => {
 // Awarding by invoking function that shows image and text on given fixed number of correct answers
 const award = (data) => {
 	let k = 2;
-	if(which_game==='transformations' && !second_trans) k=1;
+	if(which_game==='transformations' && trans==='first') k=1;
 	switch (corr_answer_counter) {
 		case 49:
 			set_award('/images/bunny50.jpg', 'Congratulations! You have 50 correct answers! Bunny is proud of you!');

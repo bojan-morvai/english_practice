@@ -13,6 +13,7 @@ const switch_transformations = document.querySelector('#h1-tab-transformations')
 const switch_dict = document.querySelector('#h1-tab-dictionary');
 const switch_story = document.querySelector('#h1-tab-story');
 const switch_transformations_2 = document.querySelector('#h1-tab-transformations-2');
+const switch_transformations_3 = document.querySelector('#h1-tab-transformations-3');
 const dict_section = document.querySelector('.dict-section');
 const assignment_section = document.querySelector('.assignment-section');
 const link_dict = document.querySelector('#link-dict');
@@ -30,8 +31,9 @@ switch_dict.addEventListener('click', () => {
 	switch_story.classList.remove('active');
 	countdown.classList.remove('show');
 	switch_transformations_2.classList.remove('active');
+	switch_transformations_3.classList.remove('active');
 	which_game = 'dictionary';
-	second_trans = false;
+	trans = false;
 	restart_answers();
 	restart();
 });
@@ -43,8 +45,9 @@ switch_story.addEventListener('click', () => {
 	switch_dict.classList.remove('active');
 	countdown.classList.add('show');
 	switch_transformations_2.classList.remove('active');
+	switch_transformations_3.classList.remove('active');
 	which_game = 'story';
-	second_trans = false;
+	trans = false;
 	restart_answers();
 	restart();
 });
@@ -55,9 +58,10 @@ switch_transformations.addEventListener('click', () => {
 	switch_story.classList.remove('active');
 	switch_transformations_2.classList.remove('active');
 	switch_transformations.classList.add('active');
+	switch_transformations_3.classList.remove('active');
 	countdown.classList.add('show');
 	which_game = 'transformations';
-	second_trans = false;
+	trans = 'first';
 	restart_answers();
 	restart();
 });
@@ -68,9 +72,23 @@ switch_transformations_2.addEventListener('click', () => {
 	switch_story.classList.remove('active');
 	switch_transformations.classList.remove('active');
 	switch_transformations_2.classList.add('active');
+	switch_transformations_3.classList.remove('active');
 	countdown.classList.add('show');
 	which_game = 'transformations';
-	second_trans = true;
+	trans = 'second';
+	restart_answers();
+	restart();
+});
+
+switch_transformations_3.addEventListener('click', () => {
+	switch_dict.classList.remove('active');
+	switch_story.classList.remove('active');
+	switch_transformations.classList.remove('active');
+	switch_transformations_2.classList.remove('active');
+	switch_transformations_3.classList.add('active');
+	countdown.classList.add('show');
+	which_game = 'transformations';
+	trans = 'third';
 	restart_answers();
 	restart();
 });
@@ -79,6 +97,7 @@ switch_transformations_2.addEventListener('click', () => {
 let state = [];
 let stories = [];
 let transformations_second = [];
+let transformations_third = [];
 let state_index = 0;
 let which_game = 'transformations';
 let end_game = false;
@@ -89,11 +108,13 @@ let rand_300_award;
 let rand_400_award;
 let rand_500_award;
 let backdrop_active = true;
-let second_trans = false;
+let trans = 'first';
 let trans1_ok,
 	trans2_ok,
+	trans3_ok,
 	story_ok = false;
 
+// transformations_third = transformations_third_local;
 // Return random number based on min and max numbers for random rewards
 const set_reward_rand_number = (min, max) => {
 	if (state.length < 55) return null;
@@ -124,7 +145,7 @@ const check_button_handler = () => {
 const after_initial_load = (data, which) => {
 	set_after_load(which);
 	setAnswerCounter(data);
-	if (trans1_ok && story_ok && trans2_ok) {
+	if (trans1_ok && story_ok && trans2_ok && trans3_ok) {
 		countdown_answers();
 		countdown.classList.add('show');
 		rand_100_award = set_reward_rand_number(110, 191);
@@ -144,6 +165,9 @@ const set_after_load = (which) => {
 			break;
 		case 'trans2':
 			trans2_ok = true;
+			break;
+		case 'trans3':
+			trans3_ok = true;
 			break;
 		case 'stories':
 			story_ok = true;
@@ -209,8 +233,14 @@ const get_word = () => {
 
 // Check which 'transformations' are selected and return correct one
 const type_of_transformations = () => {
-	if (second_trans) return transformations_second;
-	return state;
+	switch (trans) {
+		case 'second':
+			return transformations_second;
+		case 'third':
+			return transformations_third;
+		default:
+			return state;
+	}
 };
 
 // Get new transformation question based on which h1 tag is active, end game if none left
@@ -394,7 +424,7 @@ document.addEventListener('keydown', (event) => {
 // When user answers correctly, show icon, and set attribute of current object for checking how many times is correct answer provided
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
-	if (which_game === 'transformations' && !second_trans) {
+	if (which_game === 'transformations' && trans==='first') {
 		state_obj[state_index].firstCorrectAnswer = true;
 		state_obj[state_index].secondCorrectAnswer = true;
 	} else {
@@ -411,7 +441,7 @@ const answering_correct = (state_obj) => {
 // Countdown for correct answers in games 'transformations' and 'transformations 2'
 const countdown_answers = () => {
 	let k = 2;
-	if(which_game === 'transformations' && !second_trans) k=1;
+	if(which_game === 'transformations' && trans==='first') k=1;
 	let data;
 	which_game === 'story' ? (data = stories) : (data = type_of_transformations());
 	countdown.textContent = data.length * k - corr_answer_counter;

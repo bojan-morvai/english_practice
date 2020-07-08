@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Sentences = require('./models/sentence');
 const Stories = require('./models/story');
 const Sentences2 = require('./models/sentence2');
+const Sentences3 = require('./models/sentence3');
 
 const app = express();
 
@@ -50,6 +51,15 @@ app.get('/get-stories', (req,res) => {
 
 app.get('/get-sentences2', (req, res) => {
 	Sentences2.find({}, function(err, allSentences) {
+		if (err) {
+			console.log('Error connecting to db...', err);
+		}
+		res.send(allSentences);
+	});
+});
+
+app.get('/get-sentences3', (req, res) => {
+	Sentences3.find({}, function(err, allSentences) {
 		if (err) {
 			console.log('Error connecting to db...', err);
 		}
