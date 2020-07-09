@@ -204,7 +204,8 @@ h1 .small-text {
 
 .assignment-section .countdown {
   display: none;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   top: 80%;
   left: 48%;
 }

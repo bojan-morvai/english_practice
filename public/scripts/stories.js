@@ -708,6 +708,40 @@ const stories_local = [
 		['and'],['reasons'],['let'],['out']]
 	},
 	{
+		headline: 'Advertising in Britain',
+		texts: [
+			'What does (1)',
+			'say about a nation that when a national newspaper recently set (2)',
+			'to establish the best television advert of all time, as (3)',
+			'as 10,000 people responded! The anwer lies (4)',
+			"the fact that the British have developed an intense admiration for a genre that has developed into an art form in its (5)",
+			'right. In 1955, when Gibbs SR toothpaste broadcast the first TV commercial, it was inconceivable that ads would ever end (6)',
+			'being considered as sophisticated and innovative as the programmes surrounding (7)',
+			'. Yet by 1978, the author Johnatan Price was able to declare: `Financially, commercials represent the pinnacle of our popular culture`s artistic expression. More money and thought per second goes into (8)',
+			'making and more cash flows from their impact than (9)',
+			'the case for any movie, opera, stage play, painting or videtape.`',
+		],
+		answers: [['it'],['out'],['many'],['in'],['own'],
+		['up'],['them'],['their'],['is']]
+	},
+	{
+		headline: 'Celebrity Crossover',
+		texts: [
+			'It is not surprising that actors want to be pop stars, (1)',
+			'vice versa. (2)',
+			'deep in a part of our brain that most of us manage to keep (3)',
+			'control, we all want to be pop stars and actors.<hr>Sadly, there`s nothing about the (4)',
+			"profession that automatically qualifies you for the other. Some stars do display a genuine proficiency in both disciplines, and a few even maintain successful careers in both fields, but this just (5)",
+			'a bad example for all the others. (6)',
+			'every success, there are two dozen failures. And most of them have no idea (7)',
+			'terrible they are. (8)',
+			'as power tends to corrupt, so celebrity tends to destroy the ability to gauge whether or not you`re making a fool of (9)',
+			'.',
+		],
+		answers: [['and'],['somewhere'],['under'],['one'],['sets'],
+		['for'],['how'],['just'],['yourself']]
+	},
+	{
 		headline: 'NASLOV',
 		texts: [
 			'G (1)',
