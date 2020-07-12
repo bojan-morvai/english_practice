@@ -14,6 +14,7 @@ const switch_dict = document.querySelector('#h1-tab-dictionary');
 const switch_story = document.querySelector('#h1-tab-story');
 const switch_transformations_2 = document.querySelector('#h1-tab-transformations-2');
 const switch_transformations_3 = document.querySelector('#h1-tab-transformations-3');
+const switch_transformations_4 = document.querySelector('#h1-tab-transformations-4');
 const dict_section = document.querySelector('.dict-section');
 const assignment_section = document.querySelector('.assignment-section');
 const link_dict = document.querySelector('#link-dict');
@@ -32,6 +33,7 @@ switch_dict.addEventListener('click', () => {
 	countdown.classList.remove('show');
 	switch_transformations_2.classList.remove('active');
 	switch_transformations_3.classList.remove('active');
+	switch_transformations_4.classList.remove('active');
 	which_game = 'dictionary';
 	trans = false;
 	restart_answers();
@@ -46,6 +48,7 @@ switch_story.addEventListener('click', () => {
 	countdown.classList.add('show');
 	switch_transformations_2.classList.remove('active');
 	switch_transformations_3.classList.remove('active');
+	switch_transformations_4.classList.remove('active');
 	which_game = 'story';
 	trans = false;
 	restart_answers();
@@ -59,6 +62,7 @@ switch_transformations.addEventListener('click', () => {
 	switch_transformations_2.classList.remove('active');
 	switch_transformations.classList.add('active');
 	switch_transformations_3.classList.remove('active');
+	switch_transformations_4.classList.remove('active');
 	countdown.classList.add('show');
 	which_game = 'transformations';
 	trans = 'first';
@@ -73,6 +77,7 @@ switch_transformations_2.addEventListener('click', () => {
 	switch_transformations.classList.remove('active');
 	switch_transformations_2.classList.add('active');
 	switch_transformations_3.classList.remove('active');
+	switch_transformations_4.classList.remove('active');
 	countdown.classList.add('show');
 	which_game = 'transformations';
 	trans = 'second';
@@ -85,10 +90,25 @@ switch_transformations_3.addEventListener('click', () => {
 	switch_story.classList.remove('active');
 	switch_transformations.classList.remove('active');
 	switch_transformations_2.classList.remove('active');
+	switch_transformations_4.classList.remove('active');
 	switch_transformations_3.classList.add('active');
 	countdown.classList.add('show');
 	which_game = 'transformations';
 	trans = 'third';
+	restart_answers();
+	restart();
+});
+
+switch_transformations_4.addEventListener('click', () => {
+	switch_dict.classList.remove('active');
+	switch_story.classList.remove('active');
+	switch_transformations.classList.remove('active');
+	switch_transformations_2.classList.remove('active');
+	switch_transformations_3.classList.remove('active');
+	switch_transformations_4.classList.add('active');
+	countdown.classList.add('show');
+	which_game = 'transformations';
+	trans = 'fourth';
 	restart_answers();
 	restart();
 });
@@ -98,6 +118,8 @@ let state = [];
 let stories = [];
 let transformations_second = [];
 let transformations_third = [];
+let transformations_third_a = [];
+let transformations_third_b = [];
 let state_index = 0;
 let which_game = 'transformations';
 let end_game = false;
@@ -155,7 +177,16 @@ const after_initial_load = (data, which) => {
 		rand_500_award = set_reward_rand_number(510, 591);
 		if (backdrop_active) remove_backdrop();
 	}
+	if(which==='trans3'){
+		separate_third();
+	}
 };
+
+// Separate third transformations array into two arrays
+const separate_third = () => {
+	transformations_third_a = transformations_third.slice(0,121);
+	transformations_third_b = transformations_third.slice(121);
+}
 
 // When data is loaded, set appropriate variables to true
 const set_after_load = (which) => {
@@ -237,7 +268,9 @@ const type_of_transformations = () => {
 		case 'second':
 			return transformations_second;
 		case 'third':
-			return transformations_third;
+			return transformations_third_a;
+		case 'fourth':
+			return transformations_third_b;
 		default:
 			return state;
 	}
