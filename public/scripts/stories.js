@@ -831,6 +831,120 @@ const stories_local = [
 		['fill'],['they'],['when','as','while'],['not'],['how'],['to'],['it'],['with'],['considering','given'],['go','pass'],['from']]
 	},
 	{
+		headline: 'The Karaoke Culture 2',
+		texts: [
+			'We live in a culture that values participation over ability: the karaoke culture. (1)',
+			"broadcasting, it seems we cannot escape the vogue for 'access TV','people shows' and 'video diaries'. (2)",
+			'is our apparent obsession with documenting our own lives (3)',
+			'in future, programmes will be replaced by cameras in every room, so that we can watch (4)',
+			'endlessly on TV. In the countless shows that fill our daytime schedules, (5)',
+			"audience has become the star. The (6)",
+			"with this 'inclusive' culture is that it knows (7)",
+			"no bounds. The public makes programmes, the public participate in programmes, the public become performers. Anybody (8)",
+			'do it!<hr>But there is a world of (9)',
+			'between enjoying something and joining in. If we all join in, (10)',
+			'is the point of artists or experts? If everything is accessible, (11)',
+			'can be no mystery, no mystique. Is there (12)',
+			'a beauty in knowledge, a pleasure in learning from a true expert? I love listening to a genius and learning from (or even just appreciating) his or her skill. (13)',
+			"assume then that I can 'have a go at' their craft (14)",
+			'be monstrous impudence on my part. Worse still is the dismissal of something difficult or demanding (15)',
+			"'elitist'. We don't (16)",
+			"to a brilliant glassblower, juggler or plasterer as 'elitist', yet because we all use words and can all sing, anyone who aspires to greatness in these arts is considered elitist by some people."
+		],
+		answers: [[''],[''],[''],[''],[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],[''],[''],['']]
+	},
+	{
+		headline: 'Unknown Beginnings',
+		texts: [
+			'We do not know how art began any more than we know how language started. Assuming we take art to mean such activities (1)',
+			'building temples and houses, making pictures and scupltures, then there is no culture in the world (2)',
+			'art.<hr> (3)',
+			', on the other hand, we mean (4)',
+			"art some kind of beautiful luxury, something to enjoy in museums and exhibitions, we must realise that this use of the (5)",
+			'is a very recent development.<hr>In the past, paintings and statues were not (6)',
+			'of as mere works of art, but as objects (7)',
+			'a definite function. Primitive peoples saw no (8)',
+			'between building and image-making as (9)',
+			'as usefulness was concerned. Their huts were (10)',
+			"up as shelter from the weather and the spirits which contolled (11)",
+			'; images were made to (12)',
+			"them against other powers which were, to (13)",
+			', as real as the forces of (14)',
+			'. Pictures and statues, in (15)',
+			'words, were used to work magic.<hr>During the Ice Age (16)',
+			'ancestors used only the most (17)',
+			"stone tools, and yet, on the walls and ceilings of caves, are beautiful paintings of animals. However, it is most (18)",
+			"that they were made for decoration. These early hunters believed that by creating an (19)",
+			"if their prey, the real animals would also succumb to (20)",
+			"power."
+		],
+		answers: [[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],['']]
+	},
+	{
+		headline: 'Fieldwork',
+		texts: [
+			'Half the excitement of embarking on a geology degree is the prospect of doing hands-on science in the great outdoors; an activity that (1)',
+			'by the name of fieldwork<hr>(2)',
+			'vast majority of new students relish the (3)',
+			'to find it all out at (4)',
+			"hand - make their own observations and measurements, test their own hypotheses - in that (5)",
+			'of all learning environments, the field. Even those who (6)',
+			'motivation in the classroom manage to find some level of determination when faced (7)',
+			'the reality of a particularly interesting rock outcrop.<hr>There is a downside (8)',
+			'all this delirium, however. Budding geologists must learn to (9)',
+			'up with harsh conditions during the many field classes that (10)',
+			"slotted into the winter and spring vacations. In Britain, they receive precious little or (11)",
+			'support from the education authorities, despite (12)',
+			"up valuable free time when they could be earning money. What's more, they also have to (13)",
+			'themselves for the field, (14)',
+			'buying expensive tools and weatherproof clothing.<hr>All in (15)',
+			'however, the experience of fieldwork is (16)',
+			'just enjoyable, and an excellent foundation (17)',
+			"scientific experimental design, it is also good for a student's future career. Even if only a (18)",
+			"go on to become professional geologists, the benefits for students of learning to think on (19)",
+			"feet, both literally and metaphorically, (20)",
+			"developing self-motivation and teamwork, are undeniable."
+		],
+		answers: [[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],['']]
+	},
+	{
+		headline: 'Teaching English Spelling',
+		texts: [
+			'Nobody knows precisely how a child learns to read. Learning to spell, a closely related but subtly different process, is no (1)',
+			'complex and presents serious problems (2)',
+			'large numbers of English schoolchildren. In general, educationalists agree (3)',
+			'one point: improving spelling becomes harder the older (4)',
+			"gets. They are, however divided on (5)",
+			'best to help those who have difficulties. Good reading and good spelling do not always (6)',
+			'hand in hand. Encouragement to read at home as well as at school undoubtedly (7)',
+			', but simply reading more books will not teach children to spell because in reading (8)',
+			'in spelling, the child does not need to look at (9)',
+			'letter in a given word.<hr>Educationalists also disagree over (10)',
+			"English spelling is best taught by (11)",
+			'of a visual approach, or through `phonics`, (12)',
+			"is the system of sounding out words already (13)",
+			'in the teaching of reading to (14)',
+			'extent by most British primary schools. The majority of research studies (15)',
+			'out so far have lent support to the belief that accuracy (16)',
+			'spelling is largely something to (17)',
+			"with visual memory for words rather than auditory memory, not (18)",
+			"because of the number of irregular spellings in English. This is borne (19)",
+			"by the fact that adults, when (20)",
+			"of a word, will often write it down `to see if it looks right.`"
+		],
+		answers: [[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],['']]
+	},
+	{
 		headline: 'NASLOV',
 		texts: [
 			'G (1)',
@@ -859,5 +973,6 @@ const stories_local = [
 		[''],[''],[''],[''],[''],
 		[''],[''],[''],[''],[''],[''],
 		[''],[''],[''],['']]
-	}
+	},
+	
 ];

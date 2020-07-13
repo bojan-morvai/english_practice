@@ -24,6 +24,8 @@ const award_text = document.querySelector('#award-text');
 const sentence_space = document.querySelector('.sentence-space');
 const story_space = document.querySelector('.story-space');
 const countdown = document.querySelector('.countdown');
+const skip_story_button = document.querySelector('.skip-story-button');
+const reverse_story_button = document.querySelector('.reverse-story-button');
 
 // Headline click 'Dictionary' set game to 'Dictionary'
 switch_dict.addEventListener('click', () => {
@@ -53,6 +55,7 @@ switch_story.addEventListener('click', () => {
 	trans = false;
 	restart_answers();
 	restart();
+	reverse_story_button.style.display = 'block';
 });
 
 // Headline click 'Transformations', set game to 'transformations'
@@ -163,7 +166,7 @@ const check_button_handler = () => {
 	}
 };
 
-// After getting all the data from DB or locally, set counters, rewards and remove backdrop
+// After getting all the data from DB or locally, set counters, rewards and remove backdrop and separate third and fourth transformations 
 const after_initial_load = (data, which) => {
 	set_after_load(which);
 	setAnswerCounter(data);
@@ -177,16 +180,16 @@ const after_initial_load = (data, which) => {
 		rand_500_award = set_reward_rand_number(510, 591);
 		if (backdrop_active) remove_backdrop();
 	}
-	if(which==='trans3'){
-		separate_third();
+	if (which === 'trans3') {
+		separate_third(121);
 	}
 };
 
-// Separate third transformations array into two arrays
-const separate_third = () => {
-	transformations_third_a = transformations_third.slice(0,121);
-	transformations_third_b = transformations_third.slice(121);
-}
+// Separate third transformations array into two arrays on a given index
+const separate_third = (index) => {
+	transformations_third_a = transformations_third.slice(0, index);
+	transformations_third_b = transformations_third.slice(index);
+};
 
 // When data is loaded, set appropriate variables to true
 const set_after_load = (which) => {
@@ -208,6 +211,7 @@ const set_after_load = (which) => {
 
 // When user click on headline 'Transformations','Dictionary', or 'Story' restart all fields
 const restart = () => {
+	skip_story_button.disabled = true;
 	button_check.disabled = true;
 	button_next.disabled = false;
 	button_dont_know.disabled = true;
@@ -217,6 +221,9 @@ const restart = () => {
 	set_text_areas('Question', 'word');
 	remove_icons();
 	which_game === 'dictionary' ? (link_dict.style.display = 'block') : (link_dict.style.display = 'none');
+	which_game === 'story'
+		? ((skip_story_button.style.display = 'block'), (reverse_story_button.style.display = 'none'))
+		: (skip_story_button.style.display = 'none');
 	set_game(which_game);
 };
 
@@ -244,6 +251,7 @@ const set_game = (game) => {
 // When user click on button 'next', set buttons, icons and getting appropriate question
 const get_word = () => {
 	button_check.disabled = false;
+	skip_story_button.disabled = false;
 	button_next.disabled = true;
 	button_dont_know.disabled = false;
 	text_input.disabled = false;
@@ -305,6 +313,7 @@ const get_new_story = () => {
 	if (end_game) {
 		set_text_areas('', 'There is no more stories!');
 		button_check.disabled = true;
+		skip_story_button.disabled = true;
 		button_dont_know.disabled = true;
 		text_input.disabled = true;
 	} else {
@@ -320,10 +329,13 @@ const get_new_dictionary = () => {
 	set_text_areas('Translate', dictionary[state_index].english);
 };
 
-// When get_word() is fired, if game is 'story',  create appropriate DOM elements
+// When get_word() is fired, if game is 'story', create appropriate DOM elements
 const set_story = () => {
+	reverse_story_button.style.display = 'none';
 	story_space.textContent = '';
-	assignment_section.classList.add('more-height');
+	stories[state_index].answers.length < 10
+		? assignment_section.classList.add('more-height-small')
+		: assignment_section.classList.add('more-height-large');
 	countdown.classList.add('countdown-story-mode');
 	const story = stories[state_index].texts;
 	word.textContent = stories[state_index].headline;
@@ -347,7 +359,8 @@ const set_story = () => {
 // Remove created DOM elemets for game 'story'
 const remove_story = () => {
 	story_space.innerHTML = '';
-	assignment_section.classList.remove('more-height');
+	assignment_section.classList.remove('more-height-large');
+	assignment_section.classList.remove('more-height-small');
 	countdown.classList.remove('countdown-story-mode');
 };
 
@@ -457,7 +470,7 @@ document.addEventListener('keydown', (event) => {
 // When user answers correctly, show icon, and set attribute of current object for checking how many times is correct answer provided
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
-	if (which_game === 'transformations' && trans==='first') {
+	if (which_game === 'transformations' && trans === 'first') {
 		state_obj[state_index].firstCorrectAnswer = true;
 		state_obj[state_index].secondCorrectAnswer = true;
 	} else {
@@ -474,7 +487,7 @@ const answering_correct = (state_obj) => {
 // Countdown for correct answers in games 'transformations' and 'transformations 2'
 const countdown_answers = () => {
 	let k = 2;
-	if(which_game === 'transformations' && trans==='first') k=1;
+	if (which_game === 'transformations' && trans === 'first') k = 1;
 	let data;
 	which_game === 'story' ? (data = stories) : (data = type_of_transformations());
 	countdown.textContent = data.length * k - corr_answer_counter;
@@ -527,6 +540,7 @@ const remove_icons = () => {
 // Show correct answer, also trigger when "don't know" button is clicked, disables all input tags
 const show_correct_answer = () => {
 	button_check.disabled = true;
+	skip_story_button.disabled = true;
 	button_next.disabled = false;
 	button_dont_know.disabled = true;
 	const inputs = document.getElementsByTagName('input');
@@ -574,8 +588,25 @@ const restart_answers = () => {
 	set_text_areas('Questions restarted...');
 	button_next.disabled = false;
 	button_check.disabled = true;
+	skip_story_button.disabled = true;
 	button_dont_know.disabled = true;
 	end_game = false;
+};
+
+// Button 'Skip story' for skipping current story
+const skip_story_handler = () => {
+	restart();
+	story_space.textContent = `Story "${stories[state_index].headline}" skipped`;
+	state_index++;
+	const counter = stories.length * 2 - corr_answer_counter;
+	counter % 2 === 0 ? (corr_answer_counter += 2) : corr_answer_counter++;
+	countdown_answers();
+};
+
+// Button 'reverse!' for reversing order of stories
+const reverse_story_handler = () => {
+	stories = stories.reverse();
+	story_space.textContent = 'Stories reversed!';
 };
 
 // Helper function for setting text areas. Default values are empty strings
