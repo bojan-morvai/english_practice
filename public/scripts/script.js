@@ -470,7 +470,7 @@ document.addEventListener('keydown', (event) => {
 // When user answers correctly, show icon, and set attribute of current object for checking how many times is correct answer provided
 const answering_correct = (state_obj) => {
 	corr_answer_counter++;
-	if (which_game === 'transformations' && trans === 'first') {
+	if (which_game === 'transformations' && trans === 'first' || trans==='second' || trans==='third') {
 		state_obj[state_index].firstCorrectAnswer = true;
 		state_obj[state_index].secondCorrectAnswer = true;
 	} else {
@@ -487,7 +487,7 @@ const answering_correct = (state_obj) => {
 // Countdown for correct answers in games 'transformations' and 'transformations 2'
 const countdown_answers = () => {
 	let k = 2;
-	if (which_game === 'transformations' && trans === 'first') k = 1;
+	if (which_game === 'transformations' && trans === 'first' || trans==='second' || trans==='third') k = 1;
 	let data;
 	which_game === 'story' ? (data = stories) : (data = type_of_transformations());
 	countdown.textContent = data.length * k - corr_answer_counter;

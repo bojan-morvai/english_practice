@@ -851,8 +851,8 @@ const stories_local = [
 			"'elitist'. We don't (16)",
 			"to a brilliant glassblower, juggler or plasterer as 'elitist', yet because we all use words and can all sing, anyone who aspires to greatness in these arts is considered elitist by some people."
 		],
-		answers: [[''],[''],[''],[''],[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],[''],[''],['']]
+		answers: [['in'],['such'],['that'],['ourselves'],['the'],['problem','issue'],['no'],['can'],['difference'],['what'],
+		['there'],['not'],['to'],['would'],['as'],['refer']]
 	},
 	{
 		headline: 'Unknown Beginnings',
@@ -879,10 +879,10 @@ const stories_local = [
 			"if their prey, the real animals would also succumb to (20)",
 			"power."
 		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
+		answers: [['as'],['without'],['if'],['by'],['term'],
+		['though'],['with'],['difference'],['far'],['built'],
+		['it'],['protect'],['them'],['nature'],['other'],['our'],
+		['primitive'],['unlikely'],['image'],['their']]
 	},
 	{
 		headline: 'Fieldwork',
@@ -909,10 +909,10 @@ const stories_local = [
 			"feet, both literally and metaphorically, (20)",
 			"developing self-motivation and teamwork, are undeniable."
 		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
+		answers: [['goes'],['the'],['chance'],['first'],['best'],
+		['lack'],['with'],['to'],['put'],['are'],
+		['no'],['giving'],['prepare'],['by'],['all'],['not'],
+		['for'],['few'],['their'],['and']]
 	},
 	{
 		headline: 'Teaching English Spelling',
@@ -939,6 +939,358 @@ const stories_local = [
 			"by the fact that adults, when (20)",
 			"of a word, will often write it down `to see if it looks right.`"
 		],
+		answers: [['less'],['for'],['on'],['one'],['how'],
+		['go'],['helps'],['unlike'],['each'],['whether'],
+		['means'],['which'],['used'],['some'],['carried'],['in'],
+		['do'],['just'],['of'],['thinking']]
+	},
+	{
+		headline: 'Watercolour Painting',
+		texts: [
+			'The nineteenth-century obsession with correct watercolour technique bred a revolt in the early part of this century, to the extent (1)',
+			'teaching students how to put on paint began to be regarded (2)',
+			'almost immoral, stifling self-expression and creativity. However, (3)',
+			'it is true that no amount of technical knowledge and expertise can be a (4)',
+			"for vision, there is (5)",
+			'more frustrating than knowing you have something to say but (6)',
+			'having the means to say it. No art exists (7)',
+			'a vacuum - we can always learn from other artists and (8)',
+			'never be ashamed to study their methods (9)',
+			'well as their subject matter. This is, and always has (10)',
+			", part of the quest (11)",
+			'a personal artistic language.<hr>Even (12)',
+			"this narrow field of water-based media, there are almost endless different (13)",
+			'of applying paint (14)',
+			'paper. Some of these may strike a chord with a student, while (15)',
+			'may not, but they should all be (16)',
+			'out. Learning to understand the capabilities of a medium has a wonderfully liberating (17)',
+			"on one's painting. It enables artists to find their own voice and express their ideas (18)",
+			"confidence and vigour. Always remember, though, that technique is no (19)",
+			"than a tool and that the way you paint should never be more important than (20)",
+			"you paint."
+		],
+		answers: [['that'],['as'],['although'],['substitute'],['nothing'],
+		['not'],['in','within'],['should'],['as'],['been'],
+		['for'],['in'],['possibility','ways'],['to'],['others'],['tried'],
+		['effect','impact'],['with'],['more'],['what']]
+	},
+	{
+		headline: 'Left-handers',
+		texts: [
+			'My research into the phenomenon of why some people are left-handed and the effects of left-handedness in a right-handed world has been something (1)',
+			'a personal adventure. The idea came as one of (2)',
+			'twilight flashes of inspiration that arrive, quite unexpectedly, (3)',
+			'in a half-awake, half-asleep state. I have no idea (4)',
+			"provoked it as I had never been particularly (5)",
+			'of my left-handedness, other (6)',
+			'when people had noticed me writing and remarked (7)',
+			'it.<hr>It was my research (8)',
+			'sparked off a host of long-forgotten memories of discrimination at schoold and at home, (9)',
+			'significance of which had passed unnoticed at the (10)',
+			". It also served to dispense (11)",
+			'several time-worn complexes, the origins of which I had never confronted (12)',
+			"I began to dig them up.<hr>I had been labelled clumsy, thrown (13)",
+			'of the kitchen at an early (14)',
+			', then criticised for not helping with the chores. Now I was discovering that my complexes were (15)',
+			'to society`s blinkered attitude towards left-handers, (16)',
+			'attitude that tends to persist (17)',
+			"in these enlightened times.<hr>The project produced an extra bonus. Letters came in from all (18)",
+			"the country from left-handers or parents of left-handed children who were crying (19)",
+			"for left-handed scissors, can-openers and other items. Having found out (20)",
+			"to obtain them, I launched a mail-order service called Lefties, which is now a flourising business."
+		],
+		answers: [['of'],['the'],['while'],['what'],['aware'],
+		['than'],['about'],['that'],['the'],['time'],
+		['with'],['until','till'],['out'],['age'],['linked'],['an','the'],
+		['even'],['over'],['out'],['now']]
+	},
+	{
+		headline: 'The Mosaic Career',
+		texts: [
+			'The traditional career ladder - which once enabled you to join a firm in your twenties, work your way (1)',
+			'through one promotion after another and with luck, emerge some thirty years later in a (2)',
+			'of power within the same company -  (3)',
+			'longer exists.<hr>Most commentators agree that it is not possible, not (4)',
+			"for a multinational company, to anticipate (5)",
+			'will happen further than two or three years (6)',
+			'. You (7)',
+			'move from contracted work to freelance work, from high-paid work to low-paid work. This is the norm (8)',
+			'born freelancers, such as journalists, and they can (9)',
+			'it in their stride. (10)',
+			"for the rest of the working population, the vast (11)",
+			'of employed people, this uncertain state of (12)',
+			"can lead to feelings of anxiety and insecurity.<hr>In an old-style company you could (13)",
+			'your entire working life comfortably ensconced in a job for (14)',
+			'you were perhaps only partly suited. Out on your (15)',
+			'there is a greater freedom to choose (16)',
+			'to spend your time. However, this means that you have to know your (17)',
+			"and weaknesses as there is no one to cover for you or to see you (18)",
+			"any difficulties. You have to take (19)",
+			"for knowing yourself as the (20)",
+			"step towards finding a job which will suit you."
+		],
+		answers: [['up'],['position','post'],['no'],['even'],['what'],
+		['ahead'],['can','could'],['for'],['take'],['as'],
+		['majority'],['affairs'],['spend'],['which'],['own'],['how'],
+		['strengths'],['through'],['responsibility'],['first']]
+	},
+	{
+		headline: 'Mobile Communications',
+		texts: [
+			'For many people, mobile email is a habit they couldn`t give up even (1)',
+			'they wanted to. And (2)',
+			'should they want to? (3)',
+			'all, the ability to send and receive emails from a mobile device means they can stay in touch with colleagues, friends and family, whether they`re standing in a queue at the supermarket, downing a quick cup of coffee in (4)',
+			"meetings or killing (5)",
+			'before a flight.<hr>It`s fair to say that access to email while (6)',
+			'the move has done much to whet appetites for other kinds of collaborative tools. What`s (7)',
+			', there`s a whole new way of working that has opened up in recent years and, (8)',
+			'a result, there`s a general expectation that efficiency and productivity don`t necessarily take (9)',
+			'within the four walls of an organisation`s physical offices.',
+		],
+		answers: [['if'],['why'],['after'],['between'],['time'],
+		['on'],['more'],['as'],['place']]
+	},
+	{
+		headline: 'The Map Thief',
+		texts: [
+			'For a couple of years, Gilbert Bland was a unique figure in the privileged world of antique map dealing. He made a 100% profit (1)',
+			'every map he sold, (2)',
+			'because he was a clever businessman, but because he was a thief. In the mid-1990s, Bland crept around libraries in the USA, armed (3)',
+			'a sharp razor and a baggy shirt and sliced out those ancient maps which took (4)',
+			"fancy. Some were worth tens of thousands of dollars, and he (5)",
+			'on to sell them through both mail-order catalogues and his shop in Florida.<hr>(6)',
+			'Bland`s historical knowledge of maps was patchy at best, his knowledge of (7)',
+			'exact location in the rare book stacks was second to (8)',
+			'. When he heard that early maps of, (9)',
+			'Seattle were becoming popular, he would know precisely (10)',
+			"to start slicing.<hr>His crimes only came (11)",
+			'light when researcher in a Baltimore library noticed that a man appeared to be tearing a page from a 200=year-old book (12)',
+			"if it were a newspaper. At (13)",
+			', it was assumed that this was an isolated case, and the library and police were happy to (14)',
+			'Bland off with a warning. (15)',
+			'later did they (16)',
+			'across his notebooks, which contained elaborate details of all his thefts.',
+		],
+		answers: [['on'],['not'],['with'],['his'],['went'],
+		['although'],['their'],['none'],['say'],['where'],
+		['to'],['as'],['first'],['let'],['only'],['come']]
+	},
+	{
+		headline: 'The psychology of Selling',
+		texts: [
+			'The psychology of retailing has come to rely (1)',
+			'highly sophisticated techniques. Over and (2)',
+			'the design of the shops and the packinging of the merchandise, clever positioning of goods also ensures that the natural flow of people takes them to (3)',
+			'and every section in a shop. Customers are led gently, but at the (4)',
+			"time with deadly accuracy, towards the merchandise is such a way (5)",
+			'to maximise sales.<hr>Manufacturers compete for the right to (6)',
+			'their products displayed at the (7)',
+			'effective level. In supermarkets, there is a crucial section in the tiers of vertical shelving somewhere (8)',
+			'waist height and eye level, where we are most likely to (9)',
+			'note of a brand. In the old days, when we went into a shop, we made our (10)',
+			"up to the counter, behind (11)",
+			'would be the shopkeeper and virtually all of the merchandise, and were served with what we wanted. Those days are (12)',
+			"and truly over.<hr>Today, we are used to serving (13)",
+			'in supermarkets; products are laid before us as enticingly as (14)',
+			', and impulse purchases are encouraged as a major part of the exercise. As a (15)',
+			'of this, we, as shoppers, have to keep our wits (16)',
+			'us to resist the retailers` ploys.'
+		],
+		answers: [['on'],['above'],['each'],['same'],['as'],['have','keep'],
+		['most'],['between'],['take'],['way'],['which'],
+		['well'],['ourselves'],['possible'],['result'],['about']]
+	},
+	{
+		headline: 'Budding Writers',
+		texts: [
+			'What do Charles Dickens and Ernest Hemingway (1)',
+			'in common? The answer is that, along (2)',
+			'many other famous novelists, their writing careers began on a local newspaper. Today, (3)',
+			'its somewhat tarnished reputation, journalism still remains one of the few career paths open to the budding writer (4)',
+			"his or her best to earn a living. (5)",
+			'is more, many aspiring novelists are to be found biding their time on the staff of regional newspapers.<hr>It is (6)',
+			'exaggerating, however, to say that good writers are of (7)',
+			'or no value to a newspaper (8)',
+			'they do not know how to set about finding stories. Junior reporters have to devote hours to the cultivation of contacts who will (9)',
+			'them supplied with the type of stories their readers have become (10)',
+			"to seeing in print.<hr>Newspapers also require a particular style. The graduate entrant to journalism, all of (11)",
+			'experience and training is based on essay writing, may find the discipline required in writing a news report rather (12)',
+			"daunting prospect. The philosophy of the newspaper is quite simple, (13)",
+			'the fact that there are thousands of words completing (14)',
+			'a limited number of columns. In addition, the average reader only spends at (15)',
+			'twenty-five minutes reading a paper, so brevity is of (16)',
+			'utmost importance.'
+		],
+		answers: [['have'],['with'],['despite'],['doing','trying'],['what'],
+		['over','not','hardly','scarcely'],['little'],['if'],['keep'],['used','accustomed'],
+		['whose'],['a'],['given'],['with'],['most','best'],['the']]
+	},
+	
+	{
+		headline: 'History of Music',
+		texts: [
+			'Lovers of music who are a little rusty (1)',
+			'it comes to history shouldn`t miss forthcoming issues of this magazine. In our most ambitious series of articles (2)',
+			'date, we aim to span the history of western music in (3)',
+			'entirety. Obviously, (4)',
+			"the lack of space at our disposal, we cannot be totally comprehensive (5)",
+			'we do feel we have a (6)',
+			'than adequate overview of the socio-cultural context. If you`re already feeling (7)',
+			'off by the prospect of a rather dry history lession, then I must stress how unlike a lession these articles will be. (8)',
+			'the extent to which you might be familiar (9)',
+			'the historical background, you must read these articles for the insight they give (10)',
+			"the music itself.<hr>In (11)",
+			'to this, the series will represent a guide for readers whose aim is to build an essential music collection. Now (12)',
+			"this strike you (13)",
+			'yet another voyage through familiar territory, then you may be in for some surprises, because our expert writers are nothing if (14)',
+			'unpredictable. In view of the reputation of those involved, (15)',
+			'thing is guaranteed - the music chosen to illustrate their histories will be (16)',
+			'from run-of-the-mill.',
+		],
+		answers: [['when'],['to'],['its'],['cosidering','given'],['but','yet','although'],
+		['more'],['put'],['despite'],['with'],['into'],
+		['addition'],['should'],['as'],['not'],['one'],['far']]
+	},
+	
+	{
+		headline: 'Mission to Mars',
+		texts: [
+			'Wanted: a middle-aged, married couple (1)',
+			'a 501-day round trip to Mars. Applicants must be physically and emotionally robust.<hr>This will be the profile of the very first Martian astronauts if multi-millionaire Dennis Tito`s plans to launch a capsule on 5 January 2018 actially (2)',
+			'to fruition. The capsule will take the crew to about 160 km above Mars. The spacecraft will use the gravity of Mars to allow it to return to Earth without burning any more fuel, for fuel efficiency is a priority - the 2018 deadline has been fixed (3)',
+			'the next launch window when Mars and Earth align again isn`t (4)',
+			"2031. It`s a (5)",
+			'order, but the race is on to develop systems involving totally new technologies. (6)',
+			'that these can be put in place soon enough, the spacecraft might just (7)',
+			'it. But even if it (8)',
+			'leaves Earth, the efforts to achieve these aambitious goals will not be in (9)',
+			', as they will lead to valuable advances for future missions.',
+		],
+		answers: [['for'],['come'],['because'],['until'],['tall'],
+		['providing'],['make'],['never'],['vain']]
+	},
+	
+	{
+		headline: 'Is Nothing Impossible?',
+		texts: [
+			'It is certainly the case that believers in `nothing is impossible` base their blind optimism (1)',
+			'a kernel of truth. Strictly (2)',
+			', as logicians are keen to remind us, only (3)',
+			'which involves a logical contradiction is impossible. So two plus two cannot equal five, (4)',
+			"can there ever be any square circles. However, the limits that most of us have in (5)",
+			'when we worry about our lives are rarely logical.<hr>For as (6)',
+			'as something remains logically possible, some people can`t help (7)',
+			'wonder if their dream might become reality. This is exacerbated by the fact that our culture encourages people to (8)',
+			'big and believe that `impossibility` is nothing more than the creation of a negative mind.<hr>It is far simpler, though, to concentrate on levels of difficulty and chances of success. If the former are too high and the latter too low, there`s hardly any point in adding `but it isn`t impossible, (9)',
+			'enough desire or support`.',
+		],
+		answers: [['on'],['speaking'],['that'],['nor'],['mind'],
+		['long'],['but'],['think'],['with']]
+	},
+	{
+		headline: 'Why climb mountains?',
+		texts: [
+			'There`s (1)',
+			'more likely to irritate a mountaineer or explorer than to ask them why they do it, or why they are so willing to put (2)',
+			'with danger and discomfort. In 1924 when George Mallory was asked why he wanted to climb Mount Everest, he replied: `Because it`s there.` It may be that, having been asked the same question several hundred times, Mallory just didn`t care any more and this was the first phrase to (3)',
+			'into his head. Then again, for (4)',
+			"we know, it was simply his way of saying, `Why not?`<hr>This might seem self-evident (5)",
+			'someone like Mallory. You climb Everest because you can. One way to look at people like mountaineers or explorers, or successful ones at any rate, is to see them (6)',
+			'people who have realised what they are good at. When you read their books, more often than (7)',
+			'they will come across as people who are (8)',
+			'ease with their environment, (9)',
+			'alien it might seem to an outsider.',
+		],
+		answers: [['nothing'],['up'],['pop'],['all'],['to'],
+		['as'],['not'],['at'],['however']]
+	},
+	{
+		headline: 'Driverless Cars',
+		texts: [
+			'Driverless cars would of course, do (1)',
+			'with the stress of driving, allowing their occupants to read, browse the internet or take a nap, and they would also eliminate accidents caused by human error.<hr>The benefits would go (2)',
+			'comfort and safety, however, since they would also revolutionise transport and urban planning. Traffic lights and road signs would no (3)',
+			'be needed. Different autonomous vehicles on the road would be able to coordinate their movements, and travel (4)',
+			"close formation, so that traffic would be kept flowing without interruption, (5)",
+			'journeys quicker and road use more efficient. On the one hand, this might mean that cities got bigger, as a (6)',
+			'of commuting times being reduced; on the (7)',
+			'they could become denser, with houses in the space previously dedicated to roads.<hr>It may all sound (8)',
+			'science fiction, but much of the technology needed to turn ordinary vehicles into self-driving ones already exists. Almost (9)',
+			'car makers are developing systems which will if effect turn cars into autonomous robots.',
+		],
+		answers: [['away'],['beyond'],['longer'],['in'],['making'],
+		['result'],['other'],['like'],['all']]
+	},
+	{
+		headline: 'Translation',
+		texts: [
+			'in today`s globalised world, the role of translator plays is, (1)',
+			'a doubt, crucial. Each and (2)',
+			'time translators set to work they have a heavy responsibility to communicate as accurately as possible. A poor translation might merely cause amusement, but at (3)',
+			', the consequences could sometimes be extremely serious.<hr>There are a great many problems encountered in the translation process, some deriving (4)',
+			"the grammatical differences between languages and others caused by idioms, not to mention highly specific cultural references that some argue, with good (5)",
+			'perhaps, cannot be successfully translated.<hr>It (6)',
+			'without saying that translators should have a well-developed sensitivity to their mother tongue and the second language they work with. But whereas once they needed little (7)',
+			'than exceptional linguistic skills, translators nowadays may require specialist knowledge of areas such as medicine, law or technology.<hr>One factor they consider is how the translation sounds. Here, they may make (8)',
+			'of strategies such as reading their translation aloud, thereby ensuring that words are not put in a sentence if, (9)',
+			'individually accurate and appropriate, together they sound harsh or unpleasant.',
+		],
+		answers: [['without'],['every'],['worst'],['from'],['reason'],
+		['goes'],['more'],['use'],['while']]
+	},
+	{
+		headline: 'Film Music',
+		texts: [
+			'Any mention (1)',
+			'the movie Star Wars instantly triggers the resounding opening bars of the film score, which signals the presence of the enemy. But can you call to (2)',
+			'who wrote the music?<hr>(3)',
+			'to the legendary film director Orson Wells, music accounts (4)',
+			"half the work in a movie, mostly (5)",
+			'the audience even knowing the composer`s name. The cruellest (6)',
+			'of it for the composer is that, in a good film, that is how it should be. If the art of dressing well is to all intents and purposes to dress in such a way that others do (7)',
+			'notice your elegance, the art of a great music score is to fuse so perfectly with what is on the screen that audiences are unconsciously sucked (8)',
+			'the mood of the movie. For this reason, even great movie music brings very (9)',
+			'recognition to composers.'
+		],
+		answers: [[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],['']]
+	},
+	{
+		headline: 'Neologisms - creating new words',
+		texts: [
+			'To survive, language must evolve, yet it is resistant (1)',
+			'certain forms of change. Must new words sparkle briefly, (2)',
+			'at all, and then fade away. However, new words are necessary because, as the world changes, (3)',
+			'must our vocabulary. In a society (4)',
+			"science seems to occupy the intellectual high ground, it is inevitable that vocabularies are continually being augmented (5)",
+			'technical terms.<hr>Novel items of vocabulary distress people for two reasons. They attest to phenomena we don`t like (6)',
+			'expect not to like, and their tone offends our sensibilities. There is (7)',
+			'new about this aversion to neologism. As far (8)',
+			'as the 1750s, a distinguished English lexicographer criticised the `unnecessary words creeping into the language`.<hr>So what does make a word stick? First of all, it has to be widely adopted; it also has to denote something of lasting significance for it will only last as long as the phenomenon (9)',
+			'question; and to become embedded, it needs to generate derivative forms.',
+		],
+		answers: [[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],
+		[''],[''],[''],[''],[''],[''],
+		[''],[''],[''],['']]
+	},
+	{
+		headline: 'Altering the modern mind',
+		texts: [
+			'A recently published book claims that the (1)',
+			'of time we spend on the Internet is changing the very structure of our brains. Its thesis is simple enough: not only that the modern world`s relentless informational overload is killing our capacity (2)',
+			'reflection, contemplation and patience, but that our online habits are also altering the way our brains are wired.<hr>In the book, the author looks (3)',
+			'on such human inventions as the map and the clock and the (4)',
+			"to which they influenced our essential models of thought. He argues that the Internet`s multiplicity of stumuli and mass of information have (5)",
+			'rise to hurried and distracted thinking. Without putting too fine a point on it, the author concludes that our ability to learn (6)',
+			'at all worthwhile has become superficial. Surprisingly very (7)',
+			'research has looked into the Internet`s effects on the brain, but further research is (8)',
+			'hand and is investigating whether deep-thinking processes really are in (9)',
+			'of disappearing.'
+		],
 		answers: [[''],[''],[''],[''],[''],
 		[''],[''],[''],[''],[''],
 		[''],[''],[''],[''],[''],[''],
@@ -947,7 +1299,7 @@ const stories_local = [
 	{
 		headline: 'NASLOV',
 		texts: [
-			'G (1)',
+			'f (1)',
 			'f (2)',
 			'f (3)',
 			'f (4)',
@@ -973,6 +1325,7 @@ const stories_local = [
 		[''],[''],[''],[''],[''],
 		[''],[''],[''],[''],[''],[''],
 		[''],[''],[''],['']]
-	},
+	}
+	
 	
 ];
