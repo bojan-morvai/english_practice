@@ -166,7 +166,7 @@ const check_button_handler = () => {
 	}
 };
 
-// After getting all the data from DB or locally, set counters, rewards and remove backdrop and separate third and fourth transformations 
+// After getting all the data from DB or locally, set counters, rewards and remove backdrop and separate third and fourth transformations
 const after_initial_load = (data, which) => {
 	set_after_load(which);
 	setAnswerCounter(data);
@@ -222,8 +222,8 @@ const restart = () => {
 	remove_icons();
 	which_game === 'dictionary' ? (link_dict.style.display = 'block') : (link_dict.style.display = 'none');
 	which_game === 'story'
-		? ((skip_story_button.style.display = 'block'), (reverse_story_button.style.display = 'none'))
-		: (skip_story_button.style.display = 'none');
+		? (skip_story_button.style.display = 'block')
+		: ((skip_story_button.style.display = 'none'), (reverse_story_button.style.display = 'none'));
 	set_game(which_game);
 };
 

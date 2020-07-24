@@ -1253,10 +1253,8 @@ const stories_local = [
 			'the mood of the movie. For this reason, even great movie music brings very (9)',
 			'recognition to composers.'
 		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
+		answers: [['of'],['mind'],['accordingly'],['for'],['without'],
+		['part'],['not'],['into'],['little']]
 	},
 	{
 		headline: 'Neologisms - creating new words',
@@ -1272,10 +1270,8 @@ const stories_local = [
 			'as the 1750s, a distinguished English lexicographer criticised the `unnecessary words creeping into the language`.<hr>So what does make a word stick? First of all, it has to be widely adopted; it also has to denote something of lasting significance for it will only last as long as the phenomenon (9)',
 			'question; and to become embedded, it needs to generate derivative forms.',
 		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
+		answers: [['to'],['if'],['so'],['where'],['with'],
+		['or'],['nothing'],['back'],['in']]
 	},
 	{
 		headline: 'Altering the modern mind',
@@ -1291,41 +1287,7 @@ const stories_local = [
 			'hand and is investigating whether deep-thinking processes really are in (9)',
 			'of disappearing.'
 		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
-	},
-	{
-		headline: 'NASLOV',
-		texts: [
-			'f (1)',
-			'f (2)',
-			'f (3)',
-			'f (4)',
-			"f (5)",
-			'f (6)',
-			'f (7)',
-			'f (8)',
-			'f (9)',
-			'f (10)',
-			"f (11)",
-			'f (12)',
-			"f (13)",
-			'f (14)',
-			'f (15)',
-			'f (16)',
-			'f (17)',
-			"f (18)",
-			"f (19)",
-			"f (20)",
-			"f."
-		],
-		answers: [[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],
-		[''],[''],[''],[''],[''],[''],
-		[''],[''],[''],['']]
+		answers: [['amount'],['for'],['back'],['extend'],['given'],
+		['anything'],['little'],['in'],['danger']]
 	}
-	
-	
 ];
