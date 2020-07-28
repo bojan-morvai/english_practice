@@ -27,10 +27,6 @@ app.get('/', (req, res) => {
 	res.render('index.ejs');
 });
 
-app.get('/dictionary', (req, res) => {
-	res.render('dictionary.ejs');
-});
-
 app.get('/get-sentences', (req, res) => {
 	Sentences.find({}, function(err, allSentences) {
 		if (err) {

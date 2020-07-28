@@ -80,7 +80,7 @@ h1 .small-text {
   height: 100%;
 }
 
-.assignment-section .sentence-space .story-space {
+.assignment-section .sentence-space .story-space, .assignment-section .sentence-space .same-word-space {
   padding: 0 5px;
 }
 

@@ -10,7 +10,7 @@
 <body>
     <h1 id='h1-tab-transformations' class='active'><span class='big-text'>Transformations</span><span class='small-text'>Trans</span></h1>
     <h1 id='h1-tab-story' class=''>Story</h1>
-    <h1 id='h1-tab-dictionary' class=''>Dictionary</h1>
+    <h1 id='h1-tab-same-word' class=''><span class='big-text'>Same Words</span><span class='small-text'>Words</span></h1>
     <h1 id='h1-tab-transformations-2' class=''><span class='big-text'>Transformations 2</span><span class='small-text'>Trans 2</span></h1>
     <h1 id='h1-tab-transformations-3' class=''><span class='big-text'>Transformations 3</span><span class='small-text'>Trans 3</span></h1>
     <h1 id='h1-tab-transformations-4' class=''><span class='big-text'>Transformations 4</span><span class='small-text'>Trans 4</span></h1>
@@ -21,7 +21,7 @@
         </div>
         <div class='sentence-space'>
             
-            <p class='given-sentence'>Question</p>
+            <p class='given-sentence'>Press 'next' to get a new question</p>
             <h5 class='word'>word</h5>
             <div class='answer-all'>
                 <div class='answer-first'></div>
@@ -29,6 +29,7 @@
                 <div class='answer-second'></div>
             </div>
             <div class='story-space'></div>
+            <div class='same-word-space'></div>
         </div>    
         <div class='buttons-space'>
             <button class='dont-know' onclick="show_correct_answer()" disabled>I don't know</button>
@@ -45,7 +46,6 @@
             <div class='correct-answer'></div>
         </div>
 
-        <a id='link-dict' href="/dictionary">All words</a>
         <div class='stories-buttons-div'>
             <button class='skip-story-button' onclick="skip_story_handler()">Skip Story</button>
             <button class='reverse-story-button' onclick="reverse_story_handler()">Reverse!</button>
@@ -54,11 +54,14 @@
         <p class='countdown'>399</p>
     </section>
 
-    <script src="/scripts/dictionary.js"></script>
+    <script src="/scripts/sameWord.js"></script>
     <script src='/scripts/questions.js'></script>
     <script src='/scripts/questions2.js'></script>
     <script src='/scripts/questions3.js'></script>
     <script src="/scripts/stories.js"></script>
+    <script src="/scripts/script-stories.js"></script>
+    <script src="/scripts/script-transformations.js"></script>
+    <script src="/scripts/script-sameWords.js"></script>
     <script src='/scripts/script.js'></script>
     <script src='/scripts/awards.js'></script>
     <script src="/scripts/fetch.js"></script>
