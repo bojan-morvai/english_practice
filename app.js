@@ -9,8 +9,8 @@ const app = express();
 
 app.use(express.static('public'));
 
-mongoose
-	.connect('mongodb+srv://Bojan:klisaklisa@cluster0-rfxxc.mongodb.net/english?retryWrites=true&w=majority', {
+mongoose      
+	.connect('mongodb+srv://Bojan:asdasd123123!@cluster0-rfxxc.mongodb.net/english?w=majority', {
 		useNewUrlParser: true,
 		useCreateIndex: true,
 		useUnifiedTopology: true
